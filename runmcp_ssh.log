@@ -1,0 +1,1532 @@
+2025-07-21 23:30:46,393 - __main__ - INFO - SSH Remote Command Executor 시작
+2025-07-21 23:30:46,720 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-21 23:30:46,720 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-21 23:35:22,394 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-21 23:35:22,694 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-21 23:35:22,694 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-21 23:38:06,636 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-21 23:45:40,526 - __main__ - INFO - SSH Remote Command Executor 시작
+2025-07-21 23:45:40,888 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-21 23:45:40,889 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-21 23:45:43,111 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-21 23:53:51,089 - __main__ - INFO - SSH Remote Command Executor 시작
+2025-07-21 23:53:51,451 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-21 23:53:51,452 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 00:04:57,928 - runmcp_ssh_executor - INFO - SSH 명령어 실행: 192.168.0.11 - ls -la
+2025-07-22 00:05:27,968 - runmcp_ssh_executor - ERROR - 명령어 실행 타임아웃: 30초
+2025-07-22 00:05:27,969 - runmcp_ssh_executor - ERROR - 명령어 실행 실패: 192.168.0.11 - ls -la
+2025-07-22 00:14:37,742 - runmcp_ssh_executor - INFO - SSH 명령어 실행: 192.168.0.12 - ls -la
+2025-07-22 00:14:38,080 - runmcp_ssh_executor - INFO - 명령어 실행 성공: 192.168.0.12 - ls -la
+2025-07-22 00:15:23,372 - runmcp_ssh_executor - INFO - SSH 명령어 실행: 192.168.0.12 - sudo su -
+2025-07-22 00:15:23,603 - runmcp_ssh_executor - ERROR - 명령어 실행 실패: 192.168.0.12 - sudo su -
+2025-07-22 00:15:47,219 - runmcp_ssh_executor - INFO - SSH 명령어 실행: 192.168.0.12 - sudo su -S Kks718@K
+2025-07-22 00:15:47,529 - runmcp_ssh_executor - ERROR - 명령어 실행 실패: 192.168.0.12 - sudo su -S Kks718@K
+2025-07-22 00:18:22,283 - runmcp_ssh_executor - INFO - SSH 명령어 실행: 192.168.0.12 - ufw status
+2025-07-22 00:18:22,732 - runmcp_ssh_executor - ERROR - 명령어 실행 실패: 192.168.0.12 - ufw status
+2025-07-22 00:18:43,493 - runmcp_ssh_executor - INFO - SSH 명령어 실행: 192.168.0.12 - ls -al /home
+2025-07-22 00:18:43,712 - runmcp_ssh_executor - INFO - 명령어 실행 성공: 192.168.0.12 - ls -al /home
+2025-07-22 00:19:49,481 - runmcp_ssh_executor - INFO - SSH 명령어 실행: 192.168.0.13 - ls -al /etc/
+2025-07-22 00:20:19,499 - runmcp_ssh_executor - ERROR - 명령어 실행 타임아웃: 30초
+2025-07-22 00:20:19,503 - runmcp_ssh_executor - ERROR - 명령어 실행 실패: 192.168.0.13 - ls -al /etc/
+2025-07-22 00:22:56,635 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 00:22:56,934 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 00:22:56,934 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 00:26:58,231 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 00:26:58,528 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 00:26:58,528 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 00:27:11,562 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 00:27:11,976 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 00:27:11,976 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 00:27:21,453 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 00:27:21,709 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 00:27:21,710 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 00:31:52,877 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 00:35:46,134 - __main__ - INFO - SSH Remote Command Executor 시작
+2025-07-22 00:35:46,435 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 00:35:46,435 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 00:37:04,444 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 00:37:04,465 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 00:37:04,650 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 00:37:04,650 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 00:37:04,650 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 095e1598-4e6a-4b54-a922-7ff2216ddca3 - 192.168.0.12
+2025-07-22 00:39:04,559 - runmcp_ssh_executor - INFO - 명령어 실행 완료: pwd (exit_code: 0)
+2025-07-22 00:39:20,112 - runmcp_ssh_executor - INFO - 명령어 실행 완료: sudo su - (exit_code: 1)
+2025-07-22 00:41:25,793 - runmcp_ssh_executor - INFO - 명령어 실행 완료: ufw status (exit_code: 1)
+2025-07-22 00:43:24,239 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 00:43:24,240 - runmcp_ssh_executor - INFO - SSH 세션 종료: 095e1598-4e6a-4b54-a922-7ff2216ddca3
+2025-07-22 00:44:02,839 - __main__ - INFO - SSH Remote Command Executor 시작
+2025-07-22 00:44:03,177 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 00:44:03,178 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 00:44:48,769 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 00:44:51,353 - __main__ - INFO - SSH Remote Command Executor 시작
+2025-07-22 00:44:51,660 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 00:44:51,661 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 00:44:59,654 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 00:44:59,663 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 00:44:59,848 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 00:44:59,848 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 00:44:59,848 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: dceead26-6924-43ab-88a8-95b5e024f3d5 - 192.168.0.12
+2025-07-22 00:45:05,253 - runmcp_ssh_executor - INFO - 명령어 실행 완료: pwd (exit_code: 0)
+2025-07-22 00:45:11,523 - runmcp_ssh_executor - INFO - 명령어 실행 완료: ls -al (exit_code: 0)
+2025-07-22 00:45:22,635 - runmcp_ssh_executor - INFO - 명령어 실행 완료: sudo su - (exit_code: 1)
+2025-07-22 00:45:53,099 - runmcp_ssh_executor - INFO - 명령어 실행 완료: echo "Kks718@K" | sudo su -S sudo su - (exit_code: 1)
+2025-07-22 00:50:39,783 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 00:50:39,784 - runmcp_ssh_executor - INFO - SSH 세션 종료: dceead26-6924-43ab-88a8-95b5e024f3d5
+2025-07-22 00:50:40,303 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 00:50:40,303 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 00:51:10,583 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 00:51:16,352 - __main__ - INFO - SSH Remote Command Executor 시작
+2025-07-22 00:51:16,632 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 00:51:16,632 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 00:51:23,615 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 00:51:23,625 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 00:51:23,801 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 00:51:23,801 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 00:51:23,801 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 7869695c-72f9-4259-8921-f1c918c7bf6a - 192.168.0.12
+2025-07-22 00:51:30,780 - runmcp_ssh_executor - INFO - 명령어 실행 완료: ls -al (exit_code: 0)
+2025-07-22 00:57:21,905 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 00:57:21,908 - runmcp_ssh_executor - INFO - SSH 세션 종료: 7869695c-72f9-4259-8921-f1c918c7bf6a
+2025-07-22 00:57:56,815 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 00:57:56,815 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 00:58:13,679 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 00:58:14,048 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 00:58:14,048 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 00:58:25,258 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 00:58:25,491 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 00:58:25,491 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 00:58:31,588 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 00:58:34,160 - __main__ - INFO - SSH Remote Command Executor 시작
+2025-07-22 00:58:34,431 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 00:58:34,431 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 00:58:41,099 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 00:58:41,111 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 00:58:41,306 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 00:58:41,307 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 00:58:41,307 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 57d35299-e7a3-462c-8d59-e499d7b439d9 - 192.168.0.12
+2025-07-22 00:58:43,699 - runmcp_ssh_executor - INFO - 명령어 실행 완료: ls -al (exit_code: 0)
+2025-07-22 01:08:26,328 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 01:08:26,329 - runmcp_ssh_executor - INFO - SSH 세션 종료: 57d35299-e7a3-462c-8d59-e499d7b439d9
+2025-07-22 01:08:26,748 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 01:08:26,748 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 01:08:33,575 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 01:08:33,589 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 01:08:33,775 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 01:08:33,776 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 01:08:33,776 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 1594561b-3c16-4db1-ac38-b24b74275ab8 - 192.168.0.12
+2025-07-22 01:08:37,232 - runmcp_ssh_executor - INFO - 명령어 실행 완료: ls -al (exit_code: 0)
+2025-07-22 01:17:08,411 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 01:17:08,412 - runmcp_ssh_executor - INFO - SSH 세션 종료: 1594561b-3c16-4db1-ac38-b24b74275ab8
+2025-07-22 01:17:10,665 - __main__ - INFO - SSH Remote Command Executor 시작
+2025-07-22 01:17:11,070 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 01:17:11,070 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 01:17:17,423 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 01:17:17,434 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 01:17:17,662 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 01:17:17,662 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 01:17:17,662 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 1c884f2d-b739-4467-b3b5-1ed106a3b0d0 - 192.168.0.12
+2025-07-22 01:17:22,171 - runmcp_ssh_executor - INFO - 명령어 실행 완료: pwd (exit_code: 0)
+2025-07-22 01:17:28,729 - runmcp_ssh_executor - INFO - 명령어 실행 완료: ls -al (exit_code: 0)
+2025-07-22 01:19:04,340 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 01:19:04,341 - runmcp_ssh_executor - INFO - SSH 세션 종료: 1c884f2d-b739-4467-b3b5-1ed106a3b0d0
+2025-07-22 01:19:06,668 - __main__ - INFO - SSH Remote Command Executor 시작
+2025-07-22 01:19:06,952 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 01:19:06,952 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 01:19:13,110 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 01:19:13,126 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 01:19:13,331 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 01:19:13,331 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 01:19:13,332 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: f8020160-8f55-43a7-9140-e6608cc35276 - 192.168.0.12
+2025-07-22 01:19:19,359 - runmcp_ssh_executor - INFO - 명령어 실행 완료: ls -al (exit_code: 0)
+2025-07-22 01:19:36,492 - runmcp_ssh_executor - INFO - 명령어 실행 완료: df -h (exit_code: 0)
+2025-07-22 01:19:59,543 - runmcp_ssh_executor - INFO - 명령어 실행 완료: df -h (exit_code: 0)
+2025-07-22 01:27:23,261 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 01:27:23,281 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 01:27:23,478 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 01:27:23,478 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 01:27:23,478 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 8d514e05-5c1d-4e0f-85a4-2e85460b4408 - 192.168.0.12
+2025-07-22 01:28:40,195 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 01:28:40,198 - runmcp_ssh_executor - INFO - SSH 세션 종료: f8020160-8f55-43a7-9140-e6608cc35276
+2025-07-22 01:28:40,198 - runmcp_ssh_executor - INFO - SSH 세션 종료: 8d514e05-5c1d-4e0f-85a4-2e85460b4408
+2025-07-22 01:28:41,608 - __main__ - INFO - SSH Remote Command Executor 시작
+2025-07-22 01:28:41,882 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 01:28:41,882 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 01:28:54,937 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 01:28:54,945 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 01:28:55,124 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 01:28:55,124 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 01:28:55,125 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 41f9f905-7ca1-4d37-9b3b-655e7bfabb3a - 192.168.0.12
+2025-07-22 01:30:01,085 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 01:30:01,088 - runmcp_ssh_executor - INFO - SSH 세션 종료: 41f9f905-7ca1-4d37-9b3b-655e7bfabb3a
+2025-07-22 01:30:04,988 - __main__ - INFO - SSH Remote Command Executor 시작
+2025-07-22 01:30:05,330 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 01:30:05,330 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 01:30:27,846 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 01:30:27,860 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 01:30:28,047 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 01:30:28,048 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 01:30:28,048 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 26a8ae2d-db9b-46a3-91aa-c9ab9a2583d9 - 192.168.0.12
+2025-07-22 01:32:34,447 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 01:32:34,449 - runmcp_ssh_executor - INFO - SSH 세션 종료: 26a8ae2d-db9b-46a3-91aa-c9ab9a2583d9
+2025-07-22 01:32:35,159 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 01:32:35,160 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 01:32:44,685 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 01:32:44,696 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 01:32:44,876 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 01:32:44,877 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 01:32:44,877 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 1a164be8-006c-4559-a568-2bf39c39118c - 192.168.0.12
+2025-07-22 01:33:35,203 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 01:33:35,232 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 01:33:35,479 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 01:33:35,484 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 01:33:35,485 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 04c82c01-f19a-4c14-bb67-b0b2ac1e0807 - 192.168.0.12
+2025-07-22 01:35:21,090 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 01:35:21,092 - runmcp_ssh_executor - INFO - SSH 세션 종료: 1a164be8-006c-4559-a568-2bf39c39118c
+2025-07-22 01:35:21,092 - runmcp_ssh_executor - INFO - SSH 세션 종료: 04c82c01-f19a-4c14-bb67-b0b2ac1e0807
+2025-07-22 01:35:21,564 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 01:35:21,565 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 01:35:33,005 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 01:35:33,256 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 01:35:33,256 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 01:36:20,583 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 01:36:20,603 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 01:36:20,830 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 01:36:20,831 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 01:36:20,831 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: a97da208-cdbf-41e7-bec5-2e117d3fb6d8 - 192.168.0.12
+2025-07-22 01:36:35,117 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 01:36:35,135 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 01:36:35,384 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 01:36:35,384 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 01:36:35,384 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 3f15a795-3e52-4473-a247-ea54db744b7f - 192.168.0.12
+2025-07-22 01:37:51,173 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 01:37:51,194 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 01:37:51,429 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 01:37:51,431 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 01:37:51,431 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 352c323c-2491-4fd9-ab11-ec89f622876b - 192.168.0.12
+2025-07-22 01:37:51,486 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 01:37:51,492 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 01:37:51,683 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 01:37:51,684 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 01:37:51,684 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 41b866c2-fe29-4315-a055-31520b7ce743 - 192.168.0.12
+2025-07-22 01:37:57,304 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 01:37:57,310 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 01:37:57,492 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 01:37:57,492 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 01:37:57,492 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 49155af8-3e80-4269-8237-d7484307f1a8 - 192.168.0.12
+2025-07-22 01:38:05,819 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 01:38:05,828 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 01:38:06,023 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 01:38:06,023 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 01:38:06,024 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 94d27a3e-fd71-46e8-829d-0936eb65c5b4 - 192.168.0.12
+2025-07-22 01:38:57,319 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 01:38:57,328 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 01:38:57,510 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 01:38:57,511 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 01:38:57,511 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 041b2015-9ea3-46f3-94d3-435deda18205 - 192.168.0.12
+2025-07-22 01:39:12,695 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 01:39:12,705 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 01:39:12,934 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 01:39:12,936 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 01:39:12,936 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 38af7d32-270a-47e7-a4e3-f5d7b0969555 - 192.168.0.12
+2025-07-22 01:40:09,743 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 01:40:09,779 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 01:40:10,053 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 01:40:10,053 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 01:40:10,053 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 17acc525-8d8f-4a54-9e89-b16ad64e87ff - 192.168.0.12
+2025-07-22 01:40:21,322 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 01:40:21,328 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 01:40:21,501 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 01:40:21,502 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 01:40:21,502 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: cd4d7d54-b284-4787-a51c-79b6d8219cb9 - 192.168.0.12
+2025-07-22 01:43:02,894 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 01:43:02,905 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 01:43:03,115 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 01:43:03,119 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 01:43:03,120 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: b8bdcf73-f72e-4151-911d-84bc8db8bd39 - 192.168.0.12
+2025-07-22 01:43:18,738 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 01:43:18,744 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 01:43:18,933 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 01:43:18,934 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 01:43:18,934 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 99804f81-73d3-4bc3-ba26-012afaeba40f - 192.168.0.12
+2025-07-22 01:44:27,351 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 01:44:27,352 - runmcp_ssh_executor - INFO - SSH 세션 종료: a97da208-cdbf-41e7-bec5-2e117d3fb6d8
+2025-07-22 01:44:27,352 - runmcp_ssh_executor - INFO - SSH 세션 종료: 3f15a795-3e52-4473-a247-ea54db744b7f
+2025-07-22 01:44:27,352 - runmcp_ssh_executor - INFO - SSH 세션 종료: 352c323c-2491-4fd9-ab11-ec89f622876b
+2025-07-22 01:44:27,352 - runmcp_ssh_executor - INFO - SSH 세션 종료: 41b866c2-fe29-4315-a055-31520b7ce743
+2025-07-22 01:44:27,353 - runmcp_ssh_executor - INFO - SSH 세션 종료: 49155af8-3e80-4269-8237-d7484307f1a8
+2025-07-22 01:44:27,353 - runmcp_ssh_executor - INFO - SSH 세션 종료: 94d27a3e-fd71-46e8-829d-0936eb65c5b4
+2025-07-22 01:44:27,353 - runmcp_ssh_executor - INFO - SSH 세션 종료: 041b2015-9ea3-46f3-94d3-435deda18205
+2025-07-22 01:44:27,353 - runmcp_ssh_executor - INFO - SSH 세션 종료: 38af7d32-270a-47e7-a4e3-f5d7b0969555
+2025-07-22 01:44:27,353 - runmcp_ssh_executor - INFO - SSH 세션 종료: 17acc525-8d8f-4a54-9e89-b16ad64e87ff
+2025-07-22 01:44:27,353 - runmcp_ssh_executor - INFO - SSH 세션 종료: cd4d7d54-b284-4787-a51c-79b6d8219cb9
+2025-07-22 01:44:27,353 - runmcp_ssh_executor - INFO - SSH 세션 종료: b8bdcf73-f72e-4151-911d-84bc8db8bd39
+2025-07-22 01:44:27,353 - runmcp_ssh_executor - INFO - SSH 세션 종료: 99804f81-73d3-4bc3-ba26-012afaeba40f
+2025-07-22 01:44:27,841 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 01:44:27,841 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 01:44:38,453 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 01:44:38,462 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 01:44:38,699 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 01:44:38,700 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 01:44:38,700 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: c0a88586-48d6-4d88-b47e-aa5f9d68a77c - 192.168.0.12
+2025-07-22 01:45:01,757 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 01:45:01,758 - runmcp_ssh_executor - INFO - SSH 세션 종료: c0a88586-48d6-4d88-b47e-aa5f9d68a77c
+2025-07-22 01:45:02,227 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 01:45:02,227 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 01:45:38,300 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 01:45:40,510 - __main__ - INFO - SSH Remote Command Executor 시작
+2025-07-22 01:45:40,791 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 01:45:40,792 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 01:45:58,181 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 01:45:58,442 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 01:45:58,442 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 01:46:02,249 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 01:46:02,276 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 01:46:02,480 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 01:46:02,481 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 01:46:02,481 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: a31e719e-307e-4a14-b735-2bbe872ff46a - 192.168.0.12
+2025-07-22 01:46:36,824 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 01:46:36,826 - runmcp_ssh_executor - INFO - SSH 세션 종료: a31e719e-307e-4a14-b735-2bbe872ff46a
+2025-07-22 01:46:37,365 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 01:46:37,365 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 01:46:39,052 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 01:46:39,077 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 01:46:39,267 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 01:46:39,267 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 01:46:39,267 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: eb9b55cf-51e9-4e9f-ab46-495e04237e28 - 192.168.0.12
+2025-07-22 01:47:32,251 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 01:47:32,253 - runmcp_ssh_executor - INFO - SSH 세션 종료: eb9b55cf-51e9-4e9f-ab46-495e04237e28
+2025-07-22 01:47:32,762 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 01:47:32,762 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 01:47:34,892 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 01:47:35,143 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 01:47:35,143 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 01:48:02,055 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 01:48:02,496 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 01:48:02,497 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 01:48:03,610 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 01:48:05,883 - __main__ - INFO - SSH Remote Command Executor 시작
+2025-07-22 01:48:06,175 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 01:48:06,175 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 01:48:11,100 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 01:48:11,112 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 01:48:11,289 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 01:48:11,290 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 01:48:11,290 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: f8f5db8c-077f-4932-983d-2086adda01de - 192.168.0.12
+2025-07-22 01:50:07,790 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 01:50:07,791 - runmcp_ssh_executor - INFO - SSH 세션 종료: f8f5db8c-077f-4932-983d-2086adda01de
+2025-07-22 01:50:08,332 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 01:50:08,332 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 01:55:05,234 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 01:55:05,695 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 01:55:05,695 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 01:55:25,366 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 01:55:25,793 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 01:55:25,793 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 01:55:43,731 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 01:55:44,050 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 01:55:44,050 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 01:57:05,553 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 01:57:07,442 - __main__ - INFO - SSH Remote Command Executor 시작
+2025-07-22 01:57:07,735 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 01:57:07,735 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 01:58:01,711 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 01:58:02,235 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 01:58:02,235 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 01:58:06,781 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 01:58:08,439 - __main__ - INFO - SSH Remote Command Executor 시작
+2025-07-22 01:58:08,722 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 01:58:08,722 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 01:58:46,475 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 01:58:47,854 - __main__ - INFO - SSH Remote Command Executor 시작
+2025-07-22 01:58:48,168 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 01:58:48,168 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 01:59:18,606 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 01:59:18,927 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 01:59:18,928 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 01:59:20,945 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 01:59:21,237 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 01:59:21,237 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 01:59:25,942 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 01:59:25,953 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 01:59:26,133 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 01:59:26,134 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 01:59:26,134 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 93a403d6-3288-46a7-a828-0597770af783 - 192.168.0.12
+2025-07-22 01:59:55,083 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 01:59:55,084 - runmcp_ssh_executor - INFO - SSH 세션 종료: 93a403d6-3288-46a7-a828-0597770af783
+2025-07-22 01:59:55,558 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 01:59:55,558 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 02:00:05,037 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 02:00:05,437 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 02:00:05,437 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 02:00:08,963 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 02:00:09,246 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 02:00:09,246 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 02:00:14,945 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 02:00:15,294 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 02:00:15,295 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 02:00:18,486 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 02:00:18,761 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 02:00:18,761 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 02:00:23,395 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 02:00:23,404 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 02:00:23,584 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 02:00:23,584 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 02:00:23,584 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 929074a2-16e0-4562-8491-319758cb0481 - 192.168.0.12
+2025-07-22 02:01:55,312 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 02:01:55,331 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 02:01:55,562 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 02:01:55,563 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 02:01:55,563 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 0bca1349-7d90-4169-ae7e-5f6c56f740aa - 192.168.0.12
+2025-07-22 02:02:18,206 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 02:02:18,218 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 02:02:18,444 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 02:02:18,444 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 02:02:18,444 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: c52e32ff-4988-4165-9d69-050e2a66b2cb - 192.168.0.12
+2025-07-22 02:03:28,610 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 02:03:28,611 - runmcp_ssh_executor - INFO - SSH 세션 종료: 929074a2-16e0-4562-8491-319758cb0481
+2025-07-22 02:03:28,612 - runmcp_ssh_executor - INFO - SSH 세션 종료: 0bca1349-7d90-4169-ae7e-5f6c56f740aa
+2025-07-22 02:03:28,612 - runmcp_ssh_executor - INFO - SSH 세션 종료: c52e32ff-4988-4165-9d69-050e2a66b2cb
+2025-07-22 02:03:29,095 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 02:03:29,095 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 02:03:35,425 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 02:03:35,434 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 02:03:35,621 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 02:03:35,622 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 02:03:35,622 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 4fcd89e1-c17d-4178-9be3-8d59110de708 - 192.168.0.12
+2025-07-22 02:03:43,907 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 02:03:43,907 - runmcp_ssh_executor - INFO - SSH 세션 종료: 4fcd89e1-c17d-4178-9be3-8d59110de708
+2025-07-22 02:03:44,190 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 02:03:44,190 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 02:05:47,990 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 02:05:48,008 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 02:05:48,255 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 02:05:48,256 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 02:05:48,256 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: c28c20fb-6387-45f9-87b7-6c2d9b328e71 - 192.168.0.12
+2025-07-22 02:09:18,880 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 02:09:18,881 - runmcp_ssh_executor - INFO - SSH 세션 종료: c28c20fb-6387-45f9-87b7-6c2d9b328e71
+2025-07-22 02:09:19,218 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 02:09:19,218 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 02:09:22,694 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 02:09:22,929 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 02:09:22,929 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 02:09:34,897 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 02:09:34,910 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 02:09:35,114 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 02:09:35,114 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 02:09:35,114 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: b3dcc464-064f-4fdc-85d9-9f934ad8a027 - 192.168.0.12
+2025-07-22 02:10:29,151 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 02:10:29,152 - runmcp_ssh_executor - INFO - SSH 세션 종료: b3dcc464-064f-4fdc-85d9-9f934ad8a027
+2025-07-22 02:10:29,724 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 02:10:29,724 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 02:10:31,334 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 02:10:31,344 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 02:10:31,534 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 02:10:31,536 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 02:10:31,536 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 7a2543cd-52bc-4a12-8002-b29ba5cbd7bd - 192.168.0.12
+2025-07-22 02:10:47,914 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 02:10:47,915 - runmcp_ssh_executor - INFO - SSH 세션 종료: 7a2543cd-52bc-4a12-8002-b29ba5cbd7bd
+2025-07-22 02:10:48,250 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 02:10:48,250 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 02:11:10,597 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 02:11:11,011 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 02:11:11,011 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 02:13:07,928 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 02:13:08,414 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 02:13:08,414 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 02:13:10,099 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 02:13:10,111 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 02:13:10,306 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 02:13:10,306 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 02:13:10,307 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 73fc53d3-f819-4117-9444-8d68ce8e6c2a - 192.168.0.12
+2025-07-22 02:13:31,186 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 02:13:31,186 - runmcp_ssh_executor - INFO - SSH 세션 종료: 73fc53d3-f819-4117-9444-8d68ce8e6c2a
+2025-07-22 02:13:31,531 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 02:13:31,531 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 02:14:06,801 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 02:14:07,235 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 02:14:07,236 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 02:14:09,323 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 02:14:09,338 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 02:14:09,575 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 02:14:09,576 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 02:14:09,576 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 70b50061-348b-4539-8024-9fc64f374a51 - 192.168.0.12
+2025-07-22 02:15:15,853 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 02:15:15,854 - runmcp_ssh_executor - INFO - SSH 세션 종료: 70b50061-348b-4539-8024-9fc64f374a51
+2025-07-22 02:15:16,230 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 02:15:16,230 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 02:15:21,977 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 02:15:21,992 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 02:15:22,177 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 02:15:22,177 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 02:15:22,177 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: d33b5bc9-120e-4ae9-9781-cd7b8398d583 - 192.168.0.12
+2025-07-22 02:16:03,668 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 02:16:03,669 - runmcp_ssh_executor - INFO - SSH 세션 종료: d33b5bc9-120e-4ae9-9781-cd7b8398d583
+2025-07-22 02:16:04,279 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 02:16:04,279 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 02:16:17,534 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 02:16:17,791 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 02:16:17,791 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 02:16:21,532 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 02:16:21,551 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 02:16:21,761 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 02:16:21,761 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 02:16:21,761 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 3d313f53-61b9-416e-9d8f-2afaef3f4da7 - 192.168.0.12
+2025-07-22 02:17:21,795 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 02:17:21,797 - runmcp_ssh_executor - INFO - SSH 세션 종료: 3d313f53-61b9-416e-9d8f-2afaef3f4da7
+2025-07-22 02:17:22,316 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 02:17:22,317 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 02:18:04,493 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 02:18:04,958 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 02:18:04,959 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 02:18:10,429 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 02:18:10,764 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 02:18:10,764 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 02:18:43,827 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 02:18:44,171 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 02:18:44,172 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 02:18:50,962 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 02:18:51,240 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 02:18:51,240 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 02:19:01,960 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 02:19:02,531 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 02:19:02,531 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 02:19:04,402 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 02:19:04,427 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 02:19:04,643 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 02:19:04,644 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 02:19:04,644 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 3ef95888-ba50-4317-950a-d0324a876160 - 192.168.0.12
+2025-07-22 02:19:21,018 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 02:19:21,019 - runmcp_ssh_executor - INFO - SSH 세션 종료: 3ef95888-ba50-4317-950a-d0324a876160
+2025-07-22 02:19:21,428 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 02:19:21,428 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 02:19:43,062 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 02:19:43,074 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 02:19:43,284 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 02:19:43,285 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 02:19:43,285 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: c3a37379-3475-493b-8253-e2a8f5967f56 - 192.168.0.12
+2025-07-22 02:21:00,687 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 02:21:00,702 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 02:21:00,905 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 02:21:00,906 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 02:21:00,906 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 52b9cc5b-3af1-4ccf-9519-babbdc8b6ed0 - 192.168.0.12
+2025-07-22 02:21:26,552 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 02:21:26,553 - runmcp_ssh_executor - INFO - SSH 세션 종료: c3a37379-3475-493b-8253-e2a8f5967f56
+2025-07-22 02:21:26,553 - runmcp_ssh_executor - INFO - SSH 세션 종료: 52b9cc5b-3af1-4ccf-9519-babbdc8b6ed0
+2025-07-22 02:21:26,962 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 02:21:26,963 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 02:21:30,624 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 02:21:30,637 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 02:21:30,820 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 02:21:30,821 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 02:21:30,821 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: bbea17e4-bc69-4ca7-9b7b-03679bff8191 - 192.168.0.12
+2025-07-22 02:21:46,462 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 02:21:46,465 - runmcp_ssh_executor - INFO - SSH 세션 종료: bbea17e4-bc69-4ca7-9b7b-03679bff8191
+2025-07-22 02:21:46,965 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 02:21:46,965 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 02:22:58,777 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 02:22:59,207 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 02:22:59,207 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 02:23:07,224 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 02:23:07,634 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 02:23:07,634 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 02:23:11,012 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 02:23:11,028 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 02:23:11,248 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 02:23:11,249 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 02:23:11,249 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 355901fc-6ac3-4b4c-93b2-f7564bde9ec5 - 192.168.0.12
+2025-07-22 02:23:32,315 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 02:23:32,316 - runmcp_ssh_executor - INFO - SSH 세션 종료: 355901fc-6ac3-4b4c-93b2-f7564bde9ec5
+2025-07-22 02:23:32,821 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 02:23:32,821 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 02:23:33,777 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 02:23:33,792 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 02:23:34,022 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 02:23:34,023 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 02:23:34,023 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 6c7e3e8f-2cbb-4809-968b-50b2ece4b645 - 192.168.0.12
+2025-07-22 02:23:49,124 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 02:23:49,125 - runmcp_ssh_executor - INFO - SSH 세션 종료: 6c7e3e8f-2cbb-4809-968b-50b2ece4b645
+2025-07-22 02:23:49,575 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 02:23:49,575 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 02:24:52,934 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 02:24:52,953 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 02:24:53,168 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 02:24:53,169 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 02:24:53,169 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: f121ac2d-8196-4a37-8f6a-91b66c734335 - 192.168.0.12
+2025-07-22 02:26:22,962 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 02:26:22,975 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 02:26:23,175 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 02:26:23,176 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 02:26:23,176 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 7440f7a9-e9eb-494c-a9ed-5a40c8353520 - 192.168.0.12
+2025-07-22 02:29:21,190 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 02:29:21,195 - runmcp_ssh_executor - INFO - SSH 세션 종료: f121ac2d-8196-4a37-8f6a-91b66c734335
+2025-07-22 02:29:21,196 - runmcp_ssh_executor - INFO - SSH 세션 종료: 7440f7a9-e9eb-494c-a9ed-5a40c8353520
+2025-07-22 02:29:21,660 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 02:29:21,661 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 02:29:24,922 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 02:29:24,935 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 02:29:25,113 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 02:29:25,113 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 02:29:25,114 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 89632a97-96cd-47aa-8045-f8c7bbc12d7f - 192.168.0.12
+2025-07-22 02:31:58,755 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 02:31:58,761 - runmcp_ssh_executor - INFO - SSH 세션 종료: 89632a97-96cd-47aa-8045-f8c7bbc12d7f
+2025-07-22 02:31:59,297 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 02:31:59,297 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 02:32:12,458 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 02:32:12,827 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 02:32:12,827 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 02:32:19,931 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 02:32:20,206 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 02:32:20,206 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 02:32:24,932 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 02:32:24,946 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 02:32:25,132 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 02:32:25,132 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 02:32:25,132 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 86bcc228-2123-49aa-8add-256f93019891 - 192.168.0.12
+2025-07-22 02:34:06,695 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 02:34:06,696 - runmcp_ssh_executor - INFO - SSH 세션 종료: 86bcc228-2123-49aa-8add-256f93019891
+2025-07-22 02:34:07,275 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 02:34:07,275 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 02:34:10,722 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 02:34:10,976 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 02:34:10,976 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 02:36:33,427 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 02:36:33,457 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 02:36:33,656 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 02:36:33,657 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 02:36:33,657 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: b184107f-a196-4d00-9d06-feba4c3f2e6c - 192.168.0.12
+2025-07-22 02:37:09,745 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 02:37:09,746 - runmcp_ssh_executor - INFO - SSH 세션 종료: b184107f-a196-4d00-9d06-feba4c3f2e6c
+2025-07-22 02:37:10,281 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 02:37:10,282 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 02:37:12,011 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 02:37:12,022 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 02:37:12,209 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 02:37:12,213 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 02:37:12,213 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: cd656759-ff23-4d12-8a13-2c739dae1492 - 192.168.0.12
+2025-07-22 02:37:29,836 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 02:37:29,837 - runmcp_ssh_executor - INFO - SSH 세션 종료: cd656759-ff23-4d12-8a13-2c739dae1492
+2025-07-22 02:37:30,386 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 02:37:30,386 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 02:37:42,426 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 02:37:42,454 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 02:37:42,694 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 02:37:42,695 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 02:37:42,695 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 7c2e655a-1ce8-4e38-899a-d7296047483e - 192.168.0.12
+2025-07-22 02:37:45,639 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 02:37:45,647 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 02:37:45,825 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 02:37:45,825 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 02:37:45,825 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 0e3deaa3-0564-4266-946c-99d13628c25a - 192.168.0.12
+2025-07-22 02:40:06,167 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 02:40:06,169 - runmcp_ssh_executor - INFO - SSH 세션 종료: 7c2e655a-1ce8-4e38-899a-d7296047483e
+2025-07-22 02:40:06,169 - runmcp_ssh_executor - INFO - SSH 세션 종료: 0e3deaa3-0564-4266-946c-99d13628c25a
+2025-07-22 02:40:06,810 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 02:40:06,810 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 13:16:10,962 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 13:16:10,993 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 13:16:11,241 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 13:16:11,241 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 13:16:11,241 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: c3148235-85d8-43b2-af99-a79a58e1ae28 - 192.168.0.12
+2025-07-22 13:20:47,960 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 13:20:47,968 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 13:20:48,153 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 13:20:48,154 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 13:20:48,154 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: cd1e0878-a612-44a3-8b5e-c9ed59482429 - 192.168.0.12
+2025-07-22 13:28:58,510 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 13:28:58,525 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 13:28:58,748 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 13:28:58,748 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 13:28:58,749 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: c74d9c82-a82e-406f-84dc-2c3739d4469a - 192.168.0.12
+2025-07-22 13:29:37,359 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 13:29:37,366 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 13:29:37,589 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 13:29:37,590 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 13:29:37,590 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: f2f24e95-6f3c-4956-8a6c-3514216a757c - 192.168.0.12
+2025-07-22 13:30:33,743 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 13:30:33,744 - runmcp_ssh_executor - INFO - SSH 세션 종료: c3148235-85d8-43b2-af99-a79a58e1ae28
+2025-07-22 13:30:33,744 - runmcp_ssh_executor - INFO - SSH 세션 종료: cd1e0878-a612-44a3-8b5e-c9ed59482429
+2025-07-22 13:30:33,744 - runmcp_ssh_executor - INFO - SSH 세션 종료: c74d9c82-a82e-406f-84dc-2c3739d4469a
+2025-07-22 13:30:33,744 - runmcp_ssh_executor - INFO - SSH 세션 종료: f2f24e95-6f3c-4956-8a6c-3514216a757c
+2025-07-22 13:30:34,211 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 13:30:34,211 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 13:30:37,682 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 13:30:37,933 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 13:30:37,934 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 13:32:05,818 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 13:32:06,208 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 13:32:06,208 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 13:32:13,431 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 13:32:13,440 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 13:32:13,614 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 13:32:13,615 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 13:32:13,615 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 84aef48c-f3f7-40db-8776-ec511f0bf066 - 192.168.0.12
+2025-07-22 13:36:15,438 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 13:36:15,439 - runmcp_ssh_executor - INFO - SSH 세션 종료: 84aef48c-f3f7-40db-8776-ec511f0bf066
+2025-07-22 13:36:15,834 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 13:36:15,834 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 13:36:39,171 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 13:36:39,413 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 13:36:39,413 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 13:36:51,979 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 13:36:52,223 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 13:36:52,223 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 13:37:41,995 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 13:37:42,365 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 13:37:42,366 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 13:37:50,370 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 13:37:50,614 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 13:37:50,614 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 13:37:56,874 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 13:37:56,883 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 13:37:57,061 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 13:37:57,061 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 13:37:57,061 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 7c5bff6c-6f9f-4a2a-ac57-3c8f373bcac2 - 192.168.0.12
+2025-07-22 13:41:38,519 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 13:41:38,528 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 13:41:38,716 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 13:41:38,717 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 13:41:38,717 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 7d880586-0992-4652-911b-2deeaf789501 - 192.168.0.12
+2025-07-22 13:44:43,288 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 13:44:43,308 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 13:44:43,537 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 13:44:43,537 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 13:44:43,537 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 771293e2-7eaf-460d-b094-0d653c52fd86 - 192.168.0.12
+2025-07-22 13:45:53,742 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 13:45:53,754 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 13:45:53,986 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 13:45:53,987 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 13:45:53,987 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 2a503a93-69e1-471f-a26a-3932560faa96 - 192.168.0.12
+2025-07-22 13:45:54,571 - __main__ - INFO - SSH Remote Command Executor 시작
+2025-07-22 13:46:37,654 - __main__ - INFO - SSH Remote Command Executor 시작
+2025-07-22 13:47:09,620 - __main__ - INFO - SSH Remote Command Executor 시작
+2025-07-22 13:47:38,602 - __main__ - INFO - SSH Remote Command Executor 시작
+2025-07-22 13:48:27,895 - __main__ - INFO - SSH Remote Command Executor 시작
+2025-07-22 13:48:58,426 - __main__ - INFO - SSH Remote Command Executor 시작
+2025-07-22 13:49:21,007 - __main__ - INFO - SSH Remote Command Executor 시작
+2025-07-22 13:49:41,179 - __main__ - INFO - SSH Remote Command Executor 시작
+2025-07-22 13:50:20,045 - __main__ - INFO - SSH Remote Command Executor 시작
+2025-07-22 13:50:47,030 - __main__ - INFO - SSH Remote Command Executor 시작
+2025-07-22 13:50:47,296 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 13:50:47,297 - runmcp_ssh_executor - WARNING - SSH 키 파일이 존재하지 않습니다: /home/runmcp/app/.ssh/h_web2
+2025-07-22 13:51:19,809 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 13:51:20,153 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 13:51:20,153 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 13:51:47,508 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 13:51:47,518 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 13:51:47,691 - paramiko.transport - INFO - Authentication (publickey) failed.
+2025-07-22 13:51:47,692 - paramiko.transport - ERROR - Unknown exception: q must be exactly 160, 224, or 256 bits long
+2025-07-22 13:51:47,693 - paramiko.transport - ERROR - Traceback (most recent call last):
+2025-07-22 13:51:47,693 - paramiko.transport - ERROR -   File "/home/runmcp/venv/lib/python3.12/site-packages/paramiko/transport.py", line 2220, in run
+2025-07-22 13:51:47,693 - paramiko.transport - ERROR -     handler(m)
+2025-07-22 13:51:47,693 - paramiko.transport - ERROR -   File "/home/runmcp/venv/lib/python3.12/site-packages/paramiko/auth_handler.py", line 404, in _parse_service_accept
+2025-07-22 13:51:47,693 - paramiko.transport - ERROR -     sig = self.private_key.sign_ssh_data(blob, algorithm)
+2025-07-22 13:51:47,693 - paramiko.transport - ERROR -           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-07-22 13:51:47,693 - paramiko.transport - ERROR -   File "/home/runmcp/venv/lib/python3.12/site-packages/paramiko/dsskey.py", line 120, in sign_ssh_data
+2025-07-22 13:51:47,693 - paramiko.transport - ERROR -     ).private_key(backend=default_backend())
+2025-07-22 13:51:47,693 - paramiko.transport - ERROR -       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-07-22 13:51:47,693 - paramiko.transport - ERROR - ValueError: q must be exactly 160, 224, or 256 bits long
+2025-07-22 13:51:47,693 - paramiko.transport - ERROR - 
+2025-07-22 13:51:47,693 - runmcp_ssh_executor - ERROR - SSH 연결 실패: localhost:22 - q must be exactly 160, 224, or 256 bits long
+2025-07-22 13:51:47,693 - runmcp_ssh_executor - ERROR - SSH 세션 생성 실패: localhost - SSH 연결 생성 실패
+2025-07-22 13:52:16,148 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 13:52:16,503 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 13:52:16,504 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 13:52:19,503 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 13:52:19,514 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 13:52:19,699 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 13:52:19,700 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 13:52:19,700 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: b8fe8494-0232-496c-b0dd-2291c7eea2b6 - 192.168.0.12
+2025-07-22 13:53:09,017 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 13:53:09,019 - runmcp_ssh_executor - INFO - SSH 세션 종료: b8fe8494-0232-496c-b0dd-2291c7eea2b6
+2025-07-22 13:54:30,193 - __main__ - INFO - SSH Remote Command Executor 시작
+2025-07-22 13:54:30,478 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 13:54:30,479 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 13:54:32,704 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 13:54:37,056 - __main__ - INFO - SSH Remote Command Executor 시작
+2025-07-22 13:54:37,293 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 13:54:37,293 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 13:56:57,126 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 13:56:57,142 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 13:56:57,324 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 13:56:57,325 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 13:56:57,325 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 9205acf1-1f62-4be3-89ed-a68cf0440fe5 - 192.168.0.12
+2025-07-22 14:00:39,929 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 14:00:39,937 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 14:00:40,163 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 14:00:40,163 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 14:00:40,163 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 1c443882-b4d0-41df-b5fa-342fcc236a3b - 192.168.0.12
+2025-07-22 14:11:20,897 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 14:11:20,898 - runmcp_ssh_executor - INFO - SSH 세션 종료: 9205acf1-1f62-4be3-89ed-a68cf0440fe5
+2025-07-22 14:11:20,898 - runmcp_ssh_executor - INFO - SSH 세션 종료: 1c443882-b4d0-41df-b5fa-342fcc236a3b
+2025-07-22 14:11:21,328 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 14:11:21,328 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 14:11:29,628 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 14:11:29,898 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 14:11:29,898 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 14:11:50,119 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 14:11:50,424 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 14:11:50,424 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 14:11:59,926 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 14:12:00,323 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 14:12:00,324 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 14:12:13,705 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 14:12:14,071 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 14:12:14,071 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 14:12:32,571 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 14:12:32,841 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 14:12:32,841 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 14:12:41,401 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 14:12:41,746 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 14:12:41,746 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 14:12:58,949 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 14:12:59,206 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 14:12:59,206 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 14:13:06,562 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 14:13:06,913 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 14:13:06,913 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 14:13:51,260 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 14:13:51,279 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 14:13:51,530 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 14:13:51,530 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 14:13:51,530 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: f4321f28-848f-4cc4-b83b-16fef4e43e70 - 192.168.0.12
+2025-07-22 14:15:13,600 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 14:15:13,601 - runmcp_ssh_executor - INFO - SSH 세션 종료: f4321f28-848f-4cc4-b83b-16fef4e43e70
+2025-07-22 14:15:14,106 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 14:15:14,107 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 14:17:55,089 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 14:17:55,121 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 14:17:55,347 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 14:17:55,348 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 14:17:55,348 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 94e53d90-a56f-4f71-9728-3cd330a8f21d - 192.168.0.12
+2025-07-22 14:18:56,495 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 14:18:56,496 - runmcp_ssh_executor - INFO - SSH 세션 종료: 94e53d90-a56f-4f71-9728-3cd330a8f21d
+2025-07-22 14:18:56,911 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 14:18:56,912 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 14:19:09,035 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 14:19:09,456 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 14:19:09,456 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 14:19:42,913 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 14:19:43,363 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 14:19:43,363 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 14:19:48,811 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 14:19:48,821 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 14:19:49,013 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 14:19:49,013 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 14:19:49,013 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 648e4175-ab72-4881-83e2-3f149e31fa9a - 192.168.0.12
+2025-07-22 14:20:06,539 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 14:20:06,540 - runmcp_ssh_executor - INFO - SSH 세션 종료: 648e4175-ab72-4881-83e2-3f149e31fa9a
+2025-07-22 14:20:07,075 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 14:20:07,075 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 14:20:15,886 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 14:20:37,736 - __main__ - INFO - SSH Remote Command Executor 시작
+2025-07-22 14:20:38,055 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 14:20:38,055 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 14:21:11,358 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 14:21:11,864 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 14:21:11,865 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 14:21:27,479 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 14:21:27,750 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 14:21:27,750 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 14:21:34,700 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 14:21:35,025 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 14:21:35,025 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 14:21:44,069 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 14:21:46,711 - __main__ - INFO - SSH Remote Command Executor 시작1234
+2025-07-22 14:21:46,951 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 14:21:46,951 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 14:22:00,075 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 14:22:00,380 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 14:22:00,381 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 14:23:05,829 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 14:23:24,910 - __main__ - INFO - SSH Remote Command Executor 시작
+2025-07-22 14:23:25,185 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 14:23:25,185 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 14:23:28,671 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 14:23:28,911 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 14:23:28,912 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 14:23:34,246 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 14:23:34,257 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 14:23:34,450 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 14:23:34,451 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 14:23:34,451 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: d510ab5a-6198-4176-ade3-e2d99f5e1813 - 192.168.0.12
+2025-07-22 14:24:40,285 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 14:24:40,286 - runmcp_ssh_executor - INFO - SSH 세션 종료: d510ab5a-6198-4176-ade3-e2d99f5e1813
+2025-07-22 14:24:40,747 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 14:24:40,748 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 14:24:42,258 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 14:24:45,835 - __main__ - INFO - SSH Remote Command Executor 시작1234
+2025-07-22 14:24:46,087 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 14:24:46,087 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 14:24:51,124 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 14:24:51,377 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 14:24:51,377 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 14:25:25,921 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 14:25:26,344 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 14:25:26,345 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 14:25:33,308 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 14:25:33,581 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 14:25:33,582 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 14:25:33,989 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 14:25:36,535 - __main__ - INFO - SSH Remote Command Executor 시작
+2025-07-22 14:25:36,802 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 14:25:36,802 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 14:25:42,490 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 14:25:42,818 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 14:25:42,818 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 14:25:50,015 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 14:25:50,024 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 14:25:50,201 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 14:25:50,202 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 14:25:50,202 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: f97ad3d4-e67c-4171-bb14-a8c593fdd612 - 192.168.0.12
+2025-07-22 14:27:47,747 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 14:27:47,757 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 14:27:47,983 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 14:27:47,983 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 14:27:47,984 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 4d7f4e9f-dd60-4139-a9f6-127e2047d9bc - 192.168.0.12
+2025-07-22 14:30:15,391 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 14:30:15,400 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 14:30:15,626 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 14:30:15,626 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 14:30:15,626 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 21841aa5-cd11-44f8-8289-9639b37f96df - 192.168.0.12
+2025-07-22 14:31:26,978 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 14:31:26,979 - runmcp_ssh_executor - INFO - SSH 세션 종료: f97ad3d4-e67c-4171-bb14-a8c593fdd612
+2025-07-22 14:31:26,979 - runmcp_ssh_executor - INFO - SSH 세션 종료: 4d7f4e9f-dd60-4139-a9f6-127e2047d9bc
+2025-07-22 14:31:26,979 - runmcp_ssh_executor - INFO - SSH 세션 종료: 21841aa5-cd11-44f8-8289-9639b37f96df
+2025-07-22 14:31:29,266 - __main__ - INFO - SSH Remote Command Executor 시작
+2025-07-22 14:31:29,550 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 14:31:29,551 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 14:42:32,472 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 14:42:32,849 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 14:42:32,849 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 14:42:58,108 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 14:42:58,357 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 14:42:58,357 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 14:43:10,152 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 14:43:10,650 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 14:43:10,651 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 14:45:04,692 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 14:45:05,157 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 14:45:05,158 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 14:45:08,059 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 14:45:08,069 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 14:45:08,244 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 14:45:08,244 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 14:45:08,244 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 310fb331-7bc9-462d-b1a1-29e180120738 - 192.168.0.12
+2025-07-22 14:46:10,842 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 14:46:10,856 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 14:46:11,037 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 14:46:11,037 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 14:46:11,037 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 014d166c-f2a8-4c8e-b858-83bfd94aaab7 - 192.168.0.12
+2025-07-22 14:47:16,774 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 14:47:16,785 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 14:47:16,971 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 14:47:16,971 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 14:47:16,971 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 6f3ae529-e57f-4242-a098-90d817d9087f - 192.168.0.12
+2025-07-22 14:47:47,128 - runmcp_ssh_executor - INFO - 명령어 실행 완료: pwd (exit_code: 0)
+2025-07-22 14:48:17,321 - runmcp_ssh_executor - INFO - 명령어 실행 완료: ls -al (exit_code: 0)
+2025-07-22 14:49:30,789 - runmcp_ssh_executor - INFO - 명령어 실행 완료: ps -ef (exit_code: 0)
+2025-07-22 14:50:06,582 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 14:50:06,601 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 14:50:06,794 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 14:50:06,795 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 14:50:06,795 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: de1fa6eb-2b5a-44b8-8a1c-732aa2678fe8 - 192.168.0.12
+2025-07-22 14:50:59,617 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 14:50:59,642 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 14:50:59,872 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 14:50:59,873 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 14:50:59,873 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: d5ad373c-b61e-4adf-8187-ccf3a1a98e0a - 192.168.0.12
+2025-07-22 14:51:00,017 - runmcp_ssh_executor - INFO - 대화형 쉘 시작 시도: d5ad373c-b61e-4adf-8187-ccf3a1a98e0a
+2025-07-22 14:51:00,018 - runmcp_ssh_executor - INFO - invoke_shell 호출 시작...
+2025-07-22 14:51:00,038 - runmcp_ssh_executor - INFO - invoke_shell 완료: 0.02초 소요
+2025-07-22 14:51:00,041 - runmcp_ssh_executor - INFO - 쉘 채널 생성 완료, 채널 ID: 0
+2025-07-22 14:51:00,041 - runmcp_ssh_executor - INFO - 쉘 채널 생성 완료, 초기 출력 읽기 시작
+2025-07-22 14:51:00,342 - runmcp_ssh_executor - INFO - 초기 출력 읽기 완료, 길이: 880
+2025-07-22 14:51:00,343 - runmcp_ssh_executor - INFO - 대화형 쉘 시작 완료: d5ad373c-b61e-4adf-8187-ccf3a1a98e0a, 프롬프트: [?2004h]0;parallels@hk-web2: ~[01;32mparallels@hk-web2[00m:[01;34m~[00m$
+2025-07-22 14:51:38,853 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls -al
+2025-07-22 14:51:42,824 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls
+2025-07-22 14:51:43,876 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls -al
+2025-07-22 14:51:49,240 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: sudo su -
+2025-07-22 14:51:53,309 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: Kks718@K
+2025-07-22 14:51:55,656 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls -al
+2025-07-22 14:51:58,556 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: exit
+2025-07-22 14:52:01,000 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls -al
+2025-07-22 14:53:35,312 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 14:53:35,314 - runmcp_ssh_executor - INFO - SSH 세션 종료: 310fb331-7bc9-462d-b1a1-29e180120738
+2025-07-22 14:53:35,314 - runmcp_ssh_executor - INFO - SSH 세션 종료: 014d166c-f2a8-4c8e-b858-83bfd94aaab7
+2025-07-22 14:53:35,314 - runmcp_ssh_executor - INFO - SSH 세션 종료: 6f3ae529-e57f-4242-a098-90d817d9087f
+2025-07-22 14:53:35,314 - runmcp_ssh_executor - INFO - SSH 세션 종료: de1fa6eb-2b5a-44b8-8a1c-732aa2678fe8
+2025-07-22 14:53:35,316 - runmcp_ssh_executor - INFO - SSH 세션 종료: d5ad373c-b61e-4adf-8187-ccf3a1a98e0a
+2025-07-22 14:53:35,843 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 14:53:35,843 - runmcp_ssh_executor - WARNING - SSH 키 파일이 존재하지 않습니다: /home/runmcp/app/.ssh/h_web2
+2025-07-22 14:54:03,496 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 14:54:03,883 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 14:54:03,884 - runmcp_ssh_executor - WARNING - SSH 키 파일이 존재하지 않습니다: /home/runmcp/app/.ssh/h_web2
+2025-07-22 14:54:15,761 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 14:54:16,013 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 14:54:16,013 - runmcp_ssh_executor - WARNING - SSH 키 파일이 존재하지 않습니다: /home/runmcp/app/.ssh/h_web2
+2025-07-22 14:54:30,268 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 14:54:30,526 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 14:54:30,526 - runmcp_ssh_executor - WARNING - SSH 키 파일이 존재하지 않습니다: /home/runmcp/app/.ssh/h_web2
+2025-07-22 14:56:50,735 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 14:56:51,090 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 14:56:51,091 - runmcp_ssh_executor - WARNING - SSH 키 파일이 존재하지 않습니다: /home/runmcp/app/.ssh/h_web2
+2025-07-22 14:56:57,142 - runmcp_ssh_executor - INFO - SSH 키 파일이 없어서 SSH 에이전트 사용
+2025-07-22 14:56:57,151 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 14:56:57,210 - runmcp_ssh_executor - ERROR - SSH 연결 실패: 192.168.0.12:22 - No authentication methods available
+2025-07-22 14:56:57,210 - runmcp_ssh_executor - ERROR - SSH 세션 생성 실패: 192.168.0.12 - SSH 연결 생성 실패
+2025-07-22 14:57:06,397 - runmcp_ssh_executor - INFO - SSH 키 파일이 없어서 SSH 에이전트 사용
+2025-07-22 14:57:06,402 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 14:57:06,460 - runmcp_ssh_executor - ERROR - SSH 연결 실패: 192.168.0.12:22 - No authentication methods available
+2025-07-22 14:57:06,460 - runmcp_ssh_executor - ERROR - SSH 세션 생성 실패: 192.168.0.12 - SSH 연결 생성 실패
+2025-07-22 14:57:16,645 - runmcp_ssh_executor - INFO - SSH 키 파일이 없어서 SSH 에이전트 사용
+2025-07-22 14:57:16,653 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 14:57:16,713 - runmcp_ssh_executor - ERROR - SSH 연결 실패: 192.168.0.12:22 - No authentication methods available
+2025-07-22 14:57:16,713 - runmcp_ssh_executor - ERROR - SSH 세션 생성 실패: 192.168.0.12 - SSH 연결 생성 실패
+2025-07-22 14:59:24,837 - runmcp_ssh_executor - INFO - SSH 키 파일이 없어서 SSH 에이전트 사용
+2025-07-22 14:59:24,847 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 14:59:24,908 - runmcp_ssh_executor - ERROR - SSH 연결 실패: 192.168.0.12:22 - No authentication methods available
+2025-07-22 14:59:24,909 - runmcp_ssh_executor - ERROR - SSH 세션 생성 실패: 192.168.0.12 - SSH 연결 생성 실패
+2025-07-22 14:59:31,201 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 14:59:32,911 - __main__ - INFO - SSH Remote Command Executor 시작
+2025-07-22 14:59:33,216 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 14:59:33,216 - runmcp_ssh_executor - WARNING - SSH 키 파일이 존재하지 않습니다: /home/runmcp/app/.ssh/h_web2
+2025-07-22 14:59:49,176 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 14:59:49,455 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 14:59:49,456 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 14:59:53,036 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 14:59:53,046 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 14:59:53,223 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 14:59:53,224 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 14:59:53,224 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 3343e3ad-59dd-4420-9920-55fe80147c74 - 192.168.0.12
+2025-07-22 14:59:53,283 - runmcp_ssh_executor - INFO - 대화형 쉘 시작 시도: 3343e3ad-59dd-4420-9920-55fe80147c74
+2025-07-22 14:59:53,283 - runmcp_ssh_executor - INFO - invoke_shell 호출 시작...
+2025-07-22 14:59:53,285 - runmcp_ssh_executor - INFO - invoke_shell 완료: 0.00초 소요
+2025-07-22 14:59:53,285 - runmcp_ssh_executor - INFO - 쉘 채널 생성 완료, 채널 ID: 0
+2025-07-22 14:59:53,285 - runmcp_ssh_executor - INFO - 쉘 채널 생성 완료, 초기 출력 읽기 시작
+2025-07-22 14:59:53,585 - runmcp_ssh_executor - INFO - 초기 출력 읽기 완료, 길이: 843
+2025-07-22 14:59:53,585 - runmcp_ssh_executor - INFO - 대화형 쉘 시작 완료: 3343e3ad-59dd-4420-9920-55fe80147c74, 프롬프트: 0;parallels@hk-web2: ~parallels@hk-web2:~$
+2025-07-22 14:59:59,759 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls -al
+2025-07-22 15:00:01,084 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ifconfig
+2025-07-22 15:00:03,465 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls
+2025-07-22 15:00:05,373 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls
+2025-07-22 15:00:07,392 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ifconfig
+2025-07-22 15:00:07,742 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls
+2025-07-22 15:01:56,209 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ps -ef
+2025-07-22 15:01:58,489 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls -al
+2025-07-22 15:02:02,848 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 15:02:02,849 - runmcp_ssh_executor - INFO - SSH 세션 종료: 3343e3ad-59dd-4420-9920-55fe80147c74
+2025-07-22 15:02:03,323 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 15:02:03,323 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 15:02:30,230 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 15:02:30,514 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 15:02:30,515 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 15:02:47,450 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 15:02:47,782 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 15:02:47,782 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 15:03:11,988 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 15:03:12,471 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 15:03:12,472 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 15:03:28,959 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 15:03:29,229 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 15:03:29,230 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 15:04:02,115 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 15:04:02,504 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 15:04:02,505 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 15:06:13,237 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 15:06:13,654 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 15:06:13,654 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 15:06:33,736 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 15:07:56,185 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 15:07:56,185 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 15:08:02,051 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 15:08:02,067 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 15:08:02,266 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 15:08:02,267 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 15:08:02,268 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 36130275-990d-49ba-a926-1df23a15c3b0 - 192.168.0.12
+2025-07-22 15:08:02,357 - runmcp_ssh_executor - INFO - 대화형 쉘 시작 시도: 36130275-990d-49ba-a926-1df23a15c3b0
+2025-07-22 15:08:02,359 - runmcp_ssh_executor - INFO - invoke_shell 호출 시작...
+2025-07-22 15:08:02,384 - runmcp_ssh_executor - INFO - invoke_shell 완료: 0.03초 소요
+2025-07-22 15:08:02,384 - runmcp_ssh_executor - INFO - 쉘 채널 생성 완료, 채널 ID: 0
+2025-07-22 15:08:02,385 - runmcp_ssh_executor - INFO - 쉘 채널 생성 완료, 초기 출력 읽기 시작
+2025-07-22 15:08:02,685 - runmcp_ssh_executor - INFO - 초기 출력 읽기 완료, 길이: 843
+2025-07-22 15:08:02,685 - runmcp_ssh_executor - INFO - 대화형 쉘 시작 완료: 36130275-990d-49ba-a926-1df23a15c3b0, 프롬프트: 0;parallels@hk-web2: ~parallels@hk-web2:~$
+2025-07-22 15:08:05,810 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls -al
+2025-07-22 15:08:07,099 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls
+2025-07-22 15:08:09,191 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: pwd
+2025-07-22 15:08:14,722 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: sudo s u-
+2025-07-22 15:08:20,654 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: dkjfdlkfj
+2025-07-22 15:08:23,025 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls
+2025-07-22 15:08:25,521 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: dkfjdkf
+2025-07-22 15:08:27,794 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: dkfjdkfj
+2025-07-22 15:08:33,274 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: sudo su -
+2025-07-22 15:08:36,361 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: Kks718@K
+2025-07-22 15:08:38,543 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls -al
+2025-07-22 15:08:40,555 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ifconfig
+2025-07-22 15:08:41,756 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls
+2025-07-22 15:08:44,722 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: exit
+2025-07-22 15:08:45,816 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls
+2025-07-22 15:09:40,813 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ifconfig
+2025-07-22 15:09:45,992 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls
+2025-07-22 15:09:48,140 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: pwd
+2025-07-22 15:09:49,372 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls
+2025-07-22 15:09:50,244 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls -al
+2025-07-22 15:09:54,464 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls
+2025-07-22 15:11:36,596 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 15:11:36,598 - runmcp_ssh_executor - INFO - SSH 세션 종료: 36130275-990d-49ba-a926-1df23a15c3b0
+2025-07-22 15:11:37,038 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 15:11:37,038 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 15:12:02,662 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 15:12:02,960 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 15:12:02,961 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 15:12:18,739 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 15:12:19,118 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 15:12:19,118 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 15:12:34,882 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 15:12:35,151 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 15:12:35,151 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 15:15:21,054 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 15:17:17,613 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 15:17:17,614 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 15:17:42,235 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 15:17:42,244 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 15:17:42,421 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 15:17:42,421 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 15:17:42,421 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: fdf75e2d-7325-4fdc-927b-3084d343a59d - 192.168.0.12
+2025-07-22 15:18:12,715 - runmcp_ssh_executor - INFO - 명령어 실행 완료: pwd (exit_code: 0)
+2025-07-22 15:18:42,916 - runmcp_ssh_executor - INFO - 명령어 실행 완료: ls -al (exit_code: 0)
+2025-07-22 15:19:13,254 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 15:19:13,262 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 15:19:13,499 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 15:19:13,500 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 15:19:13,500 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 828114be-e91e-4d01-9145-986a563053bf - 192.168.0.12
+2025-07-22 15:19:13,611 - runmcp_ssh_executor - INFO - 대화형 쉘 시작 시도: 828114be-e91e-4d01-9145-986a563053bf
+2025-07-22 15:19:13,612 - runmcp_ssh_executor - INFO - invoke_shell 호출 시작...
+2025-07-22 15:19:13,614 - runmcp_ssh_executor - INFO - invoke_shell 완료: 0.00초 소요
+2025-07-22 15:19:13,614 - runmcp_ssh_executor - INFO - 쉘 채널 생성 완료, 채널 ID: 0
+2025-07-22 15:19:13,614 - runmcp_ssh_executor - INFO - 쉘 채널 생성 완료, 초기 출력 읽기 시작
+2025-07-22 15:19:13,923 - runmcp_ssh_executor - INFO - 초기 출력 읽기 완료, 길이: 1035
+2025-07-22 15:19:13,923 - runmcp_ssh_executor - INFO - 대화형 쉘 시작 완료: 828114be-e91e-4d01-9145-986a563053bf, 프롬프트: 0;parallels@hk-web2: ~<span style="color: #2ecc71; font-weight: 600">parallels@hk-web2<span style="color: #ffffff">:<span style="color: #4a90e2; font-weight: 600">~<span style="color: #ffffff">$ </span></span></span></span>
+2025-07-22 15:19:23,698 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls -al
+2025-07-22 15:19:25,791 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ifconfig
+2025-07-22 15:19:27,107 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls
+2025-07-22 15:19:32,119 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: cd Public
+2025-07-22 15:19:32,868 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls
+2025-07-22 15:19:35,333 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: cd ..
+2025-07-22 15:19:35,714 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls
+2025-07-22 15:19:51,335 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: pwd
+2025-07-22 15:19:53,440 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls
+2025-07-22 15:19:57,053 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: sudo su -
+2025-07-22 15:19:59,022 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: Kks718@K
+2025-07-22 15:20:00,398 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls
+2025-07-22 15:32:50,065 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 15:32:50,067 - runmcp_ssh_executor - INFO - SSH 세션 종료: fdf75e2d-7325-4fdc-927b-3084d343a59d
+2025-07-22 15:32:50,069 - runmcp_ssh_executor - INFO - SSH 세션 종료: 828114be-e91e-4d01-9145-986a563053bf
+2025-07-22 15:32:50,570 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 15:32:50,571 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 15:33:22,130 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 15:33:22,517 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 15:33:22,517 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 15:33:30,888 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 15:37:11,502 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 15:37:11,503 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 15:37:35,244 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 15:37:35,254 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 15:37:35,437 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 15:37:35,438 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 15:37:35,438 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 5b9dd859-6fa4-4bf6-82da-220fa69da7c2 - 192.168.0.12
+2025-07-22 15:37:35,504 - runmcp_ssh_executor - INFO - 대화형 쉘 시작 시도: 5b9dd859-6fa4-4bf6-82da-220fa69da7c2
+2025-07-22 15:37:35,504 - runmcp_ssh_executor - INFO - invoke_shell 호출 시작...
+2025-07-22 15:37:35,513 - runmcp_ssh_executor - INFO - invoke_shell 완료: 0.01초 소요
+2025-07-22 15:37:35,513 - runmcp_ssh_executor - INFO - 쉘 채널 생성 완료, 채널 ID: 0
+2025-07-22 15:37:35,513 - runmcp_ssh_executor - INFO - 쉘 채널 생성 완료, 초기 출력 읽기 시작
+2025-07-22 15:37:35,814 - runmcp_ssh_executor - INFO - 초기 출력 읽기 완료, 길이: 1035
+2025-07-22 15:37:35,814 - runmcp_ssh_executor - INFO - 대화형 쉘 시작 완료: 5b9dd859-6fa4-4bf6-82da-220fa69da7c2, 프롬프트: 0;parallels@hk-web2: ~<span style="color: #2ecc71; font-weight: 600">parallels@hk-web2<span style="color: #ffffff">:<span style="color: #4a90e2; font-weight: 600">~<span style="color: #ffffff">$ </span></span></span></span>
+2025-07-22 15:37:41,734 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 15:37:41,741 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 15:37:41,920 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 15:37:41,921 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.12:22
+2025-07-22 15:37:41,921 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 5512c1b7-233a-4878-84fa-8658ab2e3b4e - 192.168.0.12
+2025-07-22 15:37:42,103 - runmcp_ssh_executor - INFO - 대화형 쉘 시작 시도: 5512c1b7-233a-4878-84fa-8658ab2e3b4e
+2025-07-22 15:37:42,103 - runmcp_ssh_executor - INFO - invoke_shell 호출 시작...
+2025-07-22 15:37:42,105 - runmcp_ssh_executor - INFO - invoke_shell 완료: 0.00초 소요
+2025-07-22 15:37:42,105 - runmcp_ssh_executor - INFO - 쉘 채널 생성 완료, 채널 ID: 0
+2025-07-22 15:37:42,105 - runmcp_ssh_executor - INFO - 쉘 채널 생성 완료, 초기 출력 읽기 시작
+2025-07-22 15:37:42,406 - runmcp_ssh_executor - INFO - 초기 출력 읽기 완료, 길이: 1035
+2025-07-22 15:37:42,406 - runmcp_ssh_executor - INFO - 대화형 쉘 시작 완료: 5512c1b7-233a-4878-84fa-8658ab2e3b4e, 프롬프트: 0;parallels@hk-web2: ~<span style="color: #2ecc71; font-weight: 600">parallels@hk-web2<span style="color: #ffffff">:<span style="color: #4a90e2; font-weight: 600">~<span style="color: #ffffff">$ </span></span></span></span>
+2025-07-22 15:42:24,989 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 15:42:24,992 - runmcp_ssh_executor - INFO - SSH 세션 종료: 5b9dd859-6fa4-4bf6-82da-220fa69da7c2
+2025-07-22 15:42:24,992 - runmcp_ssh_executor - INFO - SSH 세션 종료: 5512c1b7-233a-4878-84fa-8658ab2e3b4e
+2025-07-22 15:42:27,461 - __main__ - INFO - SSH Remote Command Executor 시작
+2025-07-22 15:42:27,731 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 15:42:27,731 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 15:42:40,979 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 15:42:41,231 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 15:42:41,231 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 15:42:49,227 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 15:42:50,728 - __main__ - INFO - SSH Remote Command Executor 시작
+2025-07-22 15:42:50,997 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 15:42:50,997 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 15:47:56,176 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 15:47:57,579 - __main__ - INFO - SSH Remote Command Executor 시작
+2025-07-22 15:47:57,843 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 15:47:57,843 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 15:54:31,512 - runmcp_ssh_executor - INFO - SSH 키 설치 시작: parallels@192.168.0.11:22
+2025-07-22 15:55:01,556 - runmcp_ssh_executor - ERROR - SSH 키 설치 오류: timed out
+2025-07-22 16:01:07,007 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 16:01:07,416 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 16:01:07,417 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 16:02:44,745 - runmcp_ssh_executor - INFO - SSH 키 설치 시작: parallels@192.168.0.11:22
+2025-07-22 16:03:14,779 - runmcp_ssh_executor - ERROR - SSH 키 설치 오류: timed out
+2025-07-22 16:03:23,142 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 16:03:23,480 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 16:03:23,480 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 16:03:38,525 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 16:03:38,788 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 16:03:38,788 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 16:03:48,690 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 16:03:48,951 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 16:03:48,952 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 16:03:59,394 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 16:03:59,644 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 16:03:59,644 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 16:04:28,731 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 16:04:29,128 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 16:04:29,128 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 16:08:40,839 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 16:08:42,222 - __main__ - INFO - SSH Remote Command Executor 시작
+2025-07-22 16:08:42,502 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 16:08:42,502 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 16:09:40,651 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 16:09:41,906 - __main__ - INFO - SSH Remote Command Executor 시작
+2025-07-22 16:09:42,179 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 16:09:42,180 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 16:10:12,415 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 16:10:12,757 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 16:10:12,757 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 16:10:17,828 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 16:10:18,105 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 16:10:18,105 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 16:10:29,856 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 16:10:30,114 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 16:10:30,115 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 16:10:31,528 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 16:10:31,830 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 16:10:31,830 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 16:10:34,267 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 16:10:58,527 - __main__ - INFO - SSH Remote Command Executor 시작
+2025-07-22 16:10:58,773 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 16:10:58,773 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 16:11:04,054 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 17:09:12,601 - __main__ - INFO - SSH Remote Command Executor 시작
+2025-07-22 17:09:12,999 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 17:09:12,999 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 17:11:07,662 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 17:11:08,144 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 17:11:08,145 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 17:12:00,507 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 17:12:00,764 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 17:12:00,764 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 17:13:05,414 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 17:13:05,782 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 17:13:05,782 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 17:13:37,851 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 17:13:38,111 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 17:13:38,111 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 17:13:49,142 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 17:13:49,389 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 17:13:49,390 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 17:14:07,727 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 17:14:08,064 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 17:14:08,064 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 17:16:09,493 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 17:16:09,926 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 17:16:09,926 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 17:17:22,576 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 17:17:22,894 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 17:17:22,894 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 17:17:40,971 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 17:17:41,243 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 17:17:41,244 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 17:17:51,158 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 17:17:51,414 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 17:17:51,414 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 17:18:51,879 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 17:18:52,187 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 17:18:52,187 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 17:21:26,735 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 17:21:27,070 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 17:21:27,070 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 17:21:34,922 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 17:21:35,181 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 17:21:35,181 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 17:21:40,901 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 17:21:41,147 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 17:21:41,147 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 17:22:10,025 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 17:22:10,303 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 17:22:10,303 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 17:22:22,527 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 17:22:22,795 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 17:22:22,795 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 17:22:31,724 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 17:22:32,005 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 17:22:32,005 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 17:23:32,710 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 17:23:33,096 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 17:23:33,097 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 17:23:40,667 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 17:23:40,926 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 17:23:40,926 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 17:24:01,467 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 17:24:01,742 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 17:24:01,742 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 17:25:03,436 - runmcp_ssh_executor - INFO - SSH 키 설치 시작: parallels@192.168.0.17:22
+2025-07-22 17:25:03,455 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.6p1)
+2025-07-22 17:25:03,603 - paramiko.transport - INFO - Authentication (password) successful!
+2025-07-22 17:25:21,177 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 17:25:21,183 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.6p1)
+2025-07-22 17:25:21,348 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 17:25:21,348 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.17:22
+2025-07-22 17:25:21,348 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: cdd29dca-00d0-4ca9-a076-2dff305132b5 - 192.168.0.17
+2025-07-22 17:26:28,591 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 17:26:28,592 - runmcp_ssh_executor - INFO - SSH 세션 종료: cdd29dca-00d0-4ca9-a076-2dff305132b5
+2025-07-22 17:26:34,233 - __main__ - INFO - SSH Remote Command Executor 시작
+2025-07-22 17:26:34,526 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 17:26:34,526 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 17:27:23,428 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 17:27:25,709 - __main__ - INFO - SSH Remote Command Executor 시작
+2025-07-22 17:27:25,990 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 17:27:25,990 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 17:28:30,113 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 17:28:30,496 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 17:28:30,496 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 17:28:33,565 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 17:28:33,844 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 17:28:33,845 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 17:28:38,017 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 17:28:38,274 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 17:28:38,274 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 17:32:23,744 - runmcp_ssh_executor - INFO - SSH 키 설치 시작: parallels@192.168.0.17:22
+2025-07-22 17:32:23,785 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.6p1)
+2025-07-22 17:32:23,925 - paramiko.transport - INFO - Authentication (password) successful!
+2025-07-22 17:35:54,663 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 17:35:55,051 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 17:35:55,051 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 17:36:17,907 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 17:36:18,157 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 17:36:18,157 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 17:36:37,694 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 17:36:37,951 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 17:36:37,951 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 17:36:58,962 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 17:36:59,333 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 17:36:59,334 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 17:40:44,517 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 17:40:44,897 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 17:40:44,897 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 17:40:52,592 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 17:40:53,694 - __main__ - INFO - SSH Remote Command Executor 시작
+2025-07-22 17:40:53,949 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 17:40:53,949 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 17:41:12,454 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 17:41:13,598 - __main__ - INFO - SSH Remote Command Executor 시작
+2025-07-22 17:41:13,851 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 17:41:13,852 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 17:50:51,443 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 17:50:51,861 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 17:50:51,861 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 17:51:04,957 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 17:51:05,227 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 17:51:05,227 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 17:51:17,695 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 17:51:17,966 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 17:51:17,966 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 17:51:33,437 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 17:51:33,753 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 17:51:33,754 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 17:51:44,659 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 17:51:44,933 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 17:51:44,933 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 17:52:36,016 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 17:52:36,324 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 17:52:36,324 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 17:53:49,572 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 17:53:49,948 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 17:53:49,948 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 17:53:55,313 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 17:53:56,387 - __main__ - INFO - SSH Remote Command Executor 시작
+2025-07-22 17:53:56,637 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 17:53:56,638 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 17:54:08,777 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 21:11:30,583 - __main__ - INFO - SSH Remote Command Executor 시작
+2025-07-22 21:11:30,847 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 21:11:30,848 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 21:14:38,221 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 21:15:19,164 - __main__ - INFO - SSH Remote Command Executor 시작
+2025-07-22 21:15:19,520 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 21:15:19,520 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 21:17:45,348 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 21:17:46,704 - __main__ - INFO - SSH Remote Command Executor 시작
+2025-07-22 21:17:46,988 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 21:17:46,988 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 21:17:57,662 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 21:17:58,820 - __main__ - INFO - SSH Remote Command Executor 시작
+2025-07-22 21:17:59,077 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 21:17:59,077 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 21:18:36,837 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 21:18:37,195 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 21:18:37,196 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 21:18:37,804 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 21:18:38,070 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 21:18:38,070 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 21:18:54,430 - __main__ - INFO - SSH Remote Command Executor 시작
+2025-07-22 21:26:30,563 - runmcp_ssh_executor - INFO - SSH 키 설치 시작: parallels@192.168.0.12:22
+2025-07-22 21:26:30,582 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 21:26:45,327 - runmcp_ssh_executor - INFO - SSH 키 설치 시작: parallels@192.168.0.12:22
+2025-07-22 21:26:45,334 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 21:27:26,737 - runmcp_ssh_executor - INFO - SSH 키 설치 시작: parallels@192.168.0.12:22
+2025-07-22 21:27:26,748 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 21:28:52,969 - runmcp_ssh_executor - INFO - SSH 키 설치 시작: parallels@192.168.0.12:22
+2025-07-22 21:28:52,977 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-07-22 21:30:55,139 - runmcp_ssh_executor - INFO - SSH 키 설치 시작: parallels@39.124.17.9:3033
+2025-07-22 21:31:25,170 - runmcp_ssh_executor - ERROR - SSH 키 설치 오류: timed out
+2025-07-22 21:32:51,958 - runmcp_ssh_executor - INFO - SSH 키 설치 시작: parallels@39.124.17.9:3033
+2025-07-22 21:33:21,991 - runmcp_ssh_executor - ERROR - SSH 키 설치 오류: timed out
+2025-07-22 21:36:43,224 - runmcp_ssh_executor - INFO - SSH 키 설치 시작: parallels@192.168.0.17:22
+2025-07-22 21:36:43,259 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.6p1)
+2025-07-22 21:36:43,398 - paramiko.transport - INFO - Authentication (password) successful!
+2025-07-22 21:37:25,347 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 21:37:25,370 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.6p1)
+2025-07-22 21:37:25,497 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 21:37:25,498 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.17:22
+2025-07-22 21:37:25,498 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 9592babb-ddc2-429f-8012-9d3892c5aebf - 192.168.0.17
+2025-07-22 21:37:55,840 - runmcp_ssh_executor - INFO - 명령어 실행 완료: pwd (exit_code: 0)
+2025-07-22 21:38:26,046 - runmcp_ssh_executor - INFO - 명령어 실행 완료: ls -al (exit_code: 0)
+2025-07-22 21:41:11,930 - runmcp_ssh_executor - INFO - 명령어 실행 완료: ls -al (exit_code: 0)
+2025-07-22 21:41:42,113 - runmcp_ssh_executor - INFO - 명령어 실행 완료: sudo su - (exit_code: 1)
+2025-07-22 21:47:45,320 - runmcp_ssh_executor - INFO - SSH 명령어 실행: 192.168.0.17 - echo "Connection test successful"
+2025-07-22 21:47:45,553 - runmcp_ssh_executor - INFO - 명령어 실행 성공: 192.168.0.17 - echo "Connection test successful"
+2025-07-22 21:47:51,658 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 21:47:51,665 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.6p1)
+2025-07-22 21:47:51,825 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 21:47:51,826 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.17:22
+2025-07-22 21:47:51,826 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: b4153a13-afa8-42f9-8d7f-77d39772133f - 192.168.0.17
+2025-07-22 21:47:51,889 - runmcp_ssh_executor - INFO - 대화형 쉘 시작 시도: b4153a13-afa8-42f9-8d7f-77d39772133f
+2025-07-22 21:47:51,889 - runmcp_ssh_executor - INFO - invoke_shell 호출 시작...
+2025-07-22 21:47:51,894 - runmcp_ssh_executor - INFO - invoke_shell 완료: 0.01초 소요
+2025-07-22 21:47:51,894 - runmcp_ssh_executor - INFO - 쉘 채널 생성 완료, 채널 ID: 0
+2025-07-22 21:47:51,895 - runmcp_ssh_executor - INFO - 쉘 채널 생성 완료, 초기 출력 읽기 시작
+2025-07-22 21:47:52,196 - runmcp_ssh_executor - INFO - 초기 출력 읽기 완료, 길이: 1130
+2025-07-22 21:47:52,196 - runmcp_ssh_executor - INFO - 대화형 쉘 시작 완료: b4153a13-afa8-42f9-8d7f-77d39772133f, 프롬프트: 0;parallels@ubuntu-linux-2404: ~<span style="color: #2ecc71; font-weight: 600">parallels@ubuntu-linux-2404<span style="color: #ffffff">:<span style="color: #4a90e2; font-weight: 600">~<span style="color: #ffffff">$ </span></span></span></span>
+2025-07-22 21:47:57,193 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: l s-al
+2025-07-22 21:47:58,066 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls -al
+2025-07-22 21:48:01,041 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ifconfig
+2025-07-22 21:48:01,656 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls
+2025-07-22 21:53:24,942 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 21:53:24,974 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.6p1)
+2025-07-22 21:53:25,100 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 21:53:25,100 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.17:22
+2025-07-22 21:53:25,100 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 52e91794-56db-4445-a67b-2771cea36658 - 192.168.0.17
+2025-07-22 21:53:25,165 - runmcp_ssh_executor - INFO - 대화형 쉘 시작 시도: 52e91794-56db-4445-a67b-2771cea36658
+2025-07-22 21:53:25,165 - runmcp_ssh_executor - INFO - invoke_shell 호출 시작...
+2025-07-22 21:53:25,172 - runmcp_ssh_executor - INFO - invoke_shell 완료: 0.01초 소요
+2025-07-22 21:53:25,172 - runmcp_ssh_executor - INFO - 쉘 채널 생성 완료, 채널 ID: 0
+2025-07-22 21:53:25,172 - runmcp_ssh_executor - INFO - 쉘 채널 생성 완료, 초기 출력 읽기 시작
+2025-07-22 21:53:25,473 - runmcp_ssh_executor - INFO - 초기 출력 읽기 완료, 길이: 1131
+2025-07-22 21:53:25,473 - runmcp_ssh_executor - INFO - 대화형 쉘 시작 완료: 52e91794-56db-4445-a67b-2771cea36658, 프롬프트: 0;parallels@ubuntu-linux-2404: ~<span style="color: #2ecc71; font-weight: 600">parallels@ubuntu-linux-2404<span style="color: #ffffff">:<span style="color: #4a90e2; font-weight: 600">~<span style="color: #ffffff">$ </span></span></span></span>
+2025-07-22 21:53:34,691 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls -al
+2025-07-22 21:53:38,366 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ifconfig
+2025-07-22 21:53:39,840 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls
+2025-07-22 21:53:43,766 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: pwd
+2025-07-22 22:01:21,203 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 22:01:21,204 - runmcp_ssh_executor - INFO - SSH 세션 종료: 9592babb-ddc2-429f-8012-9d3892c5aebf
+2025-07-22 22:01:21,205 - runmcp_ssh_executor - INFO - SSH 세션 종료: b4153a13-afa8-42f9-8d7f-77d39772133f
+2025-07-22 22:01:21,206 - runmcp_ssh_executor - INFO - SSH 세션 종료: 52e91794-56db-4445-a67b-2771cea36658
+2025-07-22 22:01:22,768 - __main__ - INFO - SSH Remote Command Executor 시작
+2025-07-22 22:01:23,108 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 22:01:23,109 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 22:05:18,889 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 22:05:18,944 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.6p1)
+2025-07-22 22:05:19,108 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 22:05:19,108 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.17:22
+2025-07-22 22:05:19,108 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: d1694023-54a8-41ff-9385-fca7864df4c0 - 192.168.0.17
+2025-07-22 22:05:19,180 - runmcp_ssh_executor - INFO - 대화형 쉘 시작 시도: d1694023-54a8-41ff-9385-fca7864df4c0
+2025-07-22 22:05:19,181 - runmcp_ssh_executor - INFO - invoke_shell 호출 시작...
+2025-07-22 22:05:19,389 - runmcp_ssh_executor - INFO - invoke_shell 완료: 0.21초 소요
+2025-07-22 22:05:19,390 - runmcp_ssh_executor - INFO - 쉘 채널 생성 완료, 채널 ID: 0
+2025-07-22 22:05:19,390 - runmcp_ssh_executor - INFO - 쉘 채널 생성 완료, 초기 출력 읽기 시작
+2025-07-22 22:05:19,693 - runmcp_ssh_executor - INFO - 초기 출력 읽기 완료, 길이: 1131
+2025-07-22 22:05:19,693 - runmcp_ssh_executor - INFO - 대화형 쉘 시작 완료: d1694023-54a8-41ff-9385-fca7864df4c0, 프롬프트: 0;parallels@ubuntu-linux-2404: ~<span style="color: #2ecc71; font-weight: 600">parallels@ubuntu-linux-2404<span style="color: #ffffff">:<span style="color: #4a90e2; font-weight: 600">~<span style="color: #ffffff">$ </span></span></span></span>
+2025-07-22 22:05:24,306 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls -al
+2025-07-22 22:05:26,668 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ifconfig
+2025-07-22 22:05:27,894 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls
+2025-07-22 22:05:30,654 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ps -ef
+2025-07-22 22:05:59,552 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls -al
+2025-07-22 22:06:01,234 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ifconfig
+2025-07-22 22:06:02,799 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: pwd
+2025-07-22 22:06:08,980 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: sudo su -
+2025-07-22 22:06:12,145 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: Kks718@K
+2025-07-22 22:06:13,881 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls -al
+2025-07-22 22:06:14,945 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: pwd
+2025-07-22 22:06:16,350 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: cd /home
+2025-07-22 22:06:16,698 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls
+2025-07-22 22:06:20,210 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: pwd
+2025-07-22 22:06:21,475 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: cd /
+2025-07-22 22:06:21,822 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls
+2025-07-22 22:06:30,807 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: pwd
+2025-07-22 22:06:31,862 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls
+2025-07-22 22:07:59,940 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: history
+2025-07-22 22:08:02,894 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: !1050
+2025-07-22 22:08:06,670 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: !1049
+2025-07-22 22:08:11,038 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: pwd
+2025-07-22 22:08:16,346 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls
+2025-07-22 22:08:21,417 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: cd ..
+2025-07-22 22:08:21,896 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls
+2025-07-22 22:08:23,341 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls -al
+2025-07-22 22:08:25,556 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: pwd
+2025-07-22 22:08:26,332 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls
+2025-07-22 22:08:27,274 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls -al
+2025-07-22 22:08:40,132 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: pwd
+2025-07-22 22:08:40,786 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls
+2025-07-22 22:08:41,963 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls -al
+2025-07-22 22:09:19,270 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls -al
+2025-07-22 22:09:22,149 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ifconfig
+2025-07-22 22:09:23,181 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls
+2025-07-22 22:09:25,703 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: pwd
+2025-07-22 22:09:33,060 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: pwd
+2025-07-22 22:09:35,217 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: mkdir -p aa
+2025-07-22 22:09:35,894 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls
+2025-07-22 22:09:42,167 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: rm -Rf aa
+2025-07-22 22:09:43,734 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls -al
+2025-07-22 22:09:45,213 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls
+2025-07-22 22:09:48,968 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: pwd
+2025-07-22 22:09:50,757 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: cd ..
+2025-07-22 22:09:51,536 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls
+2025-07-22 22:09:55,008 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: cd ~root
+2025-07-22 22:09:55,731 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls
+2025-07-22 22:09:58,658 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: pwd
+2025-07-22 22:09:59,910 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls
+2025-07-22 22:10:13,950 - runmcp_ssh_executor - INFO - 대화형 쉘 종료: d1694023-54a8-41ff-9385-fca7864df4c0
+2025-07-22 22:10:29,193 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 22:10:29,216 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.6p1)
+2025-07-22 22:10:29,335 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 22:10:29,336 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.17:22
+2025-07-22 22:10:29,336 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 3a057097-8fbd-4113-a0de-ccf897aa78d2 - 192.168.0.17
+2025-07-22 22:10:59,528 - runmcp_ssh_executor - INFO - 명령어 실행 완료: pwd (exit_code: 0)
+2025-07-22 22:11:39,376 - runmcp_ssh_executor - INFO - 명령어 실행 완료: ls -al (exit_code: 0)
+2025-07-22 22:12:51,458 - runmcp_ssh_executor - INFO - SSH 명령어 실행: 192.168.0.17 - df -h
+2025-07-22 22:13:16,139 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 22:13:16,178 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.6p1)
+2025-07-22 22:13:16,350 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 22:13:16,351 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.17:22
+2025-07-22 22:13:16,351 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: e3399550-a71f-4523-b4f0-c245944368ae - 192.168.0.17
+2025-07-22 22:13:16,413 - runmcp_ssh_executor - INFO - 대화형 쉘 시작 시도: e3399550-a71f-4523-b4f0-c245944368ae
+2025-07-22 22:13:16,413 - runmcp_ssh_executor - INFO - invoke_shell 호출 시작...
+2025-07-22 22:13:16,451 - runmcp_ssh_executor - INFO - invoke_shell 완료: 0.04초 소요
+2025-07-22 22:13:16,451 - runmcp_ssh_executor - INFO - 쉘 채널 생성 완료, 채널 ID: 0
+2025-07-22 22:13:16,451 - runmcp_ssh_executor - INFO - 쉘 채널 생성 완료, 초기 출력 읽기 시작
+2025-07-22 22:13:16,754 - runmcp_ssh_executor - INFO - 초기 출력 읽기 완료, 길이: 1131
+2025-07-22 22:13:16,754 - runmcp_ssh_executor - INFO - 대화형 쉘 시작 완료: e3399550-a71f-4523-b4f0-c245944368ae, 프롬프트: 0;parallels@ubuntu-linux-2404: ~<span style="color: #2ecc71; font-weight: 600">parallels@ubuntu-linux-2404<span style="color: #ffffff">:<span style="color: #4a90e2; font-weight: 600">~<span style="color: #ffffff">$ </span></span></span></span>
+2025-07-22 22:13:21,573 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: l s-al
+2025-07-22 22:13:23,408 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ifconfig
+2025-07-22 22:13:24,834 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls -al
+2025-07-22 22:13:25,680 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: pwd

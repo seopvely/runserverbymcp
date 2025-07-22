@@ -1,0 +1,1545 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSH 명령어 실행기 (세션 지원)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .form-section {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+        
+        .form-section h3 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #555;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e1e5e9;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            margin-right: 10px;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+        
+        .btn:active {
+            transform: translateY(0);
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
+        }
+        
+        .btn-secondary:hover {
+            box-shadow: 0 10px 20px rgba(108, 117, 125, 0.3);
+        }
+        
+        .btn-success {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+        }
+        
+        .btn-danger {
+            background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+        }
+        
+        .result-section {
+            margin-top: 30px;
+        }
+        
+        .result-box {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .result-box.success {
+            border-left-color: #28a745;
+            background: #d4edda;
+        }
+        
+        .result-box.error {
+            border-left-color: #dc3545;
+            background: #f8d7da;
+        }
+        
+        .result-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .result-status {
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        
+        .status-success {
+            background: #28a745;
+            color: white;
+        }
+        
+        .status-error {
+            background: #dc3545;
+            color: white;
+        }
+        
+        .result-content {
+            font-family: 'Courier New', monospace;
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        .server-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+        
+        .server-card {
+            background: white;
+            border: 2px solid #e1e5e9;
+            border-radius: 10px;
+            padding: 20px;
+            transition: border-color 0.3s ease, transform 0.2s ease;
+            cursor: pointer;
+        }
+        
+        .server-card:hover {
+            border-color: #667eea;
+            transform: translateY(-2px);
+        }
+        
+        .server-card.selected {
+            border-color: #667eea;
+            background: #f0f4ff;
+        }
+        
+        .server-name {
+            font-weight: 600;
+            font-size: 1.1em;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .server-info {
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        .session-info {
+            background: #e3f2fd;
+            border: 1px solid #2196f3;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .session-info h4 {
+            color: #1976d2;
+            margin-bottom: 10px;
+        }
+        
+        .session-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            font-size: 0.9em;
+        }
+        
+        .session-detail {
+            background: white;
+            padding: 8px 12px;
+            border-radius: 5px;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .session-detail strong {
+            color: #333;
+        }
+        
+        .command-history {
+            max-height: 300px;
+            overflow-y: auto;
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+        
+        .history-item {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .history-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .history-command {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .history-timestamp {
+            font-size: 0.8em;
+            color: #666;
+            margin-bottom: 5px;
+        }
+        
+        .history-result {
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            background: #f1f3f4;
+            padding: 8px;
+            border-radius: 4px;
+            max-height: 100px;
+            overflow-y: auto;
+        }
+        
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 15px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .tabs {
+            display: flex;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #e1e5e9;
+        }
+        
+        .tab {
+            padding: 15px 25px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            color: #666;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s ease;
+        }
+        
+        .tab.active {
+            color: #667eea;
+            border-bottom-color: #667eea;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .session-controls {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .no-session {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+            font-style: italic;
+        }
+        
+        /* 터미널 스타일 */
+        .terminal-container {
+            background: #1a1a1a;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            font-family: 'Courier New', monospace;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        
+        .terminal-container.fullscreen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 9999;
+            margin: 0;
+            border-radius: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        
+        .terminal-container.fullscreen .terminal-output {
+            font-size: 14px;
+            line-height: 1.2;
+        }
+        
+        .terminal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            color: #00ff88;
+            font-size: 14px;
+        }
+        
+        .terminal-controls-header {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        
+        .terminal-fullscreen-btn {
+            background: #333;
+            border: 1px solid #555;
+            color: #00ff88;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: background 0.3s;
+        }
+        
+        .terminal-fullscreen-btn:hover {
+            background: #555;
+        }
+        
+        .terminal-output {
+            flex: 1;
+            background: #000;
+            color: #00ff88;
+            padding: 15px;
+            border-radius: 4px;
+            overflow-y: auto;
+            font-size: 13px;
+            line-height: 1.1;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        
+        .terminal-input {
+            display: flex;
+            align-items: center;
+            margin-top: 5px;
+            background: #000;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+        
+        .terminal-prompt {
+            color: #00ff88;
+            margin-right: 8px;
+            font-weight: bold;
+            font-size: 13px;
+        }
+        
+        .terminal-command {
+            flex: 1;
+            background: transparent;
+            border: none;
+            color: #00ff88;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            outline: none;
+            line-height: 1.1;
+        }
+        
+        .terminal-controls {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .terminal-status {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .status-indicator {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+        
+        .status-connected {
+            background-color: #00ff00;
+        }
+        
+        .status-disconnected {
+            background-color: #ff0000;
+        }
+        
+        .status-shell {
+            background-color: #ffaa00;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔧 SSH 명령어 실행기 (세션 지원)</h1>
+            <p>원격 서버에서 안전하게 명령어를 실행하세요 - 지속적인 세션 연결 지원</p>
+        </div>
+        
+        <div class="content">
+            <div class="tabs">
+                <button class="tab active" onclick="showTab('session')">세션 모드</button>
+                <button class="tab" onclick="showTab('terminal')">🖥️ 터미널</button>
+                <button class="tab" onclick="showTab('single')">단일 명령어</button>
+                <button class="tab" onclick="showTab('batch')">배치 명령어</button>
+                <button class="tab" onclick="showTab('servers')">서버 관리</button>
+            </div>
+            
+            <!-- 세션 모드 탭 -->
+            <div id="session" class="tab-content active">
+                <div class="form-section">
+                    <h3>SSH 세션 관리</h3>
+                    
+                    <div id="sessionInfo" style="display: none;">
+                        <div class="session-info">
+                            <h4>🔄 활성 세션</h4>
+                            <div class="session-details" id="sessionDetails">
+                                <!-- 세션 정보가 여기에 표시됩니다 -->
+                            </div>
+                            <div class="session-controls">
+                                <button class="btn btn-danger" onclick="closeSession()">세션 종료</button>
+                                <button class="btn btn-secondary" onclick="refreshSessionInfo()">새로고침</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="noSession" class="no-session">
+                        <h4>📡 SSH 세션을 시작하세요</h4>
+                        <p>서버를 선택하고 세션을 생성하여 지속적인 명령어 실행을 시작할 수 있습니다.</p>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h3>서버 선택</h3>
+                        <div id="serverList" class="server-list">
+                            <!-- 서버 목록이 여기에 로드됩니다 -->
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h3>세션 명령어 실행</h3>
+                        <div class="form-group">
+                            <label for="sessionCommand">실행할 명령어:</label>
+                            <input type="text" id="sessionCommand" class="form-control" placeholder="예: ls -la /home" value="pwd" onkeydown="if(event.key === 'Enter') { executeInSession(); }">
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="sessionTimeout">타임아웃 (초):</label>
+                                <input type="number" id="sessionTimeout" class="form-control" value="30" min="5" max="300">
+                            </div>
+                            <div class="form-group">
+                                <label>
+                                    <input type="checkbox" id="useMasterKey" checked>
+                                    마스터키 사용
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="session-controls">
+                            <button class="btn btn-success" onclick="createSession()" id="createSessionBtn">세션 생성</button>
+                            <button class="btn" onclick="executeInSession()" id="executeSessionBtn" style="display: none;">명령어 실행</button>
+                        </div>
+                    </div>
+                    
+                    <div id="sessionHistory" class="command-history" style="display: none;">
+                        <h4>📜 명령어 히스토리</h4>
+                        <div id="historyList">
+                            <!-- 명령어 히스토리가 여기에 표시됩니다 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 터미널 탭 -->
+            <div id="terminal" class="tab-content">
+                <div class="form-section">
+                    <h3>🖥️ 대화형 터미널</h3>
+                    
+                    <div class="terminal-status">
+                        <div>
+                            <span class="status-indicator status-disconnected" id="connectionStatus"></span>
+                            <span id="connectionText">연결 안됨</span>
+                        </div>
+                        <div>
+                            <span class="status-indicator status-disconnected" id="shellStatus"></span>
+                            <span id="shellText">쉘 비활성</span>
+                        </div>
+                        <div id="sessionInfo">세션: 없음</div>
+                    </div>
+                    
+                    <div class="terminal-controls">
+                        <select id="terminalServerSelect" class="form-select">
+                            <option value="">서버 선택...</option>
+                        </select>
+                        <button id="startTerminalBtn" class="btn btn-primary" onclick="startTerminal()">터미널 시작</button>
+                        <button id="stopTerminalBtn" class="btn btn-danger" onclick="stopTerminal()" style="display:none;">터미널 종료</button>
+                        <div style="margin-left: auto; font-size: 12px; color: #666;">
+                            💡 ESC: 전체화면 종료 | ↑↓: 명령어 히스토리
+                        </div>
+                    </div>
+                    
+                    <div class="terminal-container" id="terminalContainer">
+                        <div class="terminal-header">
+                            <span>SSH Terminal</span>
+                            <div class="terminal-controls-header">
+                                <span id="currentPrompt">$</span>
+                                <button class="terminal-fullscreen-btn" onclick="toggleTerminalFullscreen()" title="전체화면 토글">
+                                    <span id="fullscreenIcon">⛶</span>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="terminal-output" id="terminalOutput">
+                            터미널을 시작하려면 서버를 선택하고 '터미널 시작' 버튼을 클릭하세요.
+                        </div>
+                        
+                        <div class="terminal-input">
+                            <span class="terminal-prompt" id="terminalPrompt">$</span>
+                            <input type="text" class="terminal-command" id="terminalCommand" 
+                                   placeholder="명력어를 입력하세요..." 
+                                   onkeypress="handleTerminalEnter(event)" disabled>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 단일 명령어 탭 -->
+            <div id="single" class="tab-content">
+                <div class="form-section">
+                    <h3>서버 선택</h3>
+                    <div id="serverListSingle" class="server-list">
+                        <!-- 서버 목록이 여기에 로드됩니다 -->
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h3>명령어 실행</h3>
+                    <div class="form-group">
+                        <label for="command">실행할 명령어:</label>
+                        <input type="text" id="command" class="form-control" placeholder="예: ls -la /home" value="ls -la" onkeydown="if(event.key === 'Enter') { executeCommand(); }">
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="timeout">타임아웃 (초):</label>
+                            <input type="number" id="timeout" class="form-control" value="30" min="5" max="300">
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" id="useMasterKeySingle" checked>
+                                마스터키 사용
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <button class="btn" onclick="executeCommand()">명령어 실행</button>
+                </div>
+            </div>
+            
+            <!-- 배치 명령어 탭 -->
+            <div id="batch" class="tab-content">
+                <div class="form-section">
+                    <h3>배치 명령어 실행</h3>
+                    <div class="form-group">
+                        <label for="batchCommand">모든 서버에서 실행할 명령어:</label>
+                        <input type="text" id="batchCommand" class="form-control" placeholder="예: df -h" value="df -h">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="batchTimeout">타임아웃 (초):</label>
+                        <input type="number" id="batchTimeout" class="form-control" value="30" min="5" max="300">
+                    </div>
+                    
+                    <button class="btn" onclick="executeBatchCommand()">배치 실행</button>
+                </div>
+            </div>
+            
+            <!-- 서버 관리 탭 -->
+            <div id="servers" class="tab-content">
+                <div class="form-section">
+                    <h3>서버 정보</h3>
+                    <div id="serverInfo">
+                        <!-- 서버 정보가 여기에 표시됩니다 -->
+                    </div>
+                </div>
+            </div>
+            
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>명령어를 실행하고 있습니다...</p>
+            </div>
+            
+            <div class="result-section" id="resultSection">
+                <!-- 결과가 여기에 표시됩니다 -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // API 기본 URL 설정 (웹 애플리케이션의 프록시 엔드포인트 사용)
+        const API_BASE = '/ssh';
+        
+        let selectedServer = null;
+        let servers = [];
+        let currentSessionId = null;
+        
+        // 페이지 로드 시 서버 목록 가져오기
+        // 전체화면 토글 함수
+        function toggleTerminalFullscreen() {
+            const container = document.getElementById('terminalContainer');
+            const icon = document.getElementById('fullscreenIcon');
+            
+            if (container.classList.contains('fullscreen')) {
+                container.classList.remove('fullscreen');
+                icon.textContent = '⛶';
+                document.body.style.overflow = '';
+            } else {
+                container.classList.add('fullscreen');
+                icon.textContent = '⛷';
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        // ESC 키로 전체화면 종료
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                const container = document.getElementById('terminalContainer');
+                if (container.classList.contains('fullscreen')) {
+                    toggleTerminalFullscreen();
+                }
+            }
+        });
+
+        // 프롬프트에서 HTML 태그 제거하는 함수
+        function sanitizePrompt(prompt) {
+            if (!prompt) return '$';
+            // HTML 태그 제거하고 색상 코드도 제거
+            return prompt.replace(/<[^>]*>/g, '').replace(/\x1b\[[0-9;]*m/g, '').trim() || '$';
+        }
+
+        // 출력에서 ANSI 제어 시퀀스 및 HTML 태그를 제거하는 함수
+        function sanitizeOutput(text) {
+            if (!text) return '';
+            // 1) OSC / CSI / 기타 ANSI 시퀀스 제거
+            const ansiRegex = /\x1b(?:[@-Z\\-_]|\[[0-?]*[ -/]*[@-~]|\].*?\x07)/g;
+            // 2) HTML 태그 제거 (<span ...>)
+            const htmlRegex = /<[^>]*>/g;
+            return text.replace(ansiRegex, '').replace(htmlRegex, '');
+        }
+
+        window.onload = function() {
+            loadServers();
+        };
+        
+        // 탭 전환
+        function showTab(tabName) {
+            // 모든 탭 비활성화
+            document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+            
+            // 선택된 탭 활성화
+            event.target.classList.add('active');
+            document.getElementById(tabName).classList.add('active');
+            
+            // 세션 탭으로 이동 시 세션 정보 새로고침
+            if (tabName === 'session') {
+                if (currentSessionId) {
+                    refreshSessionInfo();
+                }
+            }
+        }
+        
+        // 서버 목록 로드
+        async function loadServers() {
+            try {
+                const response = await fetch(`${API_BASE}/servers`);
+                const data = await response.json();
+                servers = data.servers || [];
+                
+                displayServers();
+                displayServerInfo();
+                return servers; // 터미널에서 사용하기 위해 반환
+            } catch (error) {
+                console.error('서버 목록 로드 실패:', error);
+                showError('서버 목록을 불러올 수 없습니다. SSH Executor 서버가 실행 중인지 확인해주세요.');
+                return [];
+            }
+        }
+        
+        // 서버 목록 표시
+        function displayServers() {
+            const serverList = document.getElementById('serverList');
+            const serverListSingle = document.getElementById('serverListSingle');
+            
+            [serverList, serverListSingle].forEach(container => {
+                if (container) {
+                    container.innerHTML = '';
+                    
+                    servers.forEach(server => {
+                        const serverCard = document.createElement('div');
+                        serverCard.className = 'server-card';
+                        serverCard.onclick = () => selectServer(server);
+                        
+                        let serverTypeIcon = '';
+                        if (server.name.includes('web')) {
+                            serverTypeIcon = '🌐';
+                        } else if (server.name.includes('db')) {
+                            serverTypeIcon = '🗄️';
+                        } else if (server.name.includes('app')) {
+                            serverTypeIcon = '📱';
+                        } else if (server.name.includes('name')) {
+                            serverTypeIcon = '📛';
+                        }
+                        
+                        serverCard.innerHTML = `
+                            <div class="server-name">${serverTypeIcon} ${server.name}</div>
+                            <div class="server-info">
+                                <div><strong>호스트:</strong> ${server.host}:${server.port}</div>
+                                <div><strong>사용자:</strong> ${server.username}</div>
+                                <div><strong>설명:</strong> ${server.description}</div>
+                            </div>
+                        `;
+                        
+                        container.appendChild(serverCard);
+                    });
+                }
+            });
+        }
+        
+        // 서버 선택
+        function selectServer(server) {
+            selectedServer = server;
+            
+            // 모든 서버 카드에서 선택 상태 제거
+            document.querySelectorAll('.server-card').forEach(card => {
+                card.classList.remove('selected');
+            });
+            
+            // 선택된 서버 카드에 선택 상태 추가
+            event.target.closest('.server-card').classList.add('selected');
+        }
+        
+        // 세션 생성
+        async function createSession() {
+            if (!selectedServer) {
+                showError('세션을 생성할 서버를 선택해주세요.');
+                return;
+            }
+            
+            showLoading(true);
+            
+            try {
+                const response = await fetch(`${API_BASE}/session/create`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        host: selectedServer.host,
+                        port: selectedServer.port,
+                        username: selectedServer.username,
+                        timeout: parseInt(document.getElementById('sessionTimeout').value),
+                        use_master_key: document.getElementById('useMasterKey').checked
+                    })
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    currentSessionId = result.session_id;
+                    showSessionInfo();
+                    showSuccess(`세션이 성공적으로 생성되었습니다: ${result.session_id}`);
+                } else {
+                    showError(`세션 생성 실패: ${result.message}`);
+                }
+            } catch (error) {
+                console.error('세션 생성 실패:', error);
+                showError('세션 생성 중 오류가 발생했습니다.');
+            } finally {
+                showLoading(false);
+            }
+        }
+        
+        // 세션 내에서 명령어 실행
+        async function executeInSession() {
+            if (!currentSessionId) {
+                showError('활성 세션이 없습니다. 먼저 세션을 생성해주세요.');
+                return;
+            }
+            
+            const command = document.getElementById('sessionCommand').value.trim();
+            if (!command) {
+                showError('실행할 명령어를 입력해주세요.');
+                return;
+            }
+            
+            showLoading(true);
+            
+            try {
+                const response = await fetch(`${API_BASE}/session/${currentSessionId}/execute`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        command: command,
+                        timeout: parseInt(document.getElementById('sessionTimeout').value)
+                    })
+                });
+                
+                const result = await response.json();
+                displaySessionResult(result);
+                refreshSessionInfo();
+            } catch (error) {
+                console.error('세션 명령어 실행 실패:', error);
+                showError('세션 명령어 실행 중 오류가 발생했습니다.');
+            } finally {
+                showLoading(false);
+            }
+        }
+        
+        // 세션 종료
+        async function closeSession() {
+            if (!currentSessionId) {
+                showError('종료할 세션이 없습니다.');
+                return;
+            }
+            
+            try {
+                const response = await fetch(`${API_BASE}/session_delete/${currentSessionId}`, {
+                    method: 'DELETE'
+                });
+                
+                if (response.ok) {
+                    showSuccess('세션이 종료되었습니다.');
+                    hideSessionInfo();
+                    currentSessionId = null;
+                } else {
+                    showError('세션 종료에 실패했습니다.');
+                }
+            } catch (error) {
+                console.error('세션 종료 실패:', error);
+                showError('세션 종료 중 오류가 발생했습니다.');
+            }
+        }
+        
+        // 세션 정보 표시
+        function showSessionInfo() {
+            document.getElementById('noSession').style.display = 'none';
+            document.getElementById('sessionInfo').style.display = 'block';
+            document.getElementById('createSessionBtn').style.display = 'none';
+            document.getElementById('executeSessionBtn').style.display = 'inline-block';
+            document.getElementById('sessionHistory').style.display = 'block';
+            
+            refreshSessionInfo();
+        }
+        
+        // 세션 정보 숨김
+        function hideSessionInfo() {
+            document.getElementById('noSession').style.display = 'block';
+            document.getElementById('sessionInfo').style.display = 'none';
+            document.getElementById('createSessionBtn').style.display = 'inline-block';
+            document.getElementById('executeSessionBtn').style.display = 'none';
+            document.getElementById('sessionHistory').style.display = 'none';
+        }
+        
+        // 세션 정보 새로고침
+        async function refreshSessionInfo() {
+            if (!currentSessionId) return;
+            
+            try {
+                const response = await fetch(`${API_BASE}/session/${currentSessionId}`);
+                const sessionInfo = await response.json();
+                
+                const sessionDetails = document.getElementById('sessionDetails');
+                const connectionStatus = sessionInfo.is_connected ? '🟢 연결됨' : '🔴 연결 끊김';
+                const activeStatus = sessionInfo.is_active ? '🟢 활성' : '🟡 비활성';
+                
+                sessionDetails.innerHTML = `
+                    <div class="session-detail">
+                        <strong>세션 ID:</strong> ${sessionInfo.session_id.substring(0, 8)}...
+                    </div>
+                    <div class="session-detail">
+                        <strong>호스트:</strong> ${sessionInfo.host}
+                    </div>
+                    <div class="session-detail">
+                        <strong>사용자:</strong> ${sessionInfo.username}
+                    </div>
+                    <div class="session-detail">
+                        <strong>연결 상태:</strong> ${connectionStatus}
+                    </div>
+                    <div class="session-detail">
+                        <strong>활성 상태:</strong> ${activeStatus}
+                    </div>
+                    <div class="session-detail">
+                        <strong>생성 시간:</strong> ${new Date(sessionInfo.created_at).toLocaleString()}
+                    </div>
+                    <div class="session-detail">
+                        <strong>마지막 활동:</strong> ${new Date(sessionInfo.last_activity).toLocaleString()}
+                    </div>
+                    <div class="session-detail">
+                        <strong>명령어 수:</strong> ${sessionInfo.command_count}
+                    </div>
+                `;
+                
+                // 명령어 히스토리 표시
+                displayCommandHistory();
+            } catch (error) {
+                console.error('세션 정보 조회 실패:', error);
+            }
+        }
+        
+        // 명령어 히스토리 표시
+        async function displayCommandHistory() {
+            if (!currentSessionId) return;
+            
+            try {
+                const response = await fetch(`${API_BASE}/session/${currentSessionId}`);
+                const sessionInfo = await response.json();
+                
+                const historyList = document.getElementById('historyList');
+                historyList.innerHTML = '';
+                
+                if (sessionInfo.command_history && sessionInfo.command_history.length > 0) {
+                    sessionInfo.command_history.forEach(item => {
+                        const historyItem = document.createElement('div');
+                        historyItem.className = 'history-item';
+                        
+                        const statusClass = item.result.success ? 'status-success' : 'status-error';
+                        const statusText = item.result.success ? '성공' : '실패';
+                        
+                        historyItem.innerHTML = `
+                            <div class="history-command">${item.command}</div>
+                            <div class="history-timestamp">${new Date(item.timestamp).toLocaleString()}</div>
+                            <div class="history-result">
+                                <span class="result-status ${statusClass}">${statusText}</span>
+                                ${item.result.stdout ? `<br>출력: ${item.result.stdout}` : ''}
+                                ${item.result.stderr ? `<br>오류: ${item.result.stderr}` : ''}
+                            </div>
+                        `;
+                        
+                        historyList.appendChild(historyItem);
+                    });
+                } else {
+                    historyList.innerHTML = '<p>명령어 히스토리가 없습니다.</p>';
+                }
+            } catch (error) {
+                console.error('명령어 히스토리 조회 실패:', error);
+                historyList.innerHTML = '<p>히스토리 조회 중 오류가 발생했습니다.</p>';
+            }
+        }
+        
+        // 세션 결과 표시
+        function displaySessionResult(result) {
+            const resultSection = document.getElementById('resultSection');
+            const resultBox = document.createElement('div');
+            resultBox.className = `result-box ${result.success ? 'success' : 'error'}`;
+            
+            const statusClass = result.success ? 'status-success' : 'status-error';
+            const statusText = result.success ? '성공' : '실패';
+            
+            resultBox.innerHTML = `
+                <div class="result-header">
+                    <strong>세션 명령어 실행</strong>
+                    <span class="result-status ${statusClass}">${statusText}</span>
+                </div>
+                <div class="result-content">
+명령어: ${result.command}
+종료 코드: ${result.exit_code}
+
+출력:
+${result.stdout || '(출력 없음)'}
+
+오류:
+${result.stderr || '(오류 없음)'}
+${result.error ? '\n오류 메시지: ' + result.error : ''}
+                </div>
+            `;
+            
+            resultSection.insertBefore(resultBox, resultSection.firstChild);
+        }
+        
+        // 서버 정보 표시
+        function displayServerInfo() {
+            const serverInfo = document.getElementById('serverInfo');
+            serverInfo.innerHTML = `
+                <div class="result-box">
+                    <h4>등록된 서버 (${servers.length}개)</h4>
+                    <div class="result-content">
+${servers.map(server => `${server.name}:
+  호스트: ${server.host}:${server.port}
+  사용자: ${server.username}
+  설명: ${server.description}
+`).join('\n')}
+                    </div>
+                </div>
+            `;
+        }
+        
+        // 단일 명령어 실행
+        async function executeCommand() {
+            if (!selectedServer) {
+                showError('실행할 서버를 선택해주세요.');
+                return;
+            }
+            
+            const command = document.getElementById('command').value.trim();
+            if (!command) {
+                showError('실행할 명령어를 입력해주세요.');
+                return;
+            }
+            
+            showLoading(true);
+            
+            try {
+                const response = await fetch('https://runmcp.hankyeul.com/execute', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        host: selectedServer.host,
+                        port: selectedServer.port,
+                        username: selectedServer.username,
+                        command: command,
+                        timeout: parseInt(document.getElementById('timeout').value),
+                        use_master_key: document.getElementById('useMasterKeySingle').checked
+                    })
+                });
+                
+                const result = await response.json();
+                displayResult(result);
+            } catch (error) {
+                console.error('명령어 실행 실패:', error);
+                showError('명령어 실행 중 오류가 발생했습니다.');
+            } finally {
+                showLoading(false);
+            }
+        }
+        
+        // 배치 명령어 실행
+        async function executeBatchCommand() {
+            const command = document.getElementById('batchCommand').value.trim();
+            if (!command) {
+                showError('실행할 명령어를 입력해주세요.');
+                return;
+            }
+            
+            if (servers.length === 0) {
+                showError('실행할 서버가 없습니다.');
+                return;
+            }
+            
+            showLoading(true);
+            
+            try {
+                const requests = servers.map(server => ({
+                    host: server.host,
+                    port: server.port,
+                    username: server.username,
+                    command: command,
+                    timeout: parseInt(document.getElementById('batchTimeout').value),
+                    use_master_key: true
+                }));
+                
+                const response = await fetch('https://runmcp.hankyeul.com/execute-batch', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(requests)
+                });
+                
+                const result = await response.json();
+                displayBatchResults(result.results);
+            } catch (error) {
+                console.error('배치 명령어 실행 실패:', error);
+                showError('배치 명령어 실행 중 오류가 발생했습니다.');
+            } finally {
+                showLoading(false);
+            }
+        }
+        
+        // 결과 표시
+        function displayResult(result) {
+            const resultSection = document.getElementById('resultSection');
+            const resultBox = document.createElement('div');
+            resultBox.className = `result-box ${result.success ? 'success' : 'error'}`;
+            
+            const statusClass = result.success ? 'status-success' : 'status-error';
+            const statusText = result.success ? '성공' : '실패';
+            
+            resultBox.innerHTML = `
+                <div class="result-header">
+                    <strong>${selectedServer.name} (${result.host})</strong>
+                    <span class="result-status ${statusClass}">${statusText}</span>
+                </div>
+                <div class="result-content">
+명령어: ${result.command}
+종료 코드: ${result.exit_code}
+
+출력:
+${result.stdout || '(출력 없음)'}
+
+오류:
+${result.stderr || '(오류 없음)'}
+${result.error ? '\n오류 메시지: ' + result.error : ''}
+                </div>
+            `;
+            
+            resultSection.insertBefore(resultBox, resultSection.firstChild);
+        }
+        
+        // 배치 결과 표시
+        function displayBatchResults(results) {
+            const resultSection = document.getElementById('resultSection');
+            
+            results.forEach(result => {
+                const resultBox = document.createElement('div');
+                resultBox.className = `result-box ${result.success ? 'success' : 'error'}`;
+                
+                const statusClass = result.success ? 'status-success' : 'status-error';
+                const statusText = result.success ? '성공' : '실패';
+                
+                resultBox.innerHTML = `
+                    <div class="result-header">
+                        <strong>${result.host}</strong>
+                        <span class="result-status ${statusClass}">${statusText}</span>
+                    </div>
+                    <div class="result-content">
+명령어: ${result.command}
+종료 코드: ${result.exit_code}
+
+출력:
+${result.stdout || '(출력 없음)'}
+
+오류:
+${result.stderr || '(오류 없음)'}
+${result.error ? '\n오류 메시지: ' + result.error : ''}
+                    </div>
+                `;
+                
+                resultSection.insertBefore(resultBox, resultSection.firstChild);
+            });
+        }
+        
+        // 로딩 표시/숨김
+        function showLoading(show) {
+            document.getElementById('loading').style.display = show ? 'block' : 'none';
+        }
+        
+        // 성공 메시지 표시
+        function showSuccess(message) {
+            const resultSection = document.getElementById('resultSection');
+            const successBox = document.createElement('div');
+            successBox.className = 'result-box success';
+            
+            successBox.innerHTML = `
+                <div class="result-header">
+                    <strong>성공</strong>
+                    <span class="result-status status-success">성공</span>
+                </div>
+                <div class="result-content">${message}</div>
+            `;
+            
+            resultSection.insertBefore(successBox, resultSection.firstChild);
+        }
+        
+        // 오류 메시지 표시
+        function showError(message) {
+            const resultSection = document.getElementById('resultSection');
+            const errorBox = document.createElement('div');
+            errorBox.className = 'result-box error';
+            
+            errorBox.innerHTML = `
+                <div class="result-header">
+                    <strong>오류</strong>
+                    <span class="result-status status-error">실패</span>
+                </div>
+                <div class="result-content">${message}</div>
+            `;
+            
+            resultSection.insertBefore(errorBox, resultSection.firstChild);
+        }
+        
+        // 터미널 관련 변수들
+        let currentTerminalSession = null;
+        let terminalHistory = [];
+        let historyIndex = -1;
+        
+        // 터미널 시작
+        async function startTerminal() {
+            const serverSelect = document.getElementById('terminalServerSelect');
+            const selectedServer = serverSelect.value;
+            
+            if (!selectedServer) {
+                alert('서버를 선택하세요.');
+                return;
+            }
+            
+            const server = JSON.parse(selectedServer);
+            
+            try {
+                // 세션 생성
+                const sessionResponse = await fetch(`${API_BASE}/session/create`, {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({
+                        host: server.host,
+                        port: server.port,
+                        username: server.username,
+                        timeout: 30
+                    })
+                });
+                
+                if (!sessionResponse.ok) {
+                    throw new Error('세션 생성 실패');
+                }
+                
+                const sessionData = await sessionResponse.json();
+                currentTerminalSession = sessionData.session_id;
+                
+                // 대화형 쉘 시작
+                const shellResponse = await fetch(`${API_BASE}/session/${currentTerminalSession}/shell/start`, {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({})
+                });
+                
+                if (!shellResponse.ok) {
+                    throw new Error('대화형 쉘 시작 실패');
+                }
+                
+                const shellData = await shellResponse.json();
+                
+                if (shellData.success) {
+                    // UI 업데이트
+                    updateTerminalStatus(true, true);
+                    document.getElementById('sessionInfo').textContent = `세션: ${currentTerminalSession}`;
+                    
+                    const output = document.getElementById('terminalOutput');
+                    output.textContent = sanitizeOutput(shellData.output) || '터미널이 시작되었습니다.';
+                    
+                    if (shellData.prompt) {
+                        const cleanPrompt = sanitizePrompt(shellData.prompt);
+                        document.getElementById('currentPrompt').textContent = cleanPrompt;
+                        document.getElementById('terminalPrompt').textContent = cleanPrompt;
+                    }
+                    
+                    // 명력어 입력 활성화
+                    document.getElementById('terminalCommand').disabled = false;
+                    document.getElementById('terminalCommand').focus();
+                    
+                    // 버튼 상태 변경
+                    document.getElementById('startTerminalBtn').style.display = 'none';
+                    document.getElementById('stopTerminalBtn').style.display = 'inline-block';
+                } else {
+                    throw new Error(shellData.error || '대화형 쉘 시작 실패');
+                }
+                
+            } catch (error) {
+                console.error('터미널 시작 오류:', error);
+                alert('터미널 시작 실패: ' + error.message);
+            }
+        }
+        
+        // 터미널 종료
+        async function stopTerminal() {
+            if (!currentTerminalSession) {
+                return;
+            }
+            
+            try {
+                // 대화형 쉘 종료
+                await fetch(`${API_BASE}/session/${currentTerminalSession}/shell/stop`, {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({})
+                });
+                
+                // 세션 종료
+                await fetch(`${API_BASE}/session/${currentTerminalSession}`, {
+                    method: 'DELETE'
+                });
+                
+                // UI 초기화
+                currentTerminalSession = null;
+                updateTerminalStatus(false, false);
+                document.getElementById('sessionInfo').textContent = '세션: 없음';
+                document.getElementById('terminalOutput').textContent = '터미널을 시작하려면 서버를 선택하고 \'터미널 시작\' 버튼을 클릭하세요.';
+                document.getElementById('terminalCommand').disabled = true;
+                document.getElementById('terminalCommand').value = '';
+                
+                // 버튼 상태 변경
+                document.getElementById('startTerminalBtn').style.display = 'inline-block';
+                document.getElementById('stopTerminalBtn').style.display = 'none';
+                
+            } catch (error) {
+                console.error('터미널 종료 오류:', error);
+            }
+        }
+        
+        // 터미널 상태 업데이트
+        function updateTerminalStatus(connected, shellActive) {
+            const connectionStatus = document.getElementById('connectionStatus');
+            const connectionText = document.getElementById('connectionText');
+            const shellStatus = document.getElementById('shellStatus');
+            const shellText = document.getElementById('shellText');
+            
+            if (connected) {
+                connectionStatus.className = 'status-indicator status-connected';
+                connectionText.textContent = '연결됨';
+            } else {
+                connectionStatus.className = 'status-indicator status-disconnected';
+                connectionText.textContent = '연결 안됨';
+            }
+            
+            if (shellActive) {
+                shellStatus.className = 'status-indicator status-shell';
+                shellText.textContent = '쉘 활성';
+            } else {
+                shellStatus.className = 'status-indicator status-disconnected';
+                shellText.textContent = '쉘 비활성';
+            }
+        }
+        
+        // 터미널 명력어 입력 처리
+        async function handleTerminalEnter(event) {
+            if (event.key === 'Enter') {
+                const command = event.target.value.trim();
+                
+                if (!command) return;
+                if (!currentTerminalSession) {
+                    alert('터미널이 시작되지 않았습니다.');
+                    return;
+                }
+                
+                // 히스토리에 추가
+                terminalHistory.push(command);
+                historyIndex = terminalHistory.length;
+                
+                // 입력 필드 클리어
+                event.target.value = '';
+                
+                try {
+                    const response = await fetch(`${API_BASE}/session/${currentTerminalSession}/shell/command`, {
+                        method: 'POST',
+                        headers: {'Content-Type': 'application/json'},
+                        body: JSON.stringify({ command: command })
+                    });
+                    
+                    if (!response.ok) {
+                        throw new Error('명력어 실행 실패');
+                    }
+                    
+                    const result = await response.json();
+                    
+                    // 터미널 출력에 명력어와 결과 추가
+                    const output = document.getElementById('terminalOutput');
+                    const currentPrompt = document.getElementById('terminalPrompt').textContent;
+                    
+                    output.textContent += `\n${currentPrompt} ${command}\n`;
+                    if (result.output) {
+                        output.textContent += sanitizeOutput(result.output);
+                    }
+                    if (result.error) {
+                        output.textContent += `ERROR: ${sanitizeOutput(result.error)}`;
+                    }
+                    
+                    // 프롬프트 업데이트
+                    if (result.prompt) {
+                        const cleanPrompt = sanitizePrompt(result.prompt);
+                        document.getElementById('currentPrompt').textContent = cleanPrompt;
+                        document.getElementById('terminalPrompt').textContent = cleanPrompt;
+                    }
+                    
+                    // 스크롤을 맨 아래로
+                    output.scrollTop = output.scrollHeight;
+                    
+                } catch (error) {
+                    console.error('명력어 실행 오류:', error);
+                    const output = document.getElementById('terminalOutput');
+                    output.textContent += `\nERROR: ${error.message}\n`;
+                    output.scrollTop = output.scrollHeight;
+                }
+            } else if (event.key === 'ArrowUp') {
+                // 명력어 히스토리 위로
+                if (historyIndex > 0) {
+                    historyIndex--;
+                    event.target.value = terminalHistory[historyIndex];
+                }
+                event.preventDefault();
+            } else if (event.key === 'ArrowDown') {
+                // 명력어 히스토리 아래로
+                if (historyIndex < terminalHistory.length - 1) {
+                    historyIndex++;
+                    event.target.value = terminalHistory[historyIndex];
+                } else {
+                    historyIndex = terminalHistory.length;
+                    event.target.value = '';
+                }
+                event.preventDefault();
+            }
+        }
+        
+        // 터미널 탭이 열릴 때 서버 목록 로드
+        function loadTerminalServers() {
+            loadServers().then(servers => {
+                const select = document.getElementById('terminalServerSelect');
+                select.innerHTML = '<option value="">서버 선택...</option>';
+                
+                servers.forEach(server => {
+                    const option = document.createElement('option');
+                    option.value = JSON.stringify(server);
+                    option.textContent = `${server.description} (${server.host}:${server.port})`;
+                    select.appendChild(option);
+                });
+            });
+        }
+        
+        // 기존 showTab 함수 수정하여 터미널 탭 지원 추가
+        const originalShowTab = showTab;
+        showTab = function(tabName) {
+            originalShowTab(tabName);
+            
+            if (tabName === 'terminal') {
+                loadTerminalServers();
+            }
+        };
+    </script>
+</body>
+</html>
+

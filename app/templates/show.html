@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>픽셀에이블 - 디지털 접근성 솔루션</title>
+	<style>
+		/* 전체 리셋 및 기본 스타일 */
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+		}
+
+		body {
+			background-color: #FFFFFF;
+			color: #333333;
+			line-height: 1.6;
+		}
+
+		/* 헤더 스타일 */
+		header {
+			background-color: #FFFFFF;
+			box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+			position: fixed;
+			width: 100%;
+			top: 0;
+			z-index: 1000;
+		}
+
+		.header-container {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 20px 5%;
+			max-width: 1200px;
+			margin: 0 auto;
+		}
+
+		.logo {
+			height: 40px;
+		}
+
+		.nav-menu {
+			display: flex;
+			list-style: none;
+		}
+
+		.nav-menu li {
+			margin-left: 30px;
+		}
+
+		.nav-menu a {
+			text-decoration: none;
+			color: #333333;
+			font-weight: 500;
+			font-size: 16px;
+			transition: color 0.3s;
+		}
+
+		.nav-menu a:hover {
+			color: #4D77FF;
+		}
+
+		.cta-button {
+			background-color: #4D77FF;
+			color: white;
+			padding: 10px 20px;
+			border-radius: 6px;
+			font-weight: 600;
+			border: none;
+			cursor: pointer;
+			transition: background-color 0.3s;
+		}
+
+		.cta-button:hover {
+			background-color: #3A5FD9;
+		}
+
+		/* 히어로 섹션 */
+		.hero-section {
+			padding: 160px 5% 100px;
+			background: linear-gradient(135deg, #F5F7FF 0%, #E8EDFF 100%);
+			text-align: center;
+		}
+
+		.hero-content {
+			max-width: 800px;
+			margin: 0 auto;
+		}
+
+		.hero-title {
+			font-size: 48px;
+			font-weight: 700;
+			color: #1A1A1A;
+			margin-bottom: 20px;
+			line-height: 1.2;
+		}
+
+		.hero-subtitle {
+			font-size: 20px;
+			color: #555555;
+			margin-bottom: 40px;
+		}
+
+		.hero-buttons {
+			display: flex;
+			justify-content: center;
+			gap: 20px;
+		}
+
+		.secondary-button {
+			background-color: white;
+			color: #4D77FF;
+			border: 1px solid #4D77FF;
+			padding: 10px 20px;
+			border-radius: 6px;
+			font-weight: 600;
+			cursor: pointer;
+			transition: all 0.3s;
+		}
+
+		.secondary-button:hover {
+			background-color: #F5F7FF;
+		}
+
+		.hero-image {
+			max-width: 100%;
+			margin-top: 60px;
+			border-radius: 10px;
+			box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+		}
+
+		/* 특징 섹션 */
+		.features-section {
+			padding: 100px 5%;
+			background-color: #FFFFFF;
+		}
+
+		.section-title {
+			text-align: center;
+			font-size: 36px;
+			font-weight: 700;
+			margin-bottom: 60px;
+			color: #1A1A1A;
+		}
+
+		.features-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+			gap: 40px;
+			max-width: 1200px;
+			margin: 0 auto;
+		}
+
+		.feature-card {
+			background-color: #F9FAFF;
+			border-radius: 10px;
+			padding: 30px;
+			text-align: center;
+			transition: transform 0.3s, box-shadow 0.3s;
+		}
+
+		.feature-card:hover {
+			transform: translateY(-10px);
+			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+		}
+
+		.feature-icon {
+			width: 60px;
+			height: 60px;
+			margin-bottom: 20px;
+		}
+
+		.feature-title {
+			font-size: 20px;
+			font-weight: 600;
+			margin-bottom: 15px;
+			color: #1A1A1A;
+		}
+
+		.feature-description {
+			color: #555555;
+			font-size: 16px;
+		}
+
+		/* 솔루션 섹션 */
+		.solutions-section {
+			padding: 100px 5%;
+			background-color: #F5F7FF;
+		}
+
+		.solutions-container {
+			max-width: 1200px;
+			margin: 0 auto;
+		}
+
+		.solution-item {
+			display: flex;
+			align-items: center;
+			margin-bottom: 80px;
+			gap: 60px;
+		}
+
+		.solution-item:nth-child(even) {
+			flex-direction: row-reverse;
+		}
+
+		.solution-image {
+			flex: 1;
+			max-width: 500px;
+			border-radius: 10px;
+			box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+		}
+
+		.solution-content {
+			flex: 1;
+		}
+
+		.solution-title {
+			font-size: 28px;
+			font-weight: 700;
+			margin-bottom: 20px;
+			color: #1A1A1A;
+		}
+
+		.solution-description {
+			color: #555555;
+			font-size: 16px;
+			margin-bottom: 30px;
+		}
+
+		/* 고객 섹션 */
+		.clients-section {
+			padding: 100px 5%;
+			background-color: #FFFFFF;
+			text-align: center;
+		}
+
+		.clients-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+			gap: 40px;
+			max-width: 1200px;
+			margin: 0 auto;
+			align-items: center;
+		}
+
+		.client-logo {
+			max-width: 120px;
+			max-height: 60px;
+			filter: grayscale(100%);
+			opacity: 0.7;
+			transition: all 0.3s;
+		}
+
+		.client-logo:hover {
+			filter: grayscale(0%);
+			opacity: 1;
+		}
+
+		/* 문의 섹션 */
+		.contact-section {
+			padding: 100px 5%;
+			background: linear-gradient(135deg, #4D77FF 0%, #3A5FD9 100%);
+			color: white;
+			text-align: center;
+		}
+
+		.contact-container {
+			max-width: 800px;
+			margin: 0 auto;
+		}
+
+		.contact-title {
+			font-size: 36px;
+			font-weight: 700;
+			margin-bottom: 20px;
+		}
+
+		.contact-description {
+			font-size: 18px;
+			margin-bottom: 40px;
+			opacity: 0.9;
+		}
+
+		.contact-form {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 20px;
+			margin-bottom: 30px;
+		}
+
+		.form-group {
+			text-align: left;
+		}
+
+		.form-group.full-width {
+			grid-column: span 2;
+		}
+
+		.form-label {
+			display: block;
+			margin-bottom: 8px;
+			font-weight: 500;
+		}
+
+		.form-input,
+		.form-textarea {
+			width: 100%;
+			padding: 12px 15px;
+			border-radius: 6px;
+			border: none;
+			font-size: 16px;
+		}
+
+		.form-textarea {
+			min-height: 150px;
+			resize: vertical;
+		}
+
+		.submit-button {
+			background-color: white;
+			color: #4D77FF;
+			padding: 12px 30px;
+			border-radius: 6px;
+			font-weight: 600;
+			border: none;
+			cursor: pointer;
+			font-size: 16px;
+			transition: all 0.3s;
+		}
+
+		.submit-button:hover {
+			background-color: #F5F7FF;
+			color: #3A5FD9;
+		}
+
+		/* 푸터 */
+		footer {
+			background-color: #1A1A1A;
+			color: #FFFFFF;
+			padding: 60px 5% 30px;
+		}
+
+		.footer-container {
+			max-width: 1200px;
+			margin: 0 auto;
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+			gap: 40px;
+		}
+
+		.footer-logo {
+			height: 40px;
+			margin-bottom: 20px;
+		}
+
+		.footer-description {
+			color: #AAAAAA;
+			margin-bottom: 20px;
+			font-size: 14px;
+		}
+
+		.footer-title {
+			font-size: 18px;
+			font-weight: 600;
+			margin-bottom: 20px;
+		}
+
+		.footer-links {
+			list-style: none;
+		}
+
+		.footer-links li {
+			margin-bottom: 10px;
+		}
+
+		.footer-links a {
+			color: #AAAAAA;
+			text-decoration: none;
+			transition: color 0.3s;
+			font-size: 14px;
+		}
+
+		.footer-links a:hover {
+			color: #FFFFFF;
+		}
+
+		.social-links {
+			display: flex;
+			gap: 15px;
+			margin-top: 20px;
+		}
+
+		.social-icon {
+			width: 36px;
+			height: 36px;
+			background-color: #333333;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			transition: background-color 0.3s;
+		}
+
+		.social-icon:hover {
+			background-color: #4D77FF;
+		}
+
+		.social-icon img {
+			width: 18px;
+			height: 18px;
+		}
+
+		.copyright {
+			text-align: center;
+			color: #777777;
+			margin-top: 60px;
+			padding-top: 20px;
+			border-top: 1px solid #333333;
+			font-size: 14px;
+		}
+
+		/* 반응형 스타일 */
+		@media (max-width: 768px) {
+			.header-container {
+				flex-direction: column;
+				padding: 15px 5%;
+			}
+
+			.nav-menu {
+				margin-top: 20px;
+				flex-wrap: wrap;
+				justify-content: center;
+			}
+
+			.nav-menu li {
+				margin: 5px 10px;
+			}
+
+			.hero-title {
+				font-size: 36px;
+			}
+
+			.hero-subtitle {
+				font-size: 18px;
+			}
+
+			.hero-buttons {
+				flex-direction: column;
+				align-items: center;
+			}
+
+			.solution-item {
+				flex-direction: column !important;
+				gap: 30px;
+			}
+
+			.solution-image {
+				max-width: 100%;
+			}
+
+			.contact-form {
+				grid-template-columns: 1fr;
+			}
+
+			.form-group.full-width {
+				grid-column: span 1;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<!-- 헤더 -->
+	<header>
+		<div class="header-container">
+			<img src="https://via.placeholder.com/150x40/4D77FF/FFFFFF?text=픽셀에이블" alt="픽셀에이블 로고" class="logo">
+			<ul class="nav-menu">
+				<li><a href="#features">특징</a></li>
+				<li><a href="#solutions">솔루션</a></li>
+				<li><a href="#clients">고객사</a></li>
+				<li><a href="#contact">문의하기</a></li>
+			</ul>
+			<button class="cta-button">무료 체험 신청</button>
+		</div>
+	</header>
+
+	<!-- 히어로 섹션 -->
+	<section class="hero-section">
+		<div class="hero-content">
+			<h1 class="hero-title">모두를 위한 디지털 접근성 솔루션</h1>
+			<p class="hero-subtitle">픽셀에이블은 모든 사용자가 디지털 콘텐츠에 쉽게 접근할 수 있도록 돕는 혁신적인 접근성 솔루션을 제공합니다.</p>
+			<div class="hero-buttons">
+				<button class="cta-button">무료 체험 신청</button>
+				<button class="secondary-button">자세히 알아보기</button>
+			</div>
+			<img src="https://via.placeholder.com/800x450/E8EDFF/333333?text=접근성+솔루션+대시보드" alt="접근성 솔루션 대시보드"
+				class="hero-image">
+		</div>
+	</section>
+
+	<!-- 특징 섹션 -->
+	<section class="features-section" id="features">
+		<h2 class="section-title">주요 특징</h2>
+		<div class="features-grid">
+			<div class="feature-card">
+				<img src="https://via.placeholder.com/60x60/4D77FF/FFFFFF?text=AI" alt="AI 아이콘" class="feature-icon">
+				<h3 class="feature-title">AI 기반 접근성 분석</h3>
+				<p class="feature-description">인공지능 기술을 활용하여 웹사이트와 앱의 접근성 문제를 자동으로 감지하고 개선 방안을 제시합니다.</p>
+			</div>
+			<div class="feature-card">
+				<img src="https://via.placeholder.com/60x60/4D77FF/FFFFFF?text=실시간" alt="실시간 아이콘" class="feature-icon">
+				<h3 class="feature-title">실시간 모니터링</h3>
+				<p class="feature-description">웹사이트와 앱의 접근성 상태를 실시간으로 모니터링하여 문제 발생 시 즉시 알림을 제공합니다.</p>
+			</div>
+			<div class="feature-card">
+				<img src="https://via.placeholder.com/60x60/4D77FF/FFFFFF?text=맞춤형" alt="맞춤형 아이콘" class="feature-icon">
+				<h3 class="feature-title">맞춤형 개선 가이드</h3>
+				<p class="feature-description">각 웹사이트와 앱의 특성에 맞는 맞춤형 접근성 개선 가이드를 제공하여 효율적인 개선을 돕습니다.</p>
+			</div>
+			<div class="feature-card">
+				<img src="https://via.placeholder.com/60x60/4D77FF/FFFFFF?text=인증" alt="인증 아이콘" class="feature-icon">
+				<h3 class="feature-title">접근성 인증 지원</h3>
+				<p class="feature-description">국내외 접근성 인증 획득을 위한 전문적인 지원 서비스를 제공합니다.</p>
+			</div>
+			<div class="feature-card">
+				<img src="https://via.placeholder.com/60x60/4D77FF/FFFFFF?text=교육" alt="교육 아이콘" class="feature-icon">
+				<h3 class="feature-title">접근성 교육 프로그램</h3>
+				<p class="feature-description">개발자와 디자이너를 위한 접근성 교육 프로그램을 제공하여 접근성에 대한 이해를 높입니다.</p>
+			</div>
+			<div class="feature-card">
+				<img src="https://via.placeholder.com/60x60/4D77FF/FFFFFF?text=보고서" alt="보고서 아이콘" class="feature-icon">
+				<h3 class="feature-title">상세 분석 보고서</h3>
+				<p class="feature-description">접근성 현황과 개선 사항에 대한 상세한 분석 보고서를 제공하여 의사 결정을 돕습니다.</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- 솔루션 섹션 -->
+	<section class="solutions-section" id="solutions">
+		<h2 class="section-title">솔루션</h2>
+		<div class="solutions-container">
+			<div class="solution-item">
+				<img src="https://via.placeholder.com/500x300/FFFFFF/333333?text=웹+접근성+스캐너" alt="웹 접근성 스캐너"
+					class="solution-image">
+				<div class="solution-content">
+					<h3 class="solution-title">웹 접근성 스캐너</h3>
+					<p class="solution-description">웹사이트의 접근성 문제를 자동으로 감지하고 개선 방안을 제시하는 강력한 스캐닝 도구입니다. WCAG 2.1 지침을 기반으로
+						한 종합적인 분석을 제공하며, 개발자가 쉽게 문제를 해결할 수 있도록 코드 수정 예시를 함께 제공합니다.</p>
+					<button class="cta-button">자세히 보기</button>
+				</div>
+			</div>
+			<div class="solution-item">
+				<img src="https://via.placeholder.com/500x300/FFFFFF/333333?text=모바일+앱+접근성+테스터" alt="모바일 앱 접근성 테스터"
+					class="solution-image">
+				<div class="solution-content">
+					<h3 class="solution-title">모바일 앱 접근성 테스터</h3>
+					<p class="solution-description">iOS와 Android 앱의 접근성을 테스트하고 개선하는 솔루션입니다. 스크린 리더 호환성, 색상 대비, 터치 타겟 크기
+						등 다양한 접근성 요소를 검사하고, 실제 사용자 경험을 시뮬레이션하여 접근성 문제를 사전에 발견할 수 있습니다.</p>
+					<button class="cta-button">자세히 보기</button>
+				</div>
+			</div>
+			<div class="solution-item">
+				<img src="https://via.placeholder.com/500x300/FFFFFF/333333?text=접근성+대시보드" alt="접근성 대시보드"
+					class="solution-image">
+				<div class="solution-content">
+					<h3 class="solution-title">접근성 대시보드</h3>
+					<p class="solution-description">조직의 모든 디지털 자산에 대한 접근성 현황을 한눈에 파악할 수 있는 종합 대시보드입니다. 실시간 모니터링, 이슈 트래킹,
+						개선 진행 상황 등을 시각적으로 확인할 수 있으며, 경영진을 위한 요약 보고서도 자동으로 생성됩니다.</p>
+					<button class="cta-button">자세히 보기</button>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- 고객사 섹션 -->
+	<section class="clients-section" id="clients">
+		<h2 class="section-title">신뢰하는 고객사</h2>
+		<div class="clients-grid">
+			<img src="https://via.placeholder.com/120x60/EEEEEE/999999?text=고객사1" alt="고객사 로고" class="client-logo">
+			<img src="https://via.placeholder.com/120x60/EEEEEE/999999?text=고객사2" alt="고객사 로고" class="client-logo">
+			<img src="https://via.placeholder.com/120x60/EEEEEE/999999?text=고객사3" alt="고객사 로고" class="client-logo">
+			<img src="https://via.placeholder.com/120x60/EEEEEE/999999?text=고객사4" alt="고객사 로고" class="client-logo">
+			<img src="https://via.placeholder.com/120x60/EEEEEE/999999?text=고객사5" alt="고객사 로고" class="client-logo">
+			<img src="https://via.placeholder.com/120x60/EEEEEE/999999?text=고객사6" alt="고객사 로고" class="client-logo">
+		</div>
+	</section>
+
+	<!-- 문의 섹션 -->
+	<section class="contact-section" id="contact">
+		<div class="contact-container">
+			<h2 class="contact-title">문의하기</h2>
+			<p class="contact-description">픽셀에이블의 접근성 솔루션에 대해 더 알고 싶으신가요? 아래 양식을 작성하시면 빠르게 답변드리겠습니다.</p>
+			<form class="contact-form">
+				<div class="form-group">
+					<label for="name" class="form-label">이름</label>
+					<input type="text" id="name" class="form-input" placeholder="이름을 입력하세요">
+				</div>
+				<div class="form-group">
+					<label for="email" class="form-label">이메일</label>
+					<input type="email" id="email" class="form-input" placeholder="이메일을 입력하세요">
+				</div>
+				<div class="form-group">
+					<label for="company" class="form-label">회사명</label>
+					<input type="text" id="company" class="form-input" placeholder="회사명을 입력하세요">
+				</div>
+				<div class="form-group">
+					<label for="phone" class="form-label">연락처</label>
+					<input type="tel" id="phone" class="form-input" placeholder="연락처를 입력하세요">
+				</div>
+				<div class="form-group full-width">
+					<label for="message" class="form-label">문의 내용</label>
+					<textarea id="message" class="form-textarea" placeholder="문의 내용을 입력하세요"></textarea>
+				</div>
+			</form>
+			<button class="submit-button">문의하기</button>
+		</div>
+	</section>
+
+	<!-- 푸터 -->
+	<footer>
+		<div class="footer-container">
+			<div>
+				<img src="https://via.placeholder.com/150x40/FFFFFF/4D77FF?text=픽셀에이블" alt="픽셀에이블 로고"
+					class="footer-logo">
+				<p class="footer-description">모두를 위한 디지털 접근성 솔루션을 제공하는 픽셀에이블입니다. 더 포용적인 디지털 세상을 만들기 위해 노력합니다.</p>
+				<div class="social-links">
+					<a href="#" class="social-icon"><img src="https://via.placeholder.com/18x18/FFFFFF/FFFFFF?text=F"
+							alt="페이스북"></a>
+					<a href="#" class="social-icon"><img src="https://via.placeholder.com/18x18/FFFFFF/FFFFFF?text=T"
+							alt="트위터"></a>
+					<a href="#" class="social-icon"><img src="https://via.placeholder.com/18x18/FFFFFF/FFFFFF?text=I"
+							alt="인스타그램"></a>
+					<a href="#" class="social-icon"><img src="https://via.placeholder.com/18x18/FFFFFF/FFFFFF?text=L"
+							alt="링크드인"></a>
+				</div>
+			</div>
+			<div>
+				<h3 class="footer-title">솔루션</h3>
+				<ul class="footer-links">
+					<li><a href="#">웹 접근성 스캐너</a></li>
+					<li><a href="#">모바일 앱 접근성 테스터</a></li>
+					<li><a href="#">접근성 대시보드</a></li>
+					<li><a href="#">접근성 컨설팅</a></li>
+					<li><a href="#">접근성 교육</a></li>
+				</ul>
+			</div>
+			<div>
+				<h3 class="footer-title">회사</h3>
+				<ul class="footer-links">
+					<li><a href="#">회사 소개</a></li>
+					<li><a href="#">블로그</a></li>
+					<li><a href="#">채용 정보</a></li>
+					<li><a href="#">파트너십</a></li>
+					<li><a href="#">보도자료</a></li>
+				</ul>
+			</div>
+			<div>
+				<h3 class="footer-title">지원</h3>
+				<ul class="footer-links">
+					<li><a href="#">고객 지원</a></li>
+					<li><a href="#">문서</a></li>
+					<li><a href="#">FAQ</a></li>
+					<li><a href="#">커뮤니티</a></li>
+					<li><a href="#">연락처</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="copyright">
+			&copy; 2023 픽셀에이블. All rights reserved.
+		</div>
+	</footer>
+
+	<script>
+		// 스크롤 시 헤더 스타일 변경
+		window.addEventListener('scroll', function () {
+			const header = document.querySelector('header');
+			if (window.scrollY > 50) {
+				header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+			} else {
+				header.style.boxShadow = 'none';
+			}
+		});
+
+		// 스무스 스크롤 구현
+		document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+			anchor.addEventListener('click', function (e) {
+				e.preventDefault();
+
+				const targetId = this.getAttribute('href');
+				const targetElement = document.querySelector(targetId);
+
+				if (targetElement) {
+					window.scrollTo({
+						top: targetElement.offsetTop - 80,
+						behavior: 'smooth'
+					});
+				}
+			});
+		});
+
+		// 폼 제출 처리
+		const contactForm = document.querySelector('.contact-form');
+		const submitButton = document.querySelector('.submit-button');
+
+		submitButton.addEventListener('click', function (e) {
+			e.preventDefault();
+
+			// 폼 유효성 검사
+			const name = document.getElementById('name').value;
+			const email = document.getElementById('email').value;
+			const message = document.getElementById('message').value;
+
+			if (!name || !email || !message) {
+				alert('이름, 이메일, 문의 내용은 필수 입력 항목입니다.');
+				return;
+			}
+
+			// 이메일 형식 검사
+			const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+			if (!emailRegex.test(email)) {
+				alert('유효한 이메일 주소를 입력해주세요.');
+				return;
+			}
+
+			// 폼 제출 성공 메시지 (실제로는 서버에 데이터 전송 로직 추가)
+			alert('문의가 성공적으로 접수되었습니다. 빠른 시일 내에 답변 드리겠습니다.');
+			contactForm.reset();
+		});
+
+		// 특징 카드 애니메이션
+		const featureCards = document.querySelectorAll('.feature-card');
+
+		function checkIfInView() {
+			featureCards.forEach(card => {
+				const cardPosition = card.getBoundingClientRect();
+
+				// 카드가 화면에 보이는 경우
+				if (cardPosition.top < window.innerHeight && cardPosition.bottom > 0) {
+					card.style.opacity = '1';
+					card.style.transform = 'translateY(0)';
+				}
+			});
+		}
+
+		// 초기 스타일 설정
+		featureCards.forEach(card => {
+			card.style.opacity = '0';
+			card.style.transform = 'translateY(20px)';
+			card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+		});
+
+		// 스크롤 이벤트 리스너 추가
+		window.addEventListener('scroll', checkIfInView);
+		window.addEventListener('load', checkIfInView);
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+# 🗄️ Alembic 데이터베이스 마이그레이션
+
+이 디렉토리는 Alembic 데이터베이스 마이그레이션 파일들을 포함합니다.
+
+## 📁 구조
+- `env.py` - Alembic 환경 설정
+- `script.py.mako` - 마이그레이션 파일 템플릿  
+- `versions/` - 마이그레이션 파일 저장소
+
+## 🚀 사용법
+
+### 새로운 마이그레이션 생성
+```bash
+alembic revision --autogenerate -m "Add new column"
+```
+
+### 마이그레이션 적용
+```bash
+alembic upgrade head
+```
+
+### 마이그레이션 롤백
+```bash
+alembic downgrade -1
+```
+
+### 현재 리비전 확인
+```bash
+alembic current
+```
+
+### 마이그레이션 이력 확인
+```bash
+alembic history
+``` 
