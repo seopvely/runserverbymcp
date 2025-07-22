@@ -177,4 +177,4 @@ ssh-keygen -t rsa -b 4096 -f .ssh/h_web2
 
 ## 라이선스
 
-이 프로젝트는 내부 사용 목적으로 개발되었습니다. 
+MIT LICENSE 

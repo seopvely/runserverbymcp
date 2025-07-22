@@ -500,6 +500,13 @@
         .status-shell {
             background-color: #ffaa00;
         }
+
+        .terminal-hint {
+            margin-left: auto;
+            font-size: 12px;
+            color: #666;
+            white-space: nowrap;
+        }
     </style>
 </head>
 <body>
@@ -516,6 +523,7 @@
                 <button class="tab" onclick="showTab('single')">단일 명령어</button>
                 <button class="tab" onclick="showTab('batch')">배치 명령어</button>
                 <button class="tab" onclick="showTab('servers')">서버 관리</button>
+                <button class="tab" onclick="showTab('security')">🛡️ 보안</button>
             </div>
             
             <!-- 세션 모드 탭 -->
@@ -606,8 +614,8 @@
                         </select>
                         <button id="startTerminalBtn" class="btn btn-primary" onclick="startTerminal()">터미널 시작</button>
                         <button id="stopTerminalBtn" class="btn btn-danger" onclick="stopTerminal()" style="display:none;">터미널 종료</button>
-                        <div style="margin-left: auto; font-size: 12px; color: #666;">
-                            💡 ESC: 전체화면 종료 | ↑↓: 명령어 히스토리
+                        <div class="terminal-hint">
+                            💡 ESC: 전체화면 종료 | ↑↓: 명령어 히스토리 | Tab: 자동완성
                         </div>
                     </div>
                     
@@ -630,7 +638,7 @@
                             <span class="terminal-prompt" id="terminalPrompt">$</span>
                             <input type="text" class="terminal-command" id="terminalCommand" 
                                    placeholder="명력어를 입력하세요..." 
-                                   onkeypress="handleTerminalEnter(event)" disabled>
+                                   onkeydown="handleTerminalKey(event)" disabled>
                         </div>
                     </div>
                 </div>
@@ -693,6 +701,40 @@
                     <h3>서버 정보</h3>
                     <div id="serverInfo">
                         <!-- 서버 정보가 여기에 표시됩니다 -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 보안 탭 -->
+            <div id="security" class="tab-content">
+                <div class="form-section">
+                    <h3>🛡️ 보안 현황</h3>
+                    <div class="security-stats" id="securityStats">
+                        <div class="result-box">
+                            <h4>보안 통계</h4>
+                            <div id="securityStatsContent">로딩 중...</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h3>🚫 차단된 명령어 이벤트</h3>
+                    <div class="security-controls" style="margin-bottom: 15px;">
+                        <button class="btn" onclick="loadSecurityEvents()">최신 이벤트 불러오기</button>
+                        <button class="btn btn-secondary" onclick="testSecuritySystem()">보안 시스템 테스트</button>
+                    </div>
+                    <div class="security-events" id="securityEvents">
+                        <div class="result-box">
+                            <h4>최근 차단된 명령어들</h4>
+                            <div id="securityEventsContent">보안 이벤트 불러오기 버튼을 클릭하세요.</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h3>🧪 보안 테스트</h3>
+                    <div id="securityTestResults">
+                        <!-- 보안 테스트 결과가 여기에 표시됩니다 -->
                     </div>
                 </div>
             </div>
@@ -1066,6 +1108,27 @@
         function displaySessionResult(result) {
             const resultSection = document.getElementById('resultSection');
             const resultBox = document.createElement('div');
+            
+            // 보안 차단된 명령어 처리
+            if (result.blocked) {
+                resultBox.className = 'result-box error';
+                resultBox.innerHTML = `
+                    <div class="result-header">
+                        <strong>🚫 보안 차단</strong>
+                        <span class="result-status status-error">차단됨</span>
+                    </div>
+                    <div class="result-content">
+명령어: ${result.command || '알 수 없음'}
+차단 사유: ${result.error || '보안 정책 위반'}
+카테고리: ${result.category || '미분류'}
+
+이 명령어는 보안상의 이유로 실행이 차단되었습니다.
+                    </div>
+                `;
+                resultSection.insertBefore(resultBox, resultSection.firstChild);
+                return;
+            }
+            
             resultBox.className = `result-box ${result.success ? 'success' : 'error'}`;
             
             const statusClass = result.success ? 'status-success' : 'status-error';
@@ -1437,7 +1500,7 @@ ${result.error ? '\n오류 메시지: ' + result.error : ''}
         }
         
         // 터미널 명력어 입력 처리
-        async function handleTerminalEnter(event) {
+        async function handleTerminalKey(event) {
             if (event.key === 'Enter') {
                 const command = event.target.value.trim();
                 
@@ -1472,18 +1535,18 @@ ${result.error ? '\n오류 메시지: ' + result.error : ''}
                     const currentPrompt = document.getElementById('terminalPrompt').textContent;
                     
                     output.textContent += `\n${currentPrompt} ${command}\n`;
-                    if (result.output) {
-                        output.textContent += sanitizeOutput(result.output);
-                    }
-                    if (result.error) {
-                        output.textContent += `ERROR: ${sanitizeOutput(result.error)}`;
-                    }
                     
-                    // 프롬프트 업데이트
-                    if (result.prompt) {
-                        const cleanPrompt = sanitizePrompt(result.prompt);
-                        document.getElementById('currentPrompt').textContent = cleanPrompt;
-                        document.getElementById('terminalPrompt').textContent = cleanPrompt;
+                    // 보안 차단된 명령어 처리
+                    if (result.blocked) {
+                        output.textContent += `🚫 보안 차단: ${result.error}\n`;
+                        output.textContent += `   카테고리: ${result.category}\n`;
+                    } else {
+                        if (result.output) {
+                            output.textContent += sanitizeOutput(result.output);
+                        }
+                        if (result.error) {
+                            output.textContent += `ERROR: ${sanitizeOutput(result.error)}`;
+                        }
                     }
                     
                     // 스크롤을 맨 아래로
@@ -1497,13 +1560,14 @@ ${result.error ? '\n오류 메시지: ' + result.error : ''}
                 }
             } else if (event.key === 'ArrowUp') {
                 // 명력어 히스토리 위로
+                event.preventDefault();
                 if (historyIndex > 0) {
                     historyIndex--;
                     event.target.value = terminalHistory[historyIndex];
                 }
-                event.preventDefault();
             } else if (event.key === 'ArrowDown') {
                 // 명력어 히스토리 아래로
+                event.preventDefault();
                 if (historyIndex < terminalHistory.length - 1) {
                     historyIndex++;
                     event.target.value = terminalHistory[historyIndex];
@@ -1511,8 +1575,177 @@ ${result.error ? '\n오류 메시지: ' + result.error : ''}
                     historyIndex = terminalHistory.length;
                     event.target.value = '';
                 }
+            } else if (event.key === 'Tab') {
+                // 탭 자동완성
                 event.preventDefault();
+                await handleTabCompletion(event.target);
             }
+        }
+        
+        // 탭 자동완성 처리
+        async function handleTabCompletion(input) {
+            const currentValue = input.value;
+            const cursorPosition = input.selectionStart;
+            const textBeforeCursor = currentValue.substring(0, cursorPosition);
+            const textAfterCursor = currentValue.substring(cursorPosition);
+            
+            // 현재 단어 추출 (공백으로 분리)
+            const words = textBeforeCursor.split(/\s+/);
+            const currentWord = words[words.length - 1];
+            
+            if (!currentWord) return;
+            
+            // 단어 위치에 따라 다른 자동완성 전략 사용
+            const isFirstWord = words.length === 1 || (words.length === 2 && words[0] === '');
+            
+            if (isFirstWord) {
+                // 첫 번째 단어는 명령어 자동완성
+                handleCommandCompletion(input, currentWord, textBeforeCursor, textAfterCursor);
+            } else {
+                // 두 번째 단어부터는 파일/경로 자동완성 시도
+                await handleFileCompletion(input, currentWord, textBeforeCursor, textAfterCursor);
+            }
+        }
+        
+        // 파일/경로 자동완성 (ls 명령어를 사용)
+        async function handleFileCompletion(input, currentWord, textBeforeCursor, textAfterCursor) {
+            try {
+                // 경로 분석
+                const hasSlash = currentWord.includes('/');
+                const directory = hasSlash ? currentWord.substring(0, currentWord.lastIndexOf('/') + 1) : './';
+                const filename = hasSlash ? currentWord.substring(currentWord.lastIndexOf('/') + 1) : currentWord;
+                
+                // 숨겨진 ls 명령어로 파일 목록 가져오기 (결과만 사용, 출력 안 함)
+                const listCommand = `ls -la "${directory}" 2>/dev/null | awk '{print $9}' | grep "^${filename}" | head -10`;
+                
+                // 별도의 임시 세션이나 백그라운드에서 실행하지 말고, 기본적인 파일 패턴 매칭 사용
+                handleBasicFileCompletion(input, currentWord, textBeforeCursor, textAfterCursor, directory, filename);
+                
+            } catch (error) {
+                // 에러 발생 시 기본 명령어 완성으로 대체
+                handleCommandCompletion(input, currentWord, textBeforeCursor, textAfterCursor);
+            }
+        }
+        
+        // 기본적인 파일 자동완성 (일반적인 파일/디렉토리 패턴)
+        function handleBasicFileCompletion(input, currentWord, textBeforeCursor, textAfterCursor, directory, filename) {
+            // 일반적인 파일/디렉토리 이름들
+            const commonPaths = [
+                './', '../', '~/', '/home/', '/etc/', '/var/', '/usr/', '/tmp/', '/opt/',
+                'Desktop/', 'Documents/', 'Downloads/', 'Pictures/', 'Videos/', 'Music/',
+                '.bashrc', '.bash_profile', '.zshrc', '.vimrc', '.gitignore', '.env',
+                'package.json', 'requirements.txt', 'Dockerfile', 'docker-compose.yml',
+                'README.md', 'LICENSE', 'Makefile', 'CMakeLists.txt',
+                '.git/', 'node_modules/', '__pycache__/', '.venv/', 'venv/'
+            ];
+            
+            const matches = commonPaths.filter(path => {
+                if (directory === './') {
+                    return path.toLowerCase().startsWith(filename.toLowerCase());
+                } else {
+                    const pathName = path.split('/').pop() || path;
+                    return pathName.toLowerCase().startsWith(filename.toLowerCase());
+                }
+            });
+            
+            if (matches.length === 1) {
+                // 하나의 매치만 있으면 자동완성
+                const suggestion = directory === './' ? matches[0] : directory + matches[0];
+                const beforeCurrentWord = textBeforeCursor.substring(0, textBeforeCursor.lastIndexOf(currentWord));
+                input.value = beforeCurrentWord + suggestion + textAfterCursor;
+                
+                // 커서를 완성된 단어 끝으로 이동
+                const newPosition = beforeCurrentWord.length + suggestion.length;
+                input.setSelectionRange(newPosition, newPosition);
+            } else if (matches.length > 1) {
+                // 여러 매치가 있으면 공통 접두사로 완성하고 옵션 표시
+                const adjustedMatches = directory === './' ? matches : matches.map(m => directory + m);
+                const commonPrefix = findCommonPrefix(adjustedMatches);
+                
+                if (commonPrefix.length > currentWord.length) {
+                    const beforeCurrentWord = textBeforeCursor.substring(0, textBeforeCursor.lastIndexOf(currentWord));
+                    input.value = beforeCurrentWord + commonPrefix + textAfterCursor;
+                    
+                    const newPosition = beforeCurrentWord.length + commonPrefix.length;
+                    input.setSelectionRange(newPosition, newPosition);
+                }
+                
+                // 터미널에 옵션들 표시 (간결하게)
+                const output = document.getElementById('terminalOutput');
+                output.textContent += `\n${adjustedMatches.slice(0, 5).join('  ')}${adjustedMatches.length > 5 ? ' ...' : ''}\n`;
+                output.scrollTop = output.scrollHeight;
+            } else {
+                // 매치가 없으면 명령어 완성 시도
+                handleCommandCompletion(input, currentWord, textBeforeCursor, textAfterCursor);
+            }
+        }
+        
+        // 명령어 자동완성
+        function handleCommandCompletion(input, currentWord, textBeforeCursor, textAfterCursor) {
+            const commonCommands = [
+                'ls', 'cd', 'pwd', 'mkdir', 'rmdir', 'cp', 'mv', 'rm', 'cat', 'less', 'more',
+                'head', 'tail', 'grep', 'find', 'which', 'whereis', 'man', 'info', 'help',
+                'ps', 'top', 'htop', 'kill', 'jobs', 'bg', 'fg', 'nohup', 'screen', 'tmux',
+                'chmod', 'chown', 'chgrp', 'umask', 'ln', 'touch', 'file', 'stat',
+                'tar', 'gzip', 'gunzip', 'zip', 'unzip', 'wget', 'curl',
+                'ssh', 'scp', 'rsync', 'ping', 'traceroute', 'netstat', 'ss',
+                'df', 'du', 'mount', 'umount', 'lsblk', 'fdisk',
+                'systemctl', 'service', 'crontab', 'history', 'alias', 'unalias',
+                'echo', 'printf', 'read', 'export', 'env', 'printenv', 'set', 'unset',
+                'exit', 'logout', 'su', 'sudo', 'whoami', 'id', 'groups',
+                'vi', 'vim', 'nano', 'emacs', 'python', 'python3', 'node', 'npm', 'git',
+                'docker', 'docker-compose', 'kubectl', 'helm'
+            ];
+            
+            const matches = commonCommands.filter(cmd => cmd.startsWith(currentWord.toLowerCase()));
+            
+            if (matches.length === 1) {
+                // 하나의 매치만 있으면 자동완성
+                const suggestion = matches[0];
+                const beforeCurrentWord = textBeforeCursor.substring(0, textBeforeCursor.lastIndexOf(currentWord));
+                input.value = beforeCurrentWord + suggestion + ' ' + textAfterCursor;
+                
+                // 커서를 완성된 단어 + 공백 끝으로 이동
+                const newPosition = beforeCurrentWord.length + suggestion.length + 1;
+                input.setSelectionRange(newPosition, newPosition);
+            } else if (matches.length > 1) {
+                // 여러 매치가 있으면 공통 접두사로 완성하고 옵션 표시
+                const commonPrefix = findCommonPrefix(matches);
+                
+                if (commonPrefix.length > currentWord.length) {
+                    const beforeCurrentWord = textBeforeCursor.substring(0, textBeforeCursor.lastIndexOf(currentWord));
+                    input.value = beforeCurrentWord + commonPrefix + textAfterCursor;
+                    
+                    const newPosition = beforeCurrentWord.length + commonPrefix.length;
+                    input.setSelectionRange(newPosition, newPosition);
+                }
+                
+                // 터미널에 옵션들 표시
+                const output = document.getElementById('terminalOutput');
+                output.textContent += `\n`;
+                output.textContent += matches.join('  ') + '\n';
+                output.scrollTop = output.scrollHeight;
+            }
+        }
+        
+        // 공통 접두사 찾기
+        function findCommonPrefix(strings) {
+            if (strings.length === 0) return '';
+            if (strings.length === 1) return strings[0];
+            
+            let commonPrefix = '';
+            const firstString = strings[0];
+            
+            for (let i = 0; i < firstString.length; i++) {
+                const char = firstString[i];
+                if (strings.every(str => str[i] === char)) {
+                    commonPrefix += char;
+                } else {
+                    break;
+                }
+            }
+            
+            return commonPrefix;
         }
         
         // 터미널 탭이 열릴 때 서버 목록 로드
@@ -1537,7 +1770,127 @@ ${result.error ? '\n오류 메시지: ' + result.error : ''}
             
             if (tabName === 'terminal') {
                 loadTerminalServers();
+            } else if (tabName === 'security') {
+                loadSecurityStats();
             }
+        };
+        
+        // 보안 통계 로드
+        async function loadSecurityStats() {
+            try {
+                const response = await fetch('/ssh/security/stats/local');
+                const data = await response.json();
+                
+                if (data.stats) {
+                    const statsContent = document.getElementById('securityStatsContent');
+                    const stats = data.stats;
+                    
+                    statsContent.innerHTML = `
+<strong>전체 차단된 명령어:</strong> ${stats.total_blocked}개
+<strong>최근 24시간:</strong> ${stats.recent_24h}개
+
+<strong>카테고리별 차단 현황:</strong>
+${Object.entries(stats.categories).map(([category, count]) => 
+    `• ${getCategoryName(category)}: ${count}개`
+).join('\n')}
+
+<strong>가장 많이 차단된 명령어 Top 5:</strong>
+${stats.top_blocked_commands.slice(0, 5).map((item, index) => 
+    `${index + 1}. "${item.command}" (${item.count}회)`
+).join('\n')}
+                    `;
+                } else {
+                    document.getElementById('securityStatsContent').textContent = data.error || '통계를 불러올 수 없습니다.';
+                }
+            } catch (error) {
+                console.error('보안 통계 로드 실패:', error);
+                document.getElementById('securityStatsContent').textContent = '통계 로드 중 오류가 발생했습니다.';
+            }
+        }
+        
+        // 보안 이벤트 로드
+        async function loadSecurityEvents() {
+            try {
+                const response = await fetch('/ssh/security/events/local?limit=20');
+                const data = await response.json();
+                
+                if (data.events && data.events.length > 0) {
+                    const eventsContent = document.getElementById('securityEventsContent');
+                    
+                    eventsContent.innerHTML = data.events.map(event => `
+<div style="border-bottom: 1px solid #eee; padding: 10px 0;">
+    <strong>시간:</strong> ${new Date(event.timestamp).toLocaleString()}
+    <strong>명령어:</strong> ${event.command}
+    <strong>카테고리:</strong> ${getCategoryName(event.category)}
+    <strong>차단 사유:</strong> ${event.reason}
+    ${event.session_id ? `<strong>세션 ID:</strong> ${event.session_id.substring(0, 8)}...` : ''}
+</div>
+                    `).join('');
+                    
+                } else {
+                    document.getElementById('securityEventsContent').textContent = '차단된 명령어 이벤트가 없습니다.';
+                }
+            } catch (error) {
+                console.error('보안 이벤트 로드 실패:', error);
+                document.getElementById('securityEventsContent').textContent = '이벤트 로드 중 오류가 발생했습니다.';
+            }
+        }
+        
+        // 보안 시스템 테스트
+        async function testSecuritySystem() {
+            try {
+                const response = await fetch('/ssh/security/test/local', {method: 'POST'});
+                const data = await response.json();
+                
+                if (data.test_results) {
+                    const testResults = document.getElementById('securityTestResults');
+                    
+                    testResults.innerHTML = `
+                        <div class="result-box success">
+                            <h4>🧪 보안 시스템 테스트 결과</h4>
+                            <div class="result-content">
+총 테스트: ${data.total_tested}개 명령어
+차단된 명령어: ${data.blocked_count}개
+통과한 명령어: ${data.total_tested - data.blocked_count}개
+
+<strong>테스트 결과 상세:</strong>
+${data.test_results.map(result => 
+    `• "${result.command}" → ${result.is_dangerous ? '🚫 차단됨' : '✅ 허용됨'}`
+).join('\n')}
+                            </div>
+                        </div>
+                    `;
+                } else {
+                    document.getElementById('securityTestResults').innerHTML = `
+                        <div class="result-box error">
+                            <h4>테스트 실패</h4>
+                            <div class="result-content">${data.error || '테스트를 실행할 수 없습니다.'}</div>
+                        </div>
+                    `;
+                }
+            } catch (error) {
+                console.error('보안 테스트 실패:', error);
+                document.getElementById('securityTestResults').innerHTML = `
+                    <div class="result-box error">
+                        <h4>테스트 오류</h4>
+                        <div class="result-content">보안 테스트 중 오류가 발생했습니다.</div>
+                    </div>
+                `;
+            }
+        }
+        
+        // 카테고리명 변환
+        function getCategoryName(category) {
+            const categoryNames = {
+                'destructive': '시스템 파괴적',
+                'privilege': '권한 상승',
+                'network_attack': '네트워크 공격',
+                'malicious_download': '악성 다운로드',
+                'system_file': '시스템 파일 조작',
+                'process_kill': '프로세스 강제 종료',
+                'scheduler': '스케줄러 조작'
+            };
+            return categoryNames[category] || category;
         };
     </script>
 </body>

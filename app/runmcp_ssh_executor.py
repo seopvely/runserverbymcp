@@ -288,7 +288,7 @@ def is_dangerous_command(command: str) -> tuple[bool, str]:
 		(r'curl\s+.*\|\s*sh', "외부 스크립트 실행 위험"),
 		(r'wget\s+.*\|\s*bash', "외부 스크립트 실행 위험"),
 		(r'wget\s+.*\|\s*sh', "외부 스크립트 실행 위험"),
-		(r'curl\s+.*\|\s*sudo', "관리자 권한으로 외부 스크립트 실행 위험"),
+		# (r'curl\s+.*\|\s*sudo', "관리자 권한으로 외부 스크립트 실행 위험"),
 	]
 	
 	# 5. 패키지 관리자 위험 명령어들

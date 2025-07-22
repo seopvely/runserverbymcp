@@ -36,3 +36,5 @@ __pycache__/
 .cursor/
 .local/
 .viminfo
+runmcp_ssh.log
+app/runmcp_ssh.log$

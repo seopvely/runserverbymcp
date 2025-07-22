@@ -1530,3 +1530,270 @@
 2025-07-22 22:13:23,408 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ifconfig
 2025-07-22 22:13:24,834 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls -al
 2025-07-22 22:13:25,680 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: pwd
+2025-07-22 22:50:55,526 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 22:50:55,526 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 23:00:57,332 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 23:00:57,373 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.6p1)
+2025-07-22 23:00:57,520 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 23:00:57,520 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.17:22
+2025-07-22 23:00:57,520 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: ba2c91bf-2003-443a-98be-deb5469572ad - 192.168.0.17
+2025-07-22 23:00:57,630 - runmcp_ssh_executor - INFO - 대화형 쉘 시작 시도: ba2c91bf-2003-443a-98be-deb5469572ad
+2025-07-22 23:00:57,631 - runmcp_ssh_executor - INFO - invoke_shell 호출 시작...
+2025-07-22 23:00:57,881 - runmcp_ssh_executor - INFO - invoke_shell 완료: 0.25초 소요
+2025-07-22 23:00:57,881 - runmcp_ssh_executor - INFO - 쉘 채널 생성 완료, 채널 ID: 0
+2025-07-22 23:00:57,881 - runmcp_ssh_executor - INFO - 쉘 채널 생성 완료, 초기 출력 읽기 시작
+2025-07-22 23:00:58,188 - runmcp_ssh_executor - INFO - 초기 출력 읽기 완료, 길이: 1131
+2025-07-22 23:00:58,188 - runmcp_ssh_executor - INFO - 대화형 쉘 시작 완료: ba2c91bf-2003-443a-98be-deb5469572ad, 프롬프트: 0;parallels@ubuntu-linux-2404: ~<span style="color: #2ecc71; font-weight: 600">parallels@ubuntu-linux-2404<span style="color: #ffffff">:<span style="color: #4a90e2; font-weight: 600">~<span style="color: #ffffff">$ </span></span></span></span>
+2025-07-22 23:01:03,476 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls -al
+2025-07-22 23:01:05,335 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ifofnig
+2025-07-22 23:01:08,307 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ifconfig
+2025-07-22 23:01:13,508 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: pwd
+2025-07-22 23:01:15,275 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls
+2025-07-22 23:01:35,741 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: chmod 777 abc.tar.gz
+2025-07-22 23:07:22,770 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: pwd
+2025-07-22 23:07:23,166 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls
+2025-07-22 23:07:26,515 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: pwd
+2025-07-22 23:07:30,714 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: mkdir -p aa
+2025-07-22 23:07:31,232 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls
+2025-07-22 23:07:32,369 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: cd aa
+2025-07-22 23:07:32,746 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls
+2025-07-22 23:07:37,901 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: chmod 777 *
+2025-07-22 23:07:47,667 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: touch a b c
+2025-07-22 23:07:52,400 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: chmod 777 *
+2025-07-22 23:11:00,655 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 23:11:00,659 - runmcp_ssh_executor - INFO - SSH 세션 종료: ba2c91bf-2003-443a-98be-deb5469572ad
+2025-07-22 23:11:01,653 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 23:11:01,653 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 23:11:17,501 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 23:11:17,965 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 23:11:17,965 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 23:11:42,143 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 23:11:42,568 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 23:11:42,568 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 23:12:37,113 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 23:12:37,565 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 23:12:37,566 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 23:12:51,006 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 23:12:51,259 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 23:12:51,260 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 23:13:02,639 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 23:13:03,145 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 23:13:03,145 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 23:13:40,500 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 23:13:40,974 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 23:13:40,974 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 23:13:57,295 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 23:13:57,559 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 23:13:57,560 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 23:14:20,377 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 23:14:20,819 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 23:14:20,820 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 23:16:00,902 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 23:16:00,928 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.6p1)
+2025-07-22 23:16:01,071 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 23:16:01,118 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.17:22
+2025-07-22 23:16:01,119 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 9ecc9b45-ffd7-46f0-96f6-5e046b45171c - 192.168.0.17
+2025-07-22 23:16:01,317 - runmcp_ssh_executor - INFO - 대화형 쉘 시작 시도: 9ecc9b45-ffd7-46f0-96f6-5e046b45171c
+2025-07-22 23:16:01,318 - runmcp_ssh_executor - INFO - invoke_shell 호출 시작...
+2025-07-22 23:16:01,726 - runmcp_ssh_executor - INFO - invoke_shell 완료: 0.41초 소요
+2025-07-22 23:16:01,726 - runmcp_ssh_executor - INFO - 쉘 채널 생성 완료, 채널 ID: 0
+2025-07-22 23:16:01,726 - runmcp_ssh_executor - INFO - 쉘 채널 생성 완료, 초기 출력 읽기 시작
+2025-07-22 23:16:02,028 - runmcp_ssh_executor - INFO - 초기 출력 읽기 완료, 길이: 1131
+2025-07-22 23:16:02,028 - runmcp_ssh_executor - INFO - 대화형 쉘 시작 완료: 9ecc9b45-ffd7-46f0-96f6-5e046b45171c, 프롬프트: 0;parallels@ubuntu-linux-2404: ~<span style="color: #2ecc71; font-weight: 600">parallels@ubuntu-linux-2404<span style="color: #ffffff">:<span style="color: #4a90e2; font-weight: 600">~<span style="color: #ffffff">$ </span></span></span></span>
+2025-07-22 23:16:05,288 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls -al
+2025-07-22 23:16:06,905 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: cd aa
+2025-07-22 23:16:07,715 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls
+2025-07-22 23:16:50,112 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: l s-al
+2025-07-22 23:16:51,113 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls -al
+2025-07-22 23:17:14,776 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 23:17:14,780 - runmcp_ssh_executor - INFO - SSH 세션 종료: 9ecc9b45-ffd7-46f0-96f6-5e046b45171c
+2025-07-22 23:17:15,335 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 23:17:15,335 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 23:17:50,102 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 23:17:50,149 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.6p1)
+2025-07-22 23:17:50,315 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 23:17:50,315 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.17:22
+2025-07-22 23:17:50,315 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: c48a4951-68ea-4e8a-8b4e-441aa7745bc4 - 192.168.0.17
+2025-07-22 23:17:50,386 - runmcp_ssh_executor - INFO - 대화형 쉘 시작 시도: c48a4951-68ea-4e8a-8b4e-441aa7745bc4
+2025-07-22 23:17:50,386 - runmcp_ssh_executor - INFO - invoke_shell 호출 시작...
+2025-07-22 23:17:50,628 - runmcp_ssh_executor - INFO - invoke_shell 완료: 0.24초 소요
+2025-07-22 23:17:50,629 - runmcp_ssh_executor - INFO - 쉘 채널 생성 완료, 채널 ID: 0
+2025-07-22 23:17:50,629 - runmcp_ssh_executor - INFO - 쉘 채널 생성 완료, 초기 출력 읽기 시작
+2025-07-22 23:17:50,930 - runmcp_ssh_executor - INFO - 초기 출력 읽기 완료, 길이: 1131
+2025-07-22 23:17:50,930 - runmcp_ssh_executor - INFO - 대화형 쉘 시작 완료: c48a4951-68ea-4e8a-8b4e-441aa7745bc4, 프롬프트: 0;parallels@ubuntu-linux-2404: ~<span style="color: #2ecc71; font-weight: 600">parallels@ubuntu-linux-2404<span style="color: #ffffff">:<span style="color: #4a90e2; font-weight: 600">~<span style="color: #ffffff">$ </span></span></span></span>
+2025-07-22 23:17:54,535 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: cd aa
+2025-07-22 23:17:55,042 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ks
+2025-07-22 23:17:56,313 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls
+2025-07-22 23:19:25,028 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 23:19:25,035 - runmcp_ssh_executor - INFO - SSH 세션 종료: c48a4951-68ea-4e8a-8b4e-441aa7745bc4
+2025-07-22 23:19:25,581 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 23:19:25,581 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 23:20:45,449 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 23:20:45,865 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 23:20:45,865 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 23:20:59,254 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 23:20:59,633 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 23:20:59,633 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 23:21:02,266 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 23:21:02,773 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 23:21:02,773 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 23:21:33,695 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 23:21:34,197 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 23:21:34,197 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 23:21:46,230 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 23:21:46,493 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 23:21:46,494 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 23:22:09,470 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 23:22:09,512 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.6p1)
+2025-07-22 23:22:09,647 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 23:22:09,648 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.17:22
+2025-07-22 23:22:09,648 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 7e955e36-f1b8-4e9f-bc5b-ad7914caeef4 - 192.168.0.17
+2025-07-22 23:22:09,707 - runmcp_ssh_executor - INFO - 대화형 쉘 시작 시도: 7e955e36-f1b8-4e9f-bc5b-ad7914caeef4
+2025-07-22 23:22:09,707 - runmcp_ssh_executor - INFO - invoke_shell 호출 시작...
+2025-07-22 23:22:09,961 - runmcp_ssh_executor - INFO - invoke_shell 완료: 0.25초 소요
+2025-07-22 23:22:09,962 - runmcp_ssh_executor - INFO - 쉘 채널 생성 완료, 채널 ID: 0
+2025-07-22 23:22:09,962 - runmcp_ssh_executor - INFO - 쉘 채널 생성 완료, 초기 출력 읽기 시작
+2025-07-22 23:22:10,264 - runmcp_ssh_executor - INFO - 초기 출력 읽기 완료, 길이: 1131
+2025-07-22 23:22:10,264 - runmcp_ssh_executor - INFO - 대화형 쉘 시작 완료: 7e955e36-f1b8-4e9f-bc5b-ad7914caeef4, 프롬프트: 0;parallels@ubuntu-linux-2404: ~<span style="color: #2ecc71; font-weight: 600">parallels@ubuntu-linux-2404<span style="color: #ffffff">:<span style="color: #4a90e2; font-weight: 600">~<span style="color: #ffffff">$ </span></span></span></span>
+2025-07-22 23:22:13,571 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: cd aa
+2025-07-22 23:22:13,916 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls
+2025-07-22 23:22:21,629 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: chmod &
+2025-07-22 23:22:28,705 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls
+2025-07-22 23:22:42,752 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 23:22:42,754 - runmcp_ssh_executor - INFO - SSH 세션 종료: 7e955e36-f1b8-4e9f-bc5b-ad7914caeef4
+2025-07-22 23:22:43,185 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 23:22:43,185 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 23:24:08,467 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 23:24:08,491 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.6p1)
+2025-07-22 23:24:08,621 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 23:24:08,621 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.17:22
+2025-07-22 23:24:08,621 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 6b464761-77ed-43d8-b424-ecf3d4e075e3 - 192.168.0.17
+2025-07-22 23:24:08,694 - runmcp_ssh_executor - INFO - 대화형 쉘 시작 시도: 6b464761-77ed-43d8-b424-ecf3d4e075e3
+2025-07-22 23:24:08,694 - runmcp_ssh_executor - INFO - invoke_shell 호출 시작...
+2025-07-22 23:24:08,909 - runmcp_ssh_executor - INFO - invoke_shell 완료: 0.21초 소요
+2025-07-22 23:24:08,909 - runmcp_ssh_executor - INFO - 쉘 채널 생성 완료, 채널 ID: 0
+2025-07-22 23:24:08,909 - runmcp_ssh_executor - INFO - 쉘 채널 생성 완료, 초기 출력 읽기 시작
+2025-07-22 23:24:09,213 - runmcp_ssh_executor - INFO - 초기 출력 읽기 완료, 길이: 1131
+2025-07-22 23:24:09,214 - runmcp_ssh_executor - INFO - 대화형 쉘 시작 완료: 6b464761-77ed-43d8-b424-ecf3d4e075e3, 프롬프트: 0;parallels@ubuntu-linux-2404: ~<span style="color: #2ecc71; font-weight: 600">parallels@ubuntu-linux-2404<span style="color: #ffffff">:<span style="color: #4a90e2; font-weight: 600">~<span style="color: #ffffff">$ </span></span></span></span>
+2025-07-22 23:24:14,374 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: sudo su -
+2025-07-22 23:24:18,254 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: Kks718@K
+2025-07-22 23:24:19,781 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls -al
+2025-07-22 23:24:22,915 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: exit
+2025-07-22 23:29:47,222 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 종료
+2025-07-22 23:29:47,227 - runmcp_ssh_executor - INFO - SSH 세션 종료: 6b464761-77ed-43d8-b424-ecf3d4e075e3
+2025-07-22 23:29:47,757 - runmcp_ssh_executor - INFO - SSH Executor FastMCP 서버 시작
+2025-07-22 23:29:47,758 - runmcp_ssh_executor - INFO - SSH 키 파일 권한 설정 완료: /home/runmcp/.ssh/h_web2
+2025-07-22 23:30:09,185 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 23:30:09,213 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.6p1)
+2025-07-22 23:30:09,354 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 23:30:09,354 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.17:22
+2025-07-22 23:30:09,354 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: 0a0675b3-f43c-44f0-93ab-234c55063c51 - 192.168.0.17
+2025-07-22 23:30:09,414 - runmcp_ssh_executor - INFO - 대화형 쉘 시작 시도: 0a0675b3-f43c-44f0-93ab-234c55063c51
+2025-07-22 23:30:09,415 - runmcp_ssh_executor - INFO - invoke_shell 호출 시작...
+2025-07-22 23:30:09,695 - runmcp_ssh_executor - INFO - invoke_shell 완료: 0.28초 소요
+2025-07-22 23:30:09,696 - runmcp_ssh_executor - INFO - 쉘 채널 생성 완료, 채널 ID: 0
+2025-07-22 23:30:09,696 - runmcp_ssh_executor - INFO - 쉘 채널 생성 완료, 초기 출력 읽기 시작
+2025-07-22 23:30:09,997 - runmcp_ssh_executor - INFO - 초기 출력 읽기 완료, 길이: 1131
+2025-07-22 23:30:09,998 - runmcp_ssh_executor - INFO - 대화형 쉘 시작 완료: 0a0675b3-f43c-44f0-93ab-234c55063c51, 프롬프트: 0;parallels@ubuntu-linux-2404: ~<span style="color: #2ecc71; font-weight: 600">parallels@ubuntu-linux-2404<span style="color: #ffffff">:<span style="color: #4a90e2; font-weight: 600">~<span style="color: #ffffff">$ </span></span></span></span>
+2025-07-22 23:30:14,297 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: compgen -f "-al" | head -10
+2025-07-22 23:30:14,645 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: compgen -f "-al" | head -10
+2025-07-22 23:30:14,989 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: compgen -f "-al" | head -10
+2025-07-22 23:30:15,340 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: compgen -f "-a" | head -10
+2025-07-22 23:30:15,697 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: compgen -f "-a" | head -10
+2025-07-22 23:30:16,047 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: compgen -f "-a" | head -10
+2025-07-22 23:30:16,402 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: compgen -f "-" | head -10
+2025-07-22 23:30:16,751 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: compgen -f "-" | head -10
+2025-07-22 23:30:18,783 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: compgen -f "-al" | head -10
+2025-07-22 23:30:19,151 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: compgen -f "-al" | head -10
+2025-07-22 23:30:32,753 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: compgen -f "chmo" | head -10
+2025-07-22 23:30:33,419 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: compgen -f "chmo" | head -10
+2025-07-22 23:30:34,381 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: compgen -f "chmod" | head -10
+2025-07-22 23:31:16,869 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 23:31:16,913 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.6p1)
+2025-07-22 23:31:17,079 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 23:31:17,080 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.17:22
+2025-07-22 23:31:17,080 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: d8869f4f-d931-4223-bafb-90f19de05fc0 - 192.168.0.17
+2025-07-22 23:31:17,157 - runmcp_ssh_executor - INFO - 대화형 쉘 시작 시도: d8869f4f-d931-4223-bafb-90f19de05fc0
+2025-07-22 23:31:17,157 - runmcp_ssh_executor - INFO - invoke_shell 호출 시작...
+2025-07-22 23:31:17,201 - runmcp_ssh_executor - INFO - invoke_shell 완료: 0.04초 소요
+2025-07-22 23:31:17,202 - runmcp_ssh_executor - INFO - 쉘 채널 생성 완료, 채널 ID: 0
+2025-07-22 23:31:17,202 - runmcp_ssh_executor - INFO - 쉘 채널 생성 완료, 초기 출력 읽기 시작
+2025-07-22 23:31:17,502 - runmcp_ssh_executor - INFO - 초기 출력 읽기 완료, 길이: 1131
+2025-07-22 23:31:17,502 - runmcp_ssh_executor - INFO - 대화형 쉘 시작 완료: d8869f4f-d931-4223-bafb-90f19de05fc0, 프롬프트: 0;parallels@ubuntu-linux-2404: ~<span style="color: #2ecc71; font-weight: 600">parallels@ubuntu-linux-2404<span style="color: #ffffff">:<span style="color: #4a90e2; font-weight: 600">~<span style="color: #ffffff">$ </span></span></span></span>
+2025-07-22 23:31:21,025 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: compgen -f "-al" | head -10
+2025-07-22 23:31:23,921 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: compgen -f "-al" | head -10
+2025-07-22 23:31:29,028 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: compgen -f "chmo" | head -10
+2025-07-22 23:31:39,605 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: compgen -f "chmod" | head -10
+2025-07-22 23:31:39,950 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: compgen -f "chmod" | head -10
+2025-07-22 23:31:42,796 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls
+2025-07-22 23:31:43,887 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: pwd
+2025-07-22 23:31:51,822 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls -alS
+2025-07-22 23:31:56,561 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: wpe
+2025-07-22 23:31:57,485 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: pwd
+2025-07-22 23:31:59,964 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: wget
+2025-07-22 23:32:05,642 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: cd aa
+2025-07-22 23:32:06,076 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls
+2025-07-22 23:32:32,047 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: compgen -f "-a" | head -10
+2025-07-22 23:32:32,402 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: compgen -f "-a" | head -10
+2025-07-22 23:32:32,755 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: compgen -f "-a" | head -10
+2025-07-22 23:32:33,112 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: compgen -f "-" | head -10
+2025-07-22 23:32:33,467 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: compgen -f "-" | head -10
+2025-07-22 23:32:33,815 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: compgen -f "-" | head -10
+2025-07-22 23:32:34,785 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: compgen -f "-a" | head -10
+2025-07-22 23:32:35,135 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: compgen -f "-a" | head -10
+2025-07-22 23:32:35,479 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: compgen -f "-a" | head -10
+2025-07-22 23:32:39,684 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls
+2025-07-22 23:32:41,212 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: pwd
+2025-07-22 23:35:40,290 - runmcp_ssh_executor - INFO - SSH 키 파일 사용: /home/runmcp/.ssh/h_web2
+2025-07-22 23:35:40,322 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.6p1)
+2025-07-22 23:35:40,470 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-07-22 23:35:40,470 - runmcp_ssh_executor - INFO - SSH 연결 성공: 192.168.0.17:22
+2025-07-22 23:35:40,470 - runmcp_ssh_executor - INFO - SSH 세션 생성 성공: b56a3df1-62b9-4717-b6ca-10ec535b49be - 192.168.0.17
+2025-07-22 23:35:40,537 - runmcp_ssh_executor - INFO - 대화형 쉘 시작 시도: b56a3df1-62b9-4717-b6ca-10ec535b49be
+2025-07-22 23:35:40,538 - runmcp_ssh_executor - INFO - invoke_shell 호출 시작...
+2025-07-22 23:35:40,577 - runmcp_ssh_executor - INFO - invoke_shell 완료: 0.04초 소요
+2025-07-22 23:35:40,578 - runmcp_ssh_executor - INFO - 쉘 채널 생성 완료, 채널 ID: 0
+2025-07-22 23:35:40,578 - runmcp_ssh_executor - INFO - 쉘 채널 생성 완료, 초기 출력 읽기 시작
+2025-07-22 23:35:40,882 - runmcp_ssh_executor - INFO - 초기 출력 읽기 완료, 길이: 1131
+2025-07-22 23:35:40,882 - runmcp_ssh_executor - INFO - 대화형 쉘 시작 완료: b56a3df1-62b9-4717-b6ca-10ec535b49be, 프롬프트: 0;parallels@ubuntu-linux-2404: ~<span style="color: #2ecc71; font-weight: 600">parallels@ubuntu-linux-2404<span style="color: #ffffff">:<span style="color: #4a90e2; font-weight: 600">~<span style="color: #ffffff">$ </span></span></span></span>
+2025-07-22 23:35:55,712 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls -al
+2025-07-22 23:35:57,691 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: sl
+2025-07-22 23:35:58,579 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls
+2025-07-22 23:35:59,963 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ifconfig
+2025-07-22 23:36:00,735 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls
+2025-07-22 23:36:05,422 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: sudo su -
+2025-07-22 23:36:08,566 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: Kks718@K
+2025-07-22 23:36:09,548 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls
+2025-07-22 23:36:11,230 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ifcofnig
+2025-07-22 23:36:12,248 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls
+2025-07-22 23:36:13,975 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ifcofnig
+2025-07-22 23:36:19,727 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: sudo su -
+2025-07-22 23:36:24,167 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: exit
+2025-07-22 23:36:25,101 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls
+2025-07-22 23:36:27,192 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: exit
+2025-07-22 23:36:28,118 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls
+2025-07-22 23:36:30,233 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls -al
+2025-07-22 23:36:32,299 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: cd aa
+2025-07-22 23:36:32,695 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls
+2025-07-22 23:36:43,050 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: lsblk
+2025-07-22 23:36:44,868 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls -al
+2025-07-22 23:36:49,082 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls
+2025-07-22 23:36:51,655 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls -al
+2025-07-22 23:36:55,048 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ifcofnig
+2025-07-22 23:36:55,725 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls
+2025-07-22 23:37:18,577 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls
+2025-07-22 23:37:19,668 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls -al
+2025-07-22 23:37:21,027 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ifconfig
+2025-07-22 23:37:21,409 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls
+2025-07-22 23:37:25,127 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls
+2025-07-22 23:37:26,953 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: rm -f a
+2025-07-22 23:37:28,140 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls
+2025-07-22 23:37:29,662 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: cd ..
+2025-07-22 23:37:30,009 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls
+2025-07-22 23:37:31,193 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: pwd
+2025-07-22 23:37:31,646 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: ls
+2025-07-22 23:37:45,552 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: pwd
+2025-07-22 23:37:48,423 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: whoami
+2025-07-22 23:37:55,072 - runmcp_ssh_executor - INFO - 쉘 명령어 실행: exit
+2025-07-22 23:37:59,639 - runmcp_ssh_executor - INFO - 대화형 쉘 종료: b56a3df1-62b9-4717-b6ca-10ec535b49be
+2025-07-22 23:38:12,473 - runmcp_ssh_executor - INFO - SSH 명령어 실행: 192.168.0.17 - df -h
